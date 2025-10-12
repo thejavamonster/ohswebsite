@@ -1,0 +1,14 @@
+{
+  "name": "ohs-course-catalog-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Simple Express server for course catalog prototype (serves static files and a small reviews API)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2"
+  }
+}

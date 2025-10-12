@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Course Catalog Mockup</title>
+  <style>
+    :root{
+      --accent:#b70f11;
+      --muted:#e9e9e9;
+      --tag-bg:#f3f3f3;
+      --card-shadow: 0 2px 0 rgba(0,0,0,0.04), 0 6px 18px rgba(0,0,0,0.06);
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color:#222;
+    }
+    body{margin:0;background:#f7f7f7}
+    .container{
+      max-width:1100px;
+      margin:28px auto;
+      padding:0 18px;
+      display:flex;
+      gap:28px;
+    }
+    /* Left column - filters */
+    .sidebar{
+      width:28%; /* approx 1/4 */
+      min-width:220px;
+    }
+    .filters{
+      background:#fff;padding:18px;border-radius:2px;box-shadow:var(--card-shadow);
+    }
+    h2{margin:0 0 12px 0;font-size:20px;color:#111}
+    .search-box{display:flex;gap:8px;margin-bottom:18px}
+    .search-box input[type="search"]{flex:1;padding:10px 12px;border:1px solid #ddd;border-radius:2px}
+    .search-box button{background:transparent;border:0;padding:0 8px;cursor:pointer}
+    .filter-group{margin-bottom:18px}
+    .filter-group h3{font-size:13px;color:#b70f11;margin:6px 0 10px}
+    .checkbox{display:flex;align-items:center;gap:8px;margin:6px 0}
+    .checkbox input{width:16px;height:16px}
+
+    /* Right column - course list */
+    .main{
+      flex:1;
+      min-width:360px;
+    }
+    .results-header{color:#666;margin:6px 0 14px}
+    .course-card{background:#fff;border:1px solid #e6e6e6;padding:18px;border-radius:2px;margin-bottom:20px;box-shadow:var(--card-shadow)}
+    .course-top{display:flex;justify-content:space-between;gap:16px}
+    .course-title{color:#0071bc;font-size:20px;margin:0 0 8px}
+    .course-desc{color:#333;line-height:1.45;margin:0 0 12px}
+    .card-footer{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .learn-btn{background:var(--accent);color:#fff;padding:10px 18px;border-radius:2px;border:0;cursor:pointer}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+  .tag{background:var(--tag-bg);padding:6px 10px;border-radius:3px;font-size:13px;color:#444;border:1px solid #e0e0e0}
+  .form-input{width:100%;padding:8px;border:1px solid #ddd;border-radius:3px;font-size:14px;font-family:inherit}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .container{flex-direction:column;padding:12px}
+      .sidebar{width:100%}
+      .main{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="filters">
+        <h2>Filter courses:</h2>
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="BY TITLE/CODE" aria-label="Search courses" />
+          <button id="searchBtn" aria-label="search">🔍</button>
+        </div>
+
+        <div class="filter-group" id="subjects">
+          <h3>BY SUBJECT</h3>
+          <label class="checkbox"><input type="checkbox" class="subject-checkbox" value="Core" /> <span>Core</span></label>
+          <label class="checkbox"><input type="checkbox" class="subject-checkbox" value="English" /> <span>English</span></label>
+          <label class="checkbox"><input type="checkbox" class="subject-checkbox" value="Humanities" /> <span>Humanities</span></label>
+          <label class="checkbox"><input type="checkbox" class="subject-checkbox" value="History" /> <span>History</span></label>
+          <label class="checkbox"><input type="checkbox" class="subject-checkbox" value="Languages" /> <span>Languages</span></label>
+          <label class="checkbox"><input type="checkbox" class="subject-checkbox" value="Mathematics" /> <span>Mathematics</span></label>
+          <label class="checkbox"><input type="checkbox" class="subject-checkbox" value="Computer Science" /> <span>Computer Science</span></label>
+          <label class="checkbox"><input type="checkbox" class="subject-checkbox" value="Science" /> <span>Science</span></label>
+        </div>
+
+        <div class="filter-group" id="levels">
+          <h3>BY LEVEL</h3>
+          <label class="checkbox"><input type="checkbox" class="level-checkbox" value="Middle school" /> <span>Middle school</span></label>
+          <label class="checkbox"><input type="checkbox" class="level-checkbox" value="High school" /> <span>High school</span></label>
+          <label class="checkbox"><input type="checkbox" class="level-checkbox" value="University" /> <span>University</span></label>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div id="resultsHeader" class="results-header">Showing 0 of 0 courses</div>
+      <div id="coursesList"></div>
+
+      <!-- course detail modal -->
+      <div id="courseModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);align-items:center;justify-content:center;padding:20px;z-index:999;">
+        <div id="modalContent" style="background:#fff;max-width:900px;width:100%;border-radius:4px;padding:20px;box-shadow:var(--card-shadow);max-height:80vh;overflow:auto;position:relative;">
+          <button id="modalClose" style="position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:20px;cursor:pointer">✕</button>
+          <!-- populated by JS -->
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
+
+<script>
+  // Simple client-side prototype: fetch courses (prefer scraped live output), render, filter, and store anonymous reviews in localStorage.
+  // Prevent legacy alert() dialogs from blocking the UI — route messages to inline message elements and console
+  window.alert = function(msg){
+    try{
+      const modalMsg = document.getElementById('modalFormMessage');
+      const pageMsg = document.getElementById('pageFormMessage');
+      if (modalMsg){ modalMsg.textContent = msg; setTimeout(()=>{ modalMsg.textContent=''; },3000); }
+      else if (pageMsg){ pageMsg.textContent = msg; setTimeout(()=>{ pageMsg.textContent=''; },3000); }
+      else console.log('alert:', msg);
+    }catch(e){ console.log('alert override error', e); }
+  };
+
+  (async function(){
+    // Try API first (scraped output or server), otherwise fallback to local sample file
+    let courses = [];
+    const apiBase = location.origin === 'null' ? null : '';
+    let usingApi = false;
+    try{
+      // prefer local combined scraper output if present
+      const rLive = await fetch('/live_courses.json');
+      if (rLive.ok){
+        courses = await rLive.json();
+        usingApi = true;
+      } else {
+        // prefer scraped API route next
+        const rScraped = await fetch('/api/scraped-courses');
+        if (rScraped.ok){
+          const payload = await rScraped.json();
+          courses = Array.isArray(payload) ? payload : (payload.results || payload);
+          if (!Array.isArray(courses)) courses = [];
+          usingApi = true;
+        } else {
+          // fallback to /api/courses if scraped endpoint not present
+          const r = await fetch('/api/courses');
+          if (r.ok){
+            const payload = await r.json();
+            courses = payload.results || [];
+            usingApi = true;
+          }
+        }
+      }
+    }catch(err){
+      // server not available or fetch failed
+    }
+
+    if (!usingApi){
+      const coursesUrl = './courses.sample.json';
+      try {
+        const res = await fetch(coursesUrl);
+        courses = await res.json();
+      } catch (e){
+        console.error('Failed to load courses sample', e);
+      }
+    }
+
+    const resultsHeader = document.getElementById('resultsHeader');
+  const coursesList = document.getElementById('coursesList');
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+
+  function formatTags(tags){
+    return tags && tags.length ? tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join(' ') : '';
+  }
+
+  function escapeHtml(s){
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function renderList(items){
+    resultsHeader.textContent = `Showing ${items.length} of ${courses.length} courses`;
+    coursesList.innerHTML = items.map(function(c){
+      const slugVal = (c.slug && String(c.slug)) || (c.code && String(c.code).toLowerCase()) || '';
+      const shortDesc = (c.description && String(c.description).length > 200) ? String(c.description).slice(0,200) + '...' : (c.description || '');
+      return [
+        '<article class="course-card">',
+          '<div class="course-top">',
+            '<div style="flex:1">',
+              '<h3 class="course-title"><a href="/courses/' + encodeURIComponent(slugVal) + '" style="color:inherit;text-decoration:none">' + escapeHtml(c.name) + ' (' + escapeHtml(c.code) + ')</a></h3>',
+              '<p class="course-desc">' + escapeHtml(shortDesc) + '</p>',
+            '</div>',
+          '</div>',
+          '<div class="card-footer">',
+            '<button class="learn-btn" data-slug="' + escapeHtml(slugVal) + '">Learn more</button>',
+            '<div class="tags">',
+              '<span class="tag">' + escapeHtml(c.subject || '') + '</span>',
+              '<span class="tag">' + escapeHtml(c.level) + '</span>',
+            '</div>',
+          '</div>',
+        '</article>'
+      ].join('\n');
+    }).join('\n');
+
+    // attach listeners: navigate to detail page
+    document.querySelectorAll('.learn-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{ location.href = '/courses/' + encodeURIComponent(btn.dataset.slug); });
+    });
+  }
+
+  function getCheckedValues(selector){
+    return Array.from(document.querySelectorAll(selector+':checked')).map(i=>i.value);
+  }
+
+  function applyFilters(){
+    const q = (searchInput.value || '').toLowerCase().trim();
+  const subjects = getCheckedValues('.subject-checkbox').map(s=>s.toLowerCase().trim());
+  const levels = getCheckedValues('.level-checkbox').map(s=>s.toLowerCase().trim());
+
+    const filtered = courses.filter(c=>{
+      if (q){
+        const hay = (c.name+' '+c.code+' '+(c.description||'')).toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+  if (subjects.length && !subjects.includes((c.subject||'').toLowerCase().trim())) return false;
+  if (levels.length && !levels.includes((c.level||'').toLowerCase().trim())) return false;
+      return true;
+    });
+    renderList(filtered);
+  }
+
+  // wire search and filters
+  searchBtn.addEventListener('click', applyFilters);
+  searchInput.addEventListener('keyup', (e)=>{ if (e.key==='Enter') applyFilters(); });
+  document.querySelectorAll('.subject-checkbox, .level-checkbox').forEach(cb=>cb.addEventListener('change', applyFilters));
+
+  // initial render
+  renderList(courses);
+
+  // modal handling
+  const modal = document.getElementById('courseModal');
+  const modalContent = document.getElementById('modalContent');
+  document.getElementById('modalClose').addEventListener('click', ()=>{ modal.style.display='none'; modalContent.innerHTML=''; });
+
+  // review storage: try server endpoints if available, otherwise localStorage
+  function reviewsKey(slug){ return `reviews:${slug}`; }
+  async function loadReviews(slug){
+    // if server available, fetch
+    try{
+      const r = await fetch(`/api/courses/${slug}/reviews`);
+      if (r.ok){ const payload = await r.json(); return payload.results || []; }
+    }catch(e){/* ignore */}
+    try{ return JSON.parse(localStorage.getItem(reviewsKey(slug)) || '[]'); } catch(e){ return []; }
+  }
+  async function saveReview(slug, review){
+    // try POST to server (include optional author and rating)
+    try{
+      const r = await fetch(`/api/courses/${slug}/reviews`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ rating: review.rating, text: review.text, author: review.author }) });
+      if (r.ok){ const payload = await r.json(); return payload.review; }
+    }catch(e){ /* fall back to local */ }
+    // local fallback: persist to localStorage
+    const arr = JSON.parse(localStorage.getItem(reviewsKey(slug)) || '[]');
+    arr.unshift(review);
+    localStorage.setItem(reviewsKey(slug), JSON.stringify(arr.slice(0,200)));
+    return review;
+  }
+
+  async function updateReviewsList(slug){
+    const revs = await loadReviews(slug);
+    // prepare rendered HTML
+    const html = (!revs || !revs.length)
+        ? '<p>No reviews yet. Be the first to review this course.</p>'
+        : '<div>'+revs.map(r=>{
+            const when = r.created_at ? new Date(r.created_at).toLocaleString() : '';
+            const author = r.author ? escapeHtml(r.author) : 'Anonymous';
+            const ratingPart = r.rating ? `<strong>⭐ ${escapeHtml(String(r.rating))}</strong> ` : '';
+            const repliesHtml = (r.replies && r.replies.length) ? ('<div class="replies">' + r.replies.map(rp=>{
+              const rwhen = rp.created_at ? new Date(rp.created_at).toLocaleString() : '';
+              const ra = rp.author ? escapeHtml(rp.author) : 'Anonymous';
+              return `<div style="margin-left:12px;border-left:2px solid #eee;padding-left:8px;margin-top:6px"><small style="color:#666">${ra} • ${escapeHtml(rwhen)}</small><p style="margin:6px 0">${escapeHtml(rp.text)}</p></div>`;
+            }).join('') + '</div>') : '';
+            const replyToggle = `<div style="margin-top:8px"><a href="#" class="reply-toggle" data-review-id="${r.id}">(Reply)</a><div class="reply-container" data-review-id="${r.id}"></div></div>`;
+            return `<div style="border-bottom:1px solid #eee;padding:10px 0"><div>${ratingPart}<small style=\"color:#666;margin-left:8px\">${author} • ${escapeHtml(when)}</small></div><p style=\"margin:6px 0\">${escapeHtml(r.text)}</p>${repliesHtml}${replyToggle}</div>`;
+          }).join('')+'</div>';
+
+    // try to update modal reviews container and page-level reviews container if present
+    let updated = false;
+    if (typeof modalContent !== 'undefined' && modalContent && modalContent.querySelector){
+      const modalEl = modalContent.querySelector('#modal-modalReviewsList');
+      if (modalEl){ modalEl.innerHTML = html; updated = true; }
+    }
+    const pageEl = document.getElementById('reviewsList');
+    if (pageEl){ pageEl.innerHTML = html; updated = true; }
+    // attach reply handlers (both modal-scoped and page-level). We'll create forms on-demand when user clicks (Reply).
+    // modal-scoped
+    // modal-scoped delegated click: create a form on demand
+    if (typeof modalContent !== 'undefined' && modalContent && modalContent.querySelector){
+      modalContent.addEventListener('click', function(ev){
+        const t = ev.target;
+        if (!t.classList || !t.classList.contains('reply-toggle')) return;
+        ev.preventDefault();
+        const reviewId = t.dataset.reviewId;
+        const container = t.parentNode.querySelector('.reply-container');
+        if (!container) return;
+        if (container.querySelector('.reply-form')) return;
+        const form = document.createElement('form');
+        form.className = 'reply-form'; form.dataset.reviewId = reviewId; form.style.marginTop = '8px';
+        form.innerHTML = '\n          <input class="form-input reply-author" placeholder="Your name (optional)" />\n          <textarea class="form-input reply-text" rows="2" placeholder="Reply to this review"></textarea>\n          <div style="margin-top:6px"><button type="submit" class="learn-btn">Reply</button> <button type="button" class="learn-btn reply-cancel" style="background:#aaa;margin-left:8px">Cancel</button></div>\n          <div class="reply-msg" style="color:#b70f11;margin-top:6px"></div>\n        ';
+        container.appendChild(form);
+        form.querySelector('.reply-cancel').addEventListener('click', ()=>{ form.remove(); });
+        form.addEventListener('submit', async (ev2)=>{
+          ev2.preventDefault();
+          const author = (form.querySelector('.reply-author') || {}).value || null;
+          const text = (form.querySelector('.reply-text') || {}).value || '';
+          const msgEl = form.querySelector('.reply-msg');
+          if (msgEl) msgEl.textContent = '';
+          if (!text || text.trim().length < 1){ if (msgEl) msgEl.textContent = 'Please enter a reply.'; return; }
+          try{
+            const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/replies`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ author, text }) });
+            if (!r.ok) throw new Error('failed');
+            if (msgEl) msgEl.textContent = 'Reply posted.';
+            await updateReviewsList(slug);
+          }catch(e){ if (msgEl) msgEl.textContent = 'Failed to post reply.'; }
+        });
+      });
+    }
+    // page-level delegated click handler
+    if (pageEl){
+      pageEl.addEventListener('click', function(ev){
+        const t = ev.target;
+        if (!t.classList || !t.classList.contains('reply-toggle')) return;
+        ev.preventDefault();
+        const reviewId = t.dataset.reviewId;
+        const container = t.parentNode.querySelector('.reply-container');
+        if (!container) return;
+        if (container.querySelector('.reply-form')) return;
+        const form = document.createElement('form');
+        form.className = 'reply-form'; form.dataset.reviewId = reviewId; form.style.marginTop = '8px';
+        form.innerHTML = '\n          <input class="form-input reply-author" placeholder="Your name (optional)" />\n          <textarea class="form-input reply-text" rows="2" placeholder="Reply to this review"></textarea>\n          <div style="margin-top:6px"><button type="submit" class="learn-btn">Reply</button> <button type="button" class="learn-btn reply-cancel" style="background:#aaa;margin-left:8px">Cancel</button></div>\n          <div class="reply-msg" style="color:#b70f11;margin-top:6px"></div>\n        ';
+        container.appendChild(form);
+        form.querySelector('.reply-cancel').addEventListener('click', ()=>{ form.remove(); });
+        form.addEventListener('submit', async (ev2)=>{
+          ev2.preventDefault();
+          const author = (form.querySelector('.reply-author') || {}).value || null;
+          const text = (form.querySelector('.reply-text') || {}).value || '';
+          const msgEl = form.querySelector('.reply-msg');
+          if (msgEl) msgEl.textContent = '';
+          if (!text || text.trim().length < 1){ if (msgEl) msgEl.textContent = 'Please enter a reply.'; return; }
+          try{
+            const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/replies`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ author, text }) });
+            if (!r.ok) throw new Error('failed');
+            if (msgEl) msgEl.textContent = 'Reply posted.';
+            await updateReviewsList(slug);
+          }catch(e){ if (msgEl) msgEl.textContent = 'Failed to post reply.'; }
+        });
+      });
+    }
+    if (!updated) return;
+  }
+
+  function showCourseModal(slug){
+    const c = courses.find(x=>x.slug===slug);
+    if (!c) return;
+    modalContent.innerHTML = `
+      <h2 style="margin-top:0">${escapeHtml(c.name)} <small style="color:#666">(${escapeHtml(c.code)})</small></h2>
+      <p>${escapeHtml(c.description)}</p>
+      <p><strong>Subject:</strong> ${escapeHtml(c.subject)} &nbsp; <strong>Level:</strong> ${escapeHtml(c.level)} &nbsp; <strong>Semester:</strong> ${escapeHtml(c.semester)}</p>
+      <hr />
+  <h3>Reviews</h3>
+
+  <h4>Leave a review</h4>
+  <form id="modal-reviewForm">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div id="modal-starWidget" role="radiogroup" aria-label="Rating"> 
+            <span class="star" data-value="1">☆</span>
+            <span class="star" data-value="2">☆</span>
+            <span class="star" data-value="3">☆</span>
+            <span class="star" data-value="4">☆</span>
+            <span class="star" data-value="5">☆</span>
+          </div>
+          <small style="color:#666">(click to set rating, optional)</small>
+        </div>
+  <div style="margin-top:8px"><input id="modal-authorName" class="form-input" placeholder="Your name (optional)"/></div>
+  <div style="margin-top:8px"><textarea id="modal-reviewText" class="form-input" rows="4" placeholder="Write about the course (what you liked, what could be better)"></textarea></div>
+    <div id="modal-modalFormMessage" style="color:#b70f11;margin-top:8px"></div>
+    <div style="margin-top:8px;display:flex;gap:8px;align-items:center"><button type="submit" class="learn-btn">Submit review</button><small style="color:#666">Reviews show name if provided. Rating optional.</small></div>
+      </form>
+  <div id="modal-modalReviewsList">Loading reviews…</div>
+
+    `;
+    modal.style.display='flex';
+
+  // init star widget (scoped to modal)
+  let selectedRating = null;
+  const stars = modalContent.querySelectorAll('#modal-starWidget .star');
+    function renderStars(v){
+      stars.forEach(s=>{ const val = Number(s.dataset.value); s.textContent = (v && val <= v) ? '★' : '☆'; });
+    }
+    stars.forEach(s=>{
+      s.style.cursor='pointer';
+      s.addEventListener('click', ()=>{ selectedRating = Number(s.dataset.value); renderStars(selectedRating); });
+      s.addEventListener('mouseenter', ()=>{ renderStars(Number(s.dataset.value)); });
+    });
+    modalContent.addEventListener('mouseleave', ()=>{ renderStars(selectedRating); });
+
+    // wire form (scoped queries so moving the form above the reviews list doesn't get overwritten)
+    const form = modalContent.querySelector('#modal-reviewForm');
+    form.addEventListener('submit', async (ev)=>{
+      ev.preventDefault();
+      const textEl = modalContent.querySelector('#modal-reviewText');
+      const authorEl = modalContent.querySelector('#modal-authorName');
+      const msgEl = modalContent.querySelector('#modal-modalFormMessage');
+      const text = textEl ? textEl.value.trim() : '';
+      const author = authorEl ? authorEl.value.trim() : '';
+      if (msgEl) msgEl.textContent = '';
+      if (!text || text.length < 6){ if (msgEl) msgEl.textContent = 'Please write a short review (6+ characters).'; return; }
+      const review = { id: 'r_'+Date.now(), course_id: slug, rating: selectedRating === null ? null : selectedRating, author: author || null, text, created_at: new Date().toISOString(), status:'published' };
+      try{
+        await saveReview(slug, review);
+        // refresh reviews (update modal and page-level lists)
+        await updateReviewsList(slug);
+        if (textEl) textEl.value = '';
+        if (authorEl) authorEl.value = '';
+        selectedRating = null; renderStars(null);
+        if (msgEl){ msgEl.textContent = 'Thanks — your review has been saved.'; setTimeout(()=>{ msgEl.textContent=''; }, 3000); }
+      }catch(e){ if (msgEl) msgEl.textContent = 'Failed to save review.'; }
+    });
+
+    // populate reviews
+    updateReviewsList(slug);
+  }
+
+})();
+</script>
+</html>

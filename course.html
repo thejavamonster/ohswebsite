@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Course detail</title>
+  <style>
+    body{font-family: 'Segoe UI', Roboto, Arial, sans-serif;margin:0;background:#fff;color:#222}
+    .wrap{max-width:1100px;margin:28px auto;padding:0 18px;display:flex;gap:28px}
+    .main{flex:1}
+    .sidebar{width:300px;background:#faf5ef;padding:20px;border-left:1px solid #eee}
+    h1{font-size:40px;margin:0 0 12px}
+    .lead{color:#444;line-height:1.6}
+    .meta{border-top:1px solid #eee;margin-top:18px;padding-top:18px}
+    .meta h4{margin:0 0 6px;color:#b70f11;font-size:12px}
+    .meta p{margin:6px 0 16px;font-weight:700}
+    .reviews{margin-top:22px}
+    .review{border-bottom:1px solid #eee;padding:10px 0}
+    .btn{background:#b70f11;color:#fff;padding:8px 14px;border-radius:3px;border:0;cursor:pointer}
+  textarea{width:100%;min-height:90px}
+  .form-input{width:100%;padding:8px;border:1px solid #ddd;border-radius:3px;font-size:14px;font-family:inherit}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="main">
+      <a href="/course-catalog-mockup.html">← Back to catalog</a>
+      <h1 id="courseTitle">Loading…</h1>
+      <p id="courseDesc" class="lead"></p>
+
+      <div class="reviews">
+        
+        
+
+        <h4>Add a review</h4>
+        <form id="reviewForm">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div id="starWidget" role="radiogroup" aria-label="Rating"> 
+              <span class="star" data-value="1">☆</span>
+              <span class="star" data-value="2">☆</span>
+              <span class="star" data-value="3">☆</span>
+              <span class="star" data-value="4">☆</span>
+              <span class="star" data-value="5">☆</span>
+            </div>
+            <small style="color:#666">(click to set rating, optional)</small>
+          </div>
+          <div style="margin-top:8px"><input id="authorName" class="form-input" placeholder="Your name (optional)"/></div>
+          <div style="margin-top:8px"><textarea id="reviewText" class="form-input" placeholder="What did you like? What could be better?"></textarea></div>
+          <div id="pageFormMessage" style="color:#b70f11;margin-top:8px"></div>
+          <div style="margin-top:8px"><button type="submit" class="btn">Submit review</button></div>
+        </form>
+        <h3>Reviews</h3>
+        <div id="reviewsContainer">Loading reviews…</div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="meta">
+        <h4>COURSE NUMBER</h4>
+        <p id="metaCode">—</p>
+        <h4>LEVEL</h4>
+        <p id="metaLevel">—</p>
+        <h4>SEMESTER</h4>
+        <p id="metaSemester">—</p>
+        <h4>SUBJECT</h4>
+        <p id="metaSubject">—</p>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    // Prevent legacy alert() dialogs from blocking the UI — route messages to inline message elements and console
+    window.alert = function(msg){
+      try{
+        const pageMsg = document.getElementById('pageFormMessage');
+        const modalMsg = document.getElementById('modalFormMessage');
+        if (pageMsg){ pageMsg.textContent = msg; setTimeout(()=>{ pageMsg.textContent=''; },3000); }
+        else if (modalMsg){ modalMsg.textContent = msg; setTimeout(()=>{ modalMsg.textContent=''; },3000); }
+        else console.log('alert:', msg);
+      }catch(e){ console.log('alert override error', e); }
+    };
+
+    // read slug from URL path /courses/:slug
+    const parts = location.pathname.split('/').filter(Boolean);
+    const slug = parts.length && parts[0]==='courses' ? parts[1] : new URLSearchParams(location.search).get('slug');
+    if (!slug){ document.getElementById('courseTitle').textContent='Course not found'; }
+
+    async function fetchCourse(){
+      try{
+        // prefer local combined scraped JSON first
+        try{
+          const rLive = await fetch('/live_courses.json');
+          if (rLive.ok){
+            const list = await rLive.json();
+            const sslug = String(slug).toLowerCase();
+            const found = (Array.isArray(list) ? list : []).find(x=> (x.slug && String(x.slug).toLowerCase()===sslug) || (x.code && String(x.code).toLowerCase()===sslug) );
+            if (found){
+              populate(found);
+              return;
+            }
+          }
+        }catch(e){/* ignore and fallback to API */}
+
+        // fallback to server API
+        const r = await fetch(`/api/courses/${slug}`);
+        if (!r.ok) throw new Error('not found');
+        const c = await r.json();
+        populate(c);
+      }catch(e){
+        document.getElementById('courseTitle').textContent='Course not found';
+        document.getElementById('courseDesc').textContent='';
+      }
+    }
+
+    function populate(c){
+      document.getElementById('courseTitle').textContent = (c.name || '') + ' ';
+      document.getElementById('courseDesc').textContent = c.description || '';
+      document.getElementById('metaCode').textContent = c.code || '';
+      document.getElementById('metaLevel').textContent = c.level || '';
+      document.getElementById('metaSemester').textContent = c.semester || '';
+      document.getElementById('metaSubject').textContent = c.subject || '';
+    }
+
+    function escapeHtml(s){
+      return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    async function loadReviews(){
+      try{
+        const r = await fetch(`/api/courses/${slug}/reviews`);
+        if (!r.ok) throw new Error('no reviews');
+        const payload = await r.json();
+        const list = payload.results || [];
+        const container = document.getElementById('reviewsContainer');
+        if (!container) return;
+        // ensure there's a dedicated list element so we don't overwrite the whole container (which may include the form)
+        let listEl = container.querySelector('#reviewsList');
+        if (!listEl){
+          listEl = document.createElement('div');
+          listEl.id = 'reviewsList';
+          // if the form was moved inside the container, insert the list after the form; otherwise clear placeholder and append
+          const formEl = container.querySelector('#reviewForm');
+          if (formEl && formEl.parentNode === container){
+            formEl.insertAdjacentElement('afterend', listEl);
+          } else {
+            // remove any placeholder text (e.g. 'Loading reviews…') before appending
+            container.innerHTML = '';
+            container.appendChild(listEl);
+          }
+        }
+        if (!list.length) { listEl.innerHTML = '<p>No reviews yet.</p>'; return; }
+        listEl.innerHTML = list.map(rv=>{
+          const when = rv.created_at ? new Date(rv.created_at).toLocaleString() : '';
+          const author = rv.author ? rv.author : 'Anonymous';
+          const ratingPart = rv.rating ? `<strong>⭐ ${rv.rating}</strong> ` : '';
+          const repliesHtml = (rv.replies && rv.replies.length) ? ('<div class="replies">' + rv.replies.map(rp=>{
+            const rwhen = rp.created_at ? new Date(rp.created_at).toLocaleString() : '';
+            const ra = rp.author ? escapeHtml(rp.author) : 'Anonymous';
+            return `<div style="margin-left:12px;border-left:2px solid #eee;padding-left:8px;margin-top:6px"><small style="color:#666">${ra} • ${escapeHtml(rwhen)}</small><p style="margin:6px 0">${escapeHtml(rp.text)}</p></div>`;
+          }).join('') + '</div>') : '';
+          // reply toggle and container for on-demand reply form
+          const replyToggle = `<div style="margin-top:8px"><a href="#" class="reply-toggle" data-review-id="${rv.id}">(Reply)</a><div class="reply-container" data-review-id="${rv.id}"></div></div>`;
+          return `<div class="review">${ratingPart}<small style="color:#666;margin-left:8px">${author} • ${when}</small><p>${escapeHtml(rv.text)}</p>${repliesHtml}${replyToggle}</div>`;
+        }).join('');
+        // delegated handler: open a small reply form only when user clicks (Reply)
+        listEl.addEventListener('click', function(ev){
+          const t = ev.target;
+          if (!t.classList || !t.classList.contains('reply-toggle')) return;
+          ev.preventDefault();
+          const reviewId = t.dataset.reviewId;
+          const container = t.parentNode.querySelector('.reply-container');
+          if (!container) return;
+          // if a form already exists, don't create another
+          if (container.querySelector('.reply-form')) return;
+          // build form
+          const form = document.createElement('form');
+          form.className = 'reply-form';
+          form.dataset.reviewId = reviewId;
+          form.style.marginTop = '8px';
+          form.innerHTML = '\n            <input class="form-input reply-author" placeholder="Your name (optional)" />\n            <textarea class="form-input reply-text" rows="2" placeholder="Reply to this review"></textarea>\n            <div style="margin-top:6px"><button type="submit" class="btn">Reply</button> <button type="button" class="btn reply-cancel" style="background:#aaa;margin-left:8px">Cancel</button></div>\n            <div class="reply-msg" style="color:#b70f11;margin-top:6px"></div>\n          ';
+          container.appendChild(form);
+          form.querySelector('.reply-cancel').addEventListener('click', ()=>{ form.remove(); });
+          form.addEventListener('submit', async (ev2)=>{
+            ev2.preventDefault();
+            const author = (form.querySelector('.reply-author') || {}).value || null;
+            const text = (form.querySelector('.reply-text') || {}).value || '';
+            const msgEl = form.querySelector('.reply-msg');
+            if (msgEl) msgEl.textContent = '';
+            if (!text || text.trim().length < 1){ if (msgEl) msgEl.textContent = 'Please enter a reply.'; return; }
+            try{
+              const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/replies`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ author, text }) });
+              if (!r.ok) throw new Error('failed');
+              if (msgEl) msgEl.textContent = 'Reply posted.';
+              await loadReviews();
+            }catch(e){ if (msgEl) msgEl.textContent = 'Failed to post reply.'; }
+          });
+        });
+      }catch(e){
+        console.error('loadReviews error:', e);
+        const container = document.getElementById('reviewsContainer');
+        if (container){
+          let listEl = container.querySelector('#reviewsList');
+          if (!listEl){ listEl = document.createElement('div'); listEl.id = 'reviewsList'; container.appendChild(listEl); }
+          const msg = e && e.message ? e.message : 'Unable to load reviews.';
+          listEl.innerHTML = `<p>Unable to load reviews: ${escapeHtml(msg)}</p>`;
+        }
+      }
+    }
+
+    // star widget
+    let selectedRating = null;
+    const stars = Array.from(document.querySelectorAll('#starWidget .star'));
+    function renderStars(v){ stars.forEach(s=>{ s.textContent = (v && Number(s.dataset.value) <= v) ? '★' : '☆'; }); }
+    stars.forEach(s=>{ s.style.cursor='pointer'; s.addEventListener('click', ()=>{ selectedRating = Number(s.dataset.value); renderStars(selectedRating); }); s.addEventListener('mouseenter', ()=>{ renderStars(Number(s.dataset.value)); }); });
+    document.querySelector('#starWidget').addEventListener('mouseleave', ()=>{ renderStars(selectedRating); });
+
+    document.getElementById('reviewForm').addEventListener('submit', async function(ev){
+      ev.preventDefault();
+      const text = document.getElementById('reviewText').value.trim();
+      const author = document.getElementById('authorName').value.trim();
+      const msgEl = document.getElementById('pageFormMessage');
+      if (msgEl) msgEl.textContent = '';
+      if (!text || text.length < 6){ if (msgEl) msgEl.textContent = 'Please write a short review (6+ characters)'; return; }
+      try{
+        const body = { text };
+        if (selectedRating !== null) body.rating = selectedRating;
+        if (author) body.author = author;
+        const r = await fetch(`/api/courses/${slug}/reviews`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body) });
+        if (!r.ok) throw new Error('failed');
+        document.getElementById('reviewText').value = '';
+        document.getElementById('authorName').value = '';
+        selectedRating = null; renderStars(null);
+        await loadReviews();
+        if (msgEl){ msgEl.textContent = 'Thanks — your review was submitted.'; setTimeout(()=>{ msgEl.textContent=''; }, 3000); }
+      }catch(e){ if (msgEl) msgEl.textContent = 'Failed to submit review.'; }
+    });
+
+    fetchCourse();
+    loadReviews();
+  </script>
+</body>
+</html>
