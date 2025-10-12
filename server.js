@@ -52,9 +52,18 @@ app.get('/api/courses/:slug', (req,res)=>{
 // GET /api/courses/:slug/reviews
 app.get('/api/courses/:slug/reviews', (req,res)=>{
   const all = readJson(REVIEWS_FILE) || {};
-  const list = (all[req.params.slug] || []).map(r => (Object.assign({ replies: [] }, r)) );
-  // ensure replies array exists for each review
-  list.forEach(r => { if (!Array.isArray(r.replies)) r.replies = []; });
+  const list = (all[req.params.slug] || []).map(r => (Object.assign({ replies: [], upvotes: 0, downvotes: 0 }, r)) );
+  // ensure replies array and vote counts exist for each review
+  list.forEach(r => { if (!Array.isArray(r.replies)) r.replies = []; if (typeof r.upvotes !== 'number') r.upvotes = 0; if (typeof r.downvotes !== 'number') r.downvotes = 0; });
+  // sort by score (upvotes - downvotes) desc, then by created_at desc
+  list.sort((a,b)=>{
+    const scoreA = (a.upvotes||0) - (a.downvotes||0);
+    const scoreB = (b.upvotes||0) - (b.downvotes||0);
+    if (scoreB !== scoreA) return scoreB - scoreA;
+    const tA = a.created_at ? Date.parse(a.created_at) : 0;
+    const tB = b.created_at ? Date.parse(b.created_at) : 0;
+    return tB - tA;
+  });
   res.json({ total: list.length, results: list });
 });
 
@@ -74,6 +83,40 @@ app.post('/api/courses/:slug/reviews', (req,res)=>{
   all[slug].unshift(review);
   writeJson(REVIEWS_FILE, all);
   res.status(201).json({ success:true, review });
+});
+
+// POST /api/courses/:slug/reviews/:reviewId/vote
+app.post('/api/courses/:slug/reviews/:reviewId/vote', (req,res)=>{
+  // Accepts { vote: 'up'|'down', prev?: 'up'|'down'|null }
+  const { vote, prev } = req.body || {};
+  if (!vote || (vote !== 'up' && vote !== 'down')) return res.status(400).json({ error: 'invalid vote' });
+  if (prev !== undefined && prev !== null && prev !== 'up' && prev !== 'down') return res.status(400).json({ error: 'invalid prev' });
+  const slug = req.params.slug;
+  const reviewId = req.params.reviewId;
+  const all = readJson(REVIEWS_FILE) || {};
+  const list = all[slug] || [];
+  const review = list.find(r=> r.id === reviewId);
+  if (!review) return res.status(404).json({ error: 'review not found' });
+  review.upvotes = typeof review.upvotes === 'number' ? review.upvotes : 0;
+  review.downvotes = typeof review.downvotes === 'number' ? review.downvotes : 0;
+  // Determine update: if prev === vote => undo; if prev is null/undefined => add; if prev !== vote => switch
+  if (prev === vote){
+    // undo previous vote
+    if (vote === 'up') review.upvotes = Math.max(0, review.upvotes - 1);
+    else review.downvotes = Math.max(0, review.downvotes - 1);
+  } else if (!prev){
+    // new vote
+    if (vote === 'up') review.upvotes += 1;
+    else review.downvotes += 1;
+  } else if (prev !== vote){
+    // change vote: remove prev, add new
+    if (prev === 'up') review.upvotes = Math.max(0, review.upvotes - 1);
+    else review.downvotes = Math.max(0, review.downvotes - 1);
+    if (vote === 'up') review.upvotes += 1;
+    else review.downvotes += 1;
+  }
+  writeJson(REVIEWS_FILE, all);
+  res.json({ success:true, upvotes: review.upvotes, downvotes: review.downvotes });
 });
 
 // POST /api/courses/:slug/reviews/:reviewId/replies

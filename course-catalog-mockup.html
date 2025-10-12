@@ -23,6 +23,7 @@
     }
     /* Left column - filters */
     .sidebar{
+      position: sticky;
       width:28%; /* approx 1/4 */
       min-width:220px;
     }
@@ -124,6 +125,9 @@
   };
 
   (async function(){
+    // handler guards so we don't double-register event listeners
+    let __modalClickHandlerAttached = false;
+    let __pageClickHandlerAttached = false;
     // Try API first (scraped output or server), otherwise fallback to local sample file
     let courses = [];
     const apiBase = location.origin === 'null' ? null : '';
@@ -269,7 +273,7 @@
   async function updateReviewsList(slug){
     const revs = await loadReviews(slug);
     // prepare rendered HTML
-    const html = (!revs || !revs.length)
+  const html = (!revs || !revs.length)
         ? '<p>No reviews yet. Be the first to review this course.</p>'
         : '<div>'+revs.map(r=>{
             const when = r.created_at ? new Date(r.created_at).toLocaleString() : '';
@@ -280,11 +284,33 @@
               const ra = rp.author ? escapeHtml(rp.author) : 'Anonymous';
               return `<div style="margin-left:12px;border-left:2px solid #eee;padding-left:8px;margin-top:6px"><small style="color:#666">${ra} • ${escapeHtml(rwhen)}</small><p style="margin:6px 0">${escapeHtml(rp.text)}</p></div>`;
             }).join('') + '</div>') : '';
-            const replyToggle = `<div style="margin-top:8px"><a href="#" class="reply-toggle" data-review-id="${r.id}">(Reply)</a><div class="reply-container" data-review-id="${r.id}"></div></div>`;
+            // place votes next to the reply toggle instead of in the header
+            // determine local vote state to render active/inactive styles
+            const localKey = 'vote:'+slug+':'+r.id;
+            const localVote = (typeof localStorage !== 'undefined') ? (localStorage.getItem(localKey) || null) : null;
+            const upStyle = localVote === 'up' ? 'filter:none;opacity:1' : 'filter:grayscale(70%);opacity:0.7';
+            const downStyle = localVote === 'down' ? 'filter:none;opacity:1' : 'filter:grayscale(70%);opacity:0.7';
+            // keep reply link inline with votes, but place the on-demand form above via the reply-region structure
+            const replyToggle = `<div style="margin-top:8px">
+              <div class="reply-region">
+                <div class="reply-container" data-review-id="${r.id}" style="margin-bottom:8px"></div>
+                <div style="display:flex;gap:12px;align-items:center">
+                  <a href="#" class="reply-toggle" data-review-id="${r.id}">(Reply)</a>
+                  <span class="votes-inline" data-review-id="${r.id}" style="display:flex;gap:8px;align-items:center">
+                    <img src="/thumbsup.png" alt="upvote" class="vote-up" data-review-id="${r.id}" role="button" tabindex="0" style="width:18px;height:18px;cursor:pointer;${upStyle}"/>
+                    <span class="upcount">${r.upvotes||0}</span>
+                    <img src="/thumbsdown.png" alt="downvote" class="vote-down" data-review-id="${r.id}" role="button" tabindex="0" style="width:18px;height:18px;cursor:pointer;${downStyle}"/>
+                    <span class="downcount">${r.downvotes||0}</span>
+                  </span>
+                </div>
+              </div>
+            </div>`;
             return `<div style="border-bottom:1px solid #eee;padding:10px 0"><div>${ratingPart}<small style=\"color:#666;margin-left:8px\">${author} • ${escapeHtml(when)}</small></div><p style=\"margin:6px 0\">${escapeHtml(r.text)}</p>${repliesHtml}${replyToggle}</div>`;
           }).join('')+'</div>';
 
-    // try to update modal reviews container and page-level reviews container if present
+  // debug: show where reviews are being rendered
+  try{ console.debug('[updateReviewsList] rendering', { slug, count: (revs||[]).length, ids: (revs||[]).slice(0,10).map(x=>x.id) }); }catch(e){}
+  // try to update modal reviews container and page-level reviews container if present
     let updated = false;
     if (typeof modalContent !== 'undefined' && modalContent && modalContent.querySelector){
       const modalEl = modalContent.querySelector('#modal-modalReviewsList');
@@ -295,18 +321,52 @@
     // attach reply handlers (both modal-scoped and page-level). We'll create forms on-demand when user clicks (Reply).
     // modal-scoped
     // modal-scoped delegated click: create a form on demand
-    if (typeof modalContent !== 'undefined' && modalContent && modalContent.querySelector){
+    if (typeof modalContent !== 'undefined' && modalContent && modalContent.querySelector && !__modalClickHandlerAttached){
       modalContent.addEventListener('click', function(ev){
         const t = ev.target;
+        // handle vote clicks inside the modal (thumb up / down). Accept clicks on the up/down text, images, or containing span
+        if (t.classList && (t.classList.contains('upcount') || t.classList.contains('downcount') || t.classList.contains('vote-up') || t.classList.contains('vote-down') || (t.parentNode && t.parentNode.classList && t.parentNode.classList.contains('votes-inline')))){
+          ev.preventDefault();
+          // find the container holding the vote data-review-id
+          const voteContainer = t.classList && (t.classList.contains('votes-inline') || t.classList.contains('vote-up') || t.classList.contains('vote-down')) ? t : (t.parentNode && t.parentNode.classList && t.parentNode.classList.contains('votes-inline') ? t.parentNode : null);
+          if (!voteContainer) return;
+          const reviewId = voteContainer.dataset.reviewId || (t.dataset && t.dataset.reviewId) || null;
+          if (!reviewId) return;
+          const isUp = t.classList.contains('vote-up');
+          const voteType = isUp ? 'up' : 'down';
+          // local prev tracking key
+          const key = `vote:${slug}:${reviewId}`;
+          const prev = localStorage.getItem(key) || null; // 'up' | 'down' or null
+          // compute intended action: if prev === voteType => undo; if prev === other => switch; if prev == null => add
+          const payload = { vote: voteType, prev: prev };
+          // optimistic local update
+          try{
+            if (prev === voteType) localStorage.removeItem(key); else localStorage.setItem(key, voteType);
+          }catch(e){}
+          (async ()=>{
+            try{
+              const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/vote`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+              if (!r.ok) throw new Error('vote failed');
+              await updateReviewsList(slug);
+            }catch(e){
+              console.error('vote error', e);
+              // revert optimistic change
+              try{ if (prev === voteType) localStorage.setItem(key, prev); else if (!prev) localStorage.removeItem(key); else localStorage.setItem(key, prev); }catch(e2){}
+              await updateReviewsList(slug);
+            }
+          })();
+          return;
+        }
         if (!t.classList || !t.classList.contains('reply-toggle')) return;
         ev.preventDefault();
-        const reviewId = t.dataset.reviewId;
-        const container = t.parentNode.querySelector('.reply-container');
+  const reviewId = t.dataset.reviewId;
+  const region = t.closest && t.closest('.reply-region');
+  const container = region ? region.querySelector('.reply-container') : (t.parentNode && t.parentNode.querySelector('.reply-container'));
         if (!container) return;
         if (container.querySelector('.reply-form')) return;
         const form = document.createElement('form');
         form.className = 'reply-form'; form.dataset.reviewId = reviewId; form.style.marginTop = '8px';
-        form.innerHTML = '\n          <input class="form-input reply-author" placeholder="Your name (optional)" />\n          <textarea class="form-input reply-text" rows="2" placeholder="Reply to this review"></textarea>\n          <div style="margin-top:6px"><button type="submit" class="learn-btn">Reply</button> <button type="button" class="learn-btn reply-cancel" style="background:#aaa;margin-left:8px">Cancel</button></div>\n          <div class="reply-msg" style="color:#b70f11;margin-top:6px"></div>\n        ';
+  form.innerHTML = '\n          <input class="form-input reply-author" placeholder="Your name (optional)" />\n          <textarea class="form-input reply-text" rows="4" placeholder="Reply to this review"></textarea>\n          <div style="margin-top:6px"><button type="submit" class="learn-btn">Reply</button> <button type="button" class="learn-btn reply-cancel" style="background:#aaa;margin-left:8px">Cancel</button></div>\n          <div class="reply-msg" style="color:#b70f11;margin-top:6px"></div>\n        ';
         container.appendChild(form);
         form.querySelector('.reply-cancel').addEventListener('click', ()=>{ form.remove(); });
         form.addEventListener('submit', async (ev2)=>{
@@ -324,20 +384,40 @@
           }catch(e){ if (msgEl) msgEl.textContent = 'Failed to post reply.'; }
         });
       });
+      __modalClickHandlerAttached = true;
     }
-    // page-level delegated click handler
-    if (pageEl){
+    // page-level delegated click handler (handles votes and reply toggles)
+    if (pageEl && !__pageClickHandlerAttached){
       pageEl.addEventListener('click', function(ev){
         const t = ev.target;
+        // handle vote clicks on page list (images or counts)
+        if (t.classList && (t.classList.contains('upcount') || t.classList.contains('downcount') || t.classList.contains('vote-up') || t.classList.contains('vote-down') || (t.parentNode && t.parentNode.classList && t.parentNode.classList.contains('votes-inline')))){
+          ev.preventDefault();
+          const voteContainer = t.classList && (t.classList.contains('votes-inline') || t.classList.contains('vote-up') || t.classList.contains('vote-down')) ? t : (t.parentNode && t.parentNode.classList && t.parentNode.classList.contains('votes-inline') ? t.parentNode : null);
+          if (!voteContainer) return;
+          const reviewId = voteContainer.dataset.reviewId || (t.dataset && t.dataset.reviewId) || null;
+          if (!reviewId) return;
+          const isUp = t.classList.contains('vote-up') || t.classList.contains('upcount');
+          const voteType = isUp ? 'up' : 'down';
+          (async ()=>{
+            try{
+              const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/vote`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ vote: voteType }) });
+              if (!r.ok) throw new Error('vote failed');
+              await updateReviewsList(slug);
+            }catch(e){ console.error('vote error', e); }
+          })();
+          return;
+        }
         if (!t.classList || !t.classList.contains('reply-toggle')) return;
         ev.preventDefault();
-        const reviewId = t.dataset.reviewId;
-        const container = t.parentNode.querySelector('.reply-container');
+  const reviewId = t.dataset.reviewId;
+  const region = t.closest && t.closest('.reply-region');
+  const container = region ? region.querySelector('.reply-container') : (t.parentNode && t.parentNode.querySelector('.reply-container'));
         if (!container) return;
         if (container.querySelector('.reply-form')) return;
         const form = document.createElement('form');
         form.className = 'reply-form'; form.dataset.reviewId = reviewId; form.style.marginTop = '8px';
-        form.innerHTML = '\n          <input class="form-input reply-author" placeholder="Your name (optional)" />\n          <textarea class="form-input reply-text" rows="2" placeholder="Reply to this review"></textarea>\n          <div style="margin-top:6px"><button type="submit" class="learn-btn">Reply</button> <button type="button" class="learn-btn reply-cancel" style="background:#aaa;margin-left:8px">Cancel</button></div>\n          <div class="reply-msg" style="color:#b70f11;margin-top:6px"></div>\n        ';
+  form.innerHTML = '\n          <input class="form-input reply-author" placeholder="Your name (optional)" />\n          <textarea class="form-input reply-text" rows="4" placeholder="Reply to this review"></textarea>\n          <div style="margin-top:6px"><button type="submit" class="learn-btn">Reply</button> <button type="button" class="learn-btn reply-cancel" style="background:#aaa;margin-left:8px">Cancel</button></div>\n          <div class="reply-msg" style="color:#b70f11;margin-top:6px"></div>\n        ';
         container.appendChild(form);
         form.querySelector('.reply-cancel').addEventListener('click', ()=>{ form.remove(); });
         form.addEventListener('submit', async (ev2)=>{
@@ -355,6 +435,7 @@
           }catch(e){ if (msgEl) msgEl.textContent = 'Failed to post reply.'; }
         });
       });
+      __pageClickHandlerAttached = true;
     }
     if (!updated) return;
   }

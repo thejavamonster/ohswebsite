@@ -124,6 +124,8 @@
     function escapeHtml(s){
       return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     }
+    // guard for handlers
+    let __listClickHandlerAttached = false;
 
     async function loadReviews(){
       try{
@@ -149,53 +151,107 @@
           }
         }
         if (!list.length) { listEl.innerHTML = '<p>No reviews yet.</p>'; return; }
-        listEl.innerHTML = list.map(rv=>{
+  console.debug('[loadReviews] rendering', { slug, count: list.length, ids: list.slice(0,10).map(x=>x.id) });
+  listEl.innerHTML = list.map(rv=>{
           const when = rv.created_at ? new Date(rv.created_at).toLocaleString() : '';
           const author = rv.author ? rv.author : 'Anonymous';
-          const ratingPart = rv.rating ? `<strong>⭐ ${rv.rating}</strong> ` : '';
+          // render numeric rating as a 5-star string, e.g. 2 -> '★★☆☆☆'
+          const ratingPart = (function(r){
+            if (r === null || r === undefined) return '';
+            const n = Math.max(0, Math.min(5, Number(r) || 0));
+            if (!n) return '';
+            const filled = '★'.repeat(n);
+            const empty = '☆'.repeat(5 - n);
+            return `${filled}${empty} `;
+          })(rv.rating);
           const repliesHtml = (rv.replies && rv.replies.length) ? ('<div class="replies">' + rv.replies.map(rp=>{
             const rwhen = rp.created_at ? new Date(rp.created_at).toLocaleString() : '';
             const ra = rp.author ? escapeHtml(rp.author) : 'Anonymous';
             return `<div style="margin-left:12px;border-left:2px solid #eee;padding-left:8px;margin-top:6px"><small style="color:#666">${ra} • ${escapeHtml(rwhen)}</small><p style="margin:6px 0">${escapeHtml(rp.text)}</p></div>`;
           }).join('') + '</div>') : '';
           // reply toggle and container for on-demand reply form
-          const replyToggle = `<div style="margin-top:8px"><a href="#" class="reply-toggle" data-review-id="${rv.id}">(Reply)</a><div class="reply-container" data-review-id="${rv.id}"></div></div>`;
+          const localKey = 'vote:'+slug+':'+rv.id;
+          const localVote = (typeof localStorage !== 'undefined') ? (localStorage.getItem(localKey) || null) : null;
+          const upStyle = localVote === 'up' ? 'filter:none;opacity:1' : 'filter:grayscale(50%);opacity:0.5';
+          const downStyle = localVote === 'down' ? 'filter:none;opacity:1' : 'filter:grayscale(50%);opacity:0.5';
+          // keep reply link inline with votes, but place the on-demand form above via the reply-region structure
+          const replyToggle = `<div style="margin-top:8px">
+            <div class="reply-region">
+              <div class="reply-container" data-review-id="${rv.id}" style="margin-bottom:8px"></div>
+              <div style="display:flex;gap:12px;align-items:center">
+                <a href="#" class="reply-toggle" data-review-id="${rv.id}">(Reply)</a>
+                <span class="votes-inline" data-review-id="${rv.id}" style="display:flex;gap:8px;align-items:center">
+                  <img src="/thumbsup.png" alt="upvote" class="vote-up" data-review-id="${rv.id}" role="button" tabindex="0" style="width:18px;height:18px;cursor:pointer;${upStyle}"/>
+                  <span class="upcount">${rv.upvotes||0}</span>
+                  <img src="/thumbsdown.png" alt="downvote" class="vote-down" data-review-id="${rv.id}" role="button" tabindex="0" style="width:18px;height:18px;cursor:pointer;${downStyle}"/>
+                  <span class="downcount">${rv.downvotes||0}</span>
+                </span>
+              </div>
+            </div>
+          </div>`;
           return `<div class="review">${ratingPart}<small style="color:#666;margin-left:8px">${author} • ${when}</small><p>${escapeHtml(rv.text)}</p>${repliesHtml}${replyToggle}</div>`;
         }).join('');
         // delegated handler: open a small reply form only when user clicks (Reply)
-        listEl.addEventListener('click', function(ev){
-          const t = ev.target;
-          if (!t.classList || !t.classList.contains('reply-toggle')) return;
-          ev.preventDefault();
-          const reviewId = t.dataset.reviewId;
-          const container = t.parentNode.querySelector('.reply-container');
-          if (!container) return;
-          // if a form already exists, don't create another
-          if (container.querySelector('.reply-form')) return;
-          // build form
-          const form = document.createElement('form');
-          form.className = 'reply-form';
-          form.dataset.reviewId = reviewId;
-          form.style.marginTop = '8px';
-          form.innerHTML = '\n            <input class="form-input reply-author" placeholder="Your name (optional)" />\n            <textarea class="form-input reply-text" rows="2" placeholder="Reply to this review"></textarea>\n            <div style="margin-top:6px"><button type="submit" class="btn">Reply</button> <button type="button" class="btn reply-cancel" style="background:#aaa;margin-left:8px">Cancel</button></div>\n            <div class="reply-msg" style="color:#b70f11;margin-top:6px"></div>\n          ';
-          container.appendChild(form);
-          form.querySelector('.reply-cancel').addEventListener('click', ()=>{ form.remove(); });
-          form.addEventListener('submit', async (ev2)=>{
-            ev2.preventDefault();
-            const author = (form.querySelector('.reply-author') || {}).value || null;
-            const text = (form.querySelector('.reply-text') || {}).value || '';
-            const msgEl = form.querySelector('.reply-msg');
-            if (msgEl) msgEl.textContent = '';
-            if (!text || text.trim().length < 1){ if (msgEl) msgEl.textContent = 'Please enter a reply.'; return; }
-            try{
-              const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/replies`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ author, text }) });
-              if (!r.ok) throw new Error('failed');
-              if (msgEl) msgEl.textContent = 'Reply posted.';
-              await loadReviews();
-            }catch(e){ if (msgEl) msgEl.textContent = 'Failed to post reply.'; }
+        if (!__listClickHandlerAttached){
+          listEl.addEventListener('click', function(ev){
+            __listClickHandlerAttached = true;
+            const t = ev.target;
+            // handle vote clicks (thumb up / down). We'll accept clicks on the up/down text or the span
+            if (t.classList && (t.classList.contains('upcount') || t.classList.contains('downcount') || t.classList.contains('vote-up') || t.classList.contains('vote-down') || (t.parentNode && t.parentNode.classList && t.parentNode.classList.contains('votes-inline')))){
+              ev.preventDefault();
+              const voteContainer = t.classList && (t.classList.contains('votes-inline') || t.classList.contains('vote-up') || t.classList.contains('vote-down')) ? t : (t.parentNode && t.parentNode.classList && t.parentNode.classList.contains('votes-inline') ? t.parentNode : null);
+              if (!voteContainer) return;
+              const reviewId = voteContainer.dataset.reviewId || (t.dataset && t.dataset.reviewId) || null;
+              if (!reviewId) return;
+              const isUp = t.classList.contains('vote-up');
+              const voteType = isUp ? 'up' : 'down';
+              const key = `vote:${slug}:${reviewId}`;
+              const prev = localStorage.getItem(key) || null;
+              const payload = { vote: voteType, prev: prev };
+              (async ()=>{
+                try{
+                  const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/vote`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+                  if (!r.ok) throw new Error('vote failed');
+                  if (prev === voteType) localStorage.removeItem(key); else localStorage.setItem(key, voteType);
+                  await loadReviews();
+                }catch(e){ console.error('vote error', e); }
+              })();
+              return;
+            }
+            if (!t.classList || !t.classList.contains('reply-toggle')) return;
+            ev.preventDefault();
+            const reviewId = t.dataset.reviewId;
+            // find the nearest reply-region and then the reply-container inside it
+            const region = t.closest && t.closest('.reply-region');
+            const container = region ? region.querySelector('.reply-container') : (t.parentNode && t.parentNode.querySelector('.reply-container'));
+            if (!container) return;
+            // if a form already exists, don't create another
+            if (container.querySelector('.reply-form')) return;
+            // build form
+            const form = document.createElement('form');
+            form.className = 'reply-form';
+            form.dataset.reviewId = reviewId;
+            form.style.marginTop = '8px';
+            form.innerHTML = '\n            <input class="form-input reply-author" placeholder="Your name (optional)" />\n            <textarea class="form-input reply-text" rows="4" placeholder="Reply to this review"></textarea>\n            <div style="margin-top:6px"><button type="submit" class="btn">Reply</button> <button type="button" class="btn reply-cancel" style="background:#aaa;margin-left:8px">Cancel</button></div>\n            <div class="reply-msg" style="color:#b70f11;margin-top:6px"></div>\n          ';
+            container.appendChild(form);
+            form.querySelector('.reply-cancel').addEventListener('click', ()=>{ form.remove(); });
+            form.addEventListener('submit', async (ev2)=>{
+              ev2.preventDefault();
+              const author = (form.querySelector('.reply-author') || {}).value || null;
+              const text = (form.querySelector('.reply-text') || {}).value || '';
+              const msgEl = form.querySelector('.reply-msg');
+              if (msgEl) msgEl.textContent = '';
+              if (!text || text.trim().length < 1){ if (msgEl) msgEl.textContent = 'Please enter a reply.'; return; }
+              try{
+                const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/replies`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ author, text }) });
+                if (!r.ok) throw new Error('failed');
+                if (msgEl) msgEl.textContent = 'Reply posted.';
+                await loadReviews();
+              }catch(e){ if (msgEl) msgEl.textContent = 'Failed to post reply.'; }
+            });
           });
-        });
-      }catch(e){
+        }
+      } catch(e) {
         console.error('loadReviews error:', e);
         const container = document.getElementById('reviewsContainer');
         if (container){
