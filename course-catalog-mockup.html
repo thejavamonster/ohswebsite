@@ -63,7 +63,12 @@
     }
   </style>
 </head>
-<body>
+<body style="padding-top:44px">
+  <!-- Top red bar: shows logged-in username and logout button -->
+  <div id="topBar" style="position:fixed;top:0;left:0;right:0;height:44px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:flex-end;padding:0 14px;box-shadow:0 1px 0 rgba(0,0,0,0.05);z-index:1000">
+    <div id="topBarUser" style="margin-right:12px;font-weight:600"></div>
+    <button id="logoutBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.25);color:#fff;padding:6px 10px;border-radius:3px;cursor:pointer">Logout</button>
+  </div>
   <div class="container">
     <aside class="sidebar">
       <div class="filters">
@@ -260,7 +265,7 @@
   async function saveReview(slug, review){
     // try POST to server (include optional author and rating)
     try{
-      const r = await fetch(`/api/courses/${slug}/reviews`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ rating: review.rating, text: review.text, author: review.author }) });
+  const r = await fetch(`/api/courses/${slug}/reviews`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ rating: review.rating, text: review.text, author: (review.author === '' ? null : review.author) }) });
       if (r.ok){ const payload = await r.json(); return payload.review; }
     }catch(e){ /* fall back to local */ }
     // local fallback: persist to localStorage
@@ -271,7 +276,13 @@
   }
 
   async function updateReviewsList(slug){
-    const revs = await loadReviews(slug);
+    // try admin endpoint first to obtain full data when admin; otherwise use public loadReviews
+    let revs = [];
+    try{
+      const adminResp = await fetch('/api/admin/reviews');
+      if (adminResp.ok){ const adminPayload = await adminResp.json(); const all = adminPayload.results || {}; revs = all[slug] || []; }
+    }catch(e){ }
+    if (!revs || !revs.length){ revs = await loadReviews(slug); }
     // prepare rendered HTML
   const html = (!revs || !revs.length)
         ? '<p>No reviews yet. Be the first to review this course.</p>'
@@ -377,7 +388,7 @@
           if (msgEl) msgEl.textContent = '';
           if (!text || text.trim().length < 1){ if (msgEl) msgEl.textContent = 'Please enter a reply.'; return; }
           try{
-            const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/replies`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ author, text }) });
+            const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/replies`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ author: (author === '' ? null : author), text }) });
             if (!r.ok) throw new Error('failed');
             if (msgEl) msgEl.textContent = 'Reply posted.';
             await updateReviewsList(slug);
@@ -428,7 +439,7 @@
           if (msgEl) msgEl.textContent = '';
           if (!text || text.trim().length < 1){ if (msgEl) msgEl.textContent = 'Please enter a reply.'; return; }
           try{
-            const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/replies`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ author, text }) });
+            const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}/replies`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ author: (author === '' ? null : author), text }) });
             if (!r.ok) throw new Error('failed');
             if (msgEl) msgEl.textContent = 'Reply posted.';
             await updateReviewsList(slug);
@@ -462,7 +473,7 @@
           </div>
           <small style="color:#666">(click to set rating, optional)</small>
         </div>
-  <div style="margin-top:8px"><input id="modal-authorName" class="form-input" placeholder="Your name (optional)"/></div>
+  <div style="margin-top:8px"><input id="modal-authorName" class="form-input" placeholder="Your name (optional)" /></div>
   <div style="margin-top:8px"><textarea id="modal-reviewText" class="form-input" rows="4" placeholder="Write about the course (what you liked, what could be better)"></textarea></div>
     <div id="modal-modalFormMessage" style="color:#b70f11;margin-top:8px"></div>
     <div style="margin-top:8px;display:flex;gap:8px;align-items:center"><button type="submit" class="learn-btn">Submit review</button><small style="color:#666">Reviews show name if provided. Rating optional.</small></div>
@@ -487,7 +498,10 @@
 
     // wire form (scoped queries so moving the form above the reviews list doesn't get overwritten)
     const form = modalContent.querySelector('#modal-reviewForm');
-    form.addEventListener('submit', async (ev)=>{
+  // attempt to prefill modal author field from authenticated session
+  (async function(){ try{ const r = await fetch('/api/auth/whoami'); if (r.ok){ const j = await r.json(); if (j && j.authenticated && j.name){ const ael = modalContent.querySelector('#modal-authorName'); if (ael) ael.value = j.name; } } }catch(e){} })();
+
+  form.addEventListener('submit', async (ev)=>{
       ev.preventDefault();
       const textEl = modalContent.querySelector('#modal-reviewText');
       const authorEl = modalContent.querySelector('#modal-authorName');
@@ -513,5 +527,22 @@
   }
 
 })();
+</script>
+<script>
+  // init top bar: fetch whoami and wire logout
+  (async function(){
+    try{
+      const r = await fetch('/api/auth/whoami');
+      if (r.ok){ const j = await r.json(); if (j && j.authenticated && j.name){ const el = document.getElementById('topBarUser'); if (el) el.textContent = j.name; } }
+    }catch(e){ }
+    const btn = document.getElementById('logoutBtn');
+    if (btn){ btn.addEventListener('click', async ()=>{
+      try{
+        await fetch('/api/auth/logout', { method: 'POST' });
+      }catch(e){}
+      // redirect to login page
+      location.href = '/login.html';
+    }); }
+  })();
 </script>
 </html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OHS Login</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f3f3f3}
+    .card{background:#fff;padding:28px;border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,0.08);width:360px}
+    h2{margin:0 0 18px;color:#b70f11}
+    .form-input{width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;margin-bottom:10px}
+    .btn{background:#b70f11;color:#fff;padding:10px;border:0;border-radius:4px;cursor:pointer;width:100%}
+    .muted{color:#666;font-size:13px}
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Stanford OHS Login</h2>
+    <div id="stepEmail">
+      <p class="muted">Enter your Stanford OHS email (must end with <code>@ohs.stanford.edu</code>)</p>
+      <input id="emailInput" class="form-input" placeholder="you@ohs.stanford.edu" />
+      <button id="sendBtn" class="btn">Send code</button>
+      <div id="emailMsg" class="small" style="color:#b70f11;margin-top:8px"></div>
+    </div>
+
+    <div id="stepCode" style="display:none;margin-top:8px">
+      <p class="muted">Enter the 6-digit code sent to your email</p>
+      <input id="codeInput" class="form-input" placeholder="123456" />
+      <button id="verifyBtn" class="btn">Verify &amp; sign in</button>
+      <div id="codeMsg" class="small" style="color:#b70f11;margin-top:8px"></div>
+    </div>
+  </div>
+
+<script>
+  const sendBtn = document.getElementById('sendBtn');
+  const verifyBtn = document.getElementById('verifyBtn');
+  const emailInput = document.getElementById('emailInput');
+  const codeInput = document.getElementById('codeInput');
+  const emailMsg = document.getElementById('emailMsg');
+  const codeMsg = document.getElementById('codeMsg');
+  const stepEmail = document.getElementById('stepEmail');
+  const stepCode = document.getElementById('stepCode');
+
+  sendBtn.addEventListener('click', async ()=>{
+    emailMsg.textContent = '';
+    const email = (emailInput.value || '').trim();
+    if (!email) { emailMsg.textContent = 'Please enter your email.'; return; }
+    // optimistic UI: immediately show the code entry step so the UI feels responsive
+    stepEmail.style.display = 'none'; stepCode.style.display = '';
+    emailMsg.textContent = 'Sending code…';
+    // disable button to prevent double-clicking
+    sendBtn.disabled = true; sendBtn.textContent = 'Sending…';
+    try{
+      const r = await fetch('/api/auth/request-code', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email }) });
+      const j = await r.json().catch(()=>null);
+      if (!r.ok){
+        // revert UI on error
+        sendBtn.disabled = false; sendBtn.textContent = 'Send code';
+        stepEmail.style.display = '';
+        stepCode.style.display = 'none';
+        emailMsg.textContent = j && j.error ? j.error : 'Failed to send code.';
+        return;
+      }
+      // success
+      emailMsg.textContent = 'Code sent. Check your email.';
+    }catch(e){
+      // network error: revert UI
+      sendBtn.disabled = false; sendBtn.textContent = 'Send code';
+      stepEmail.style.display = '';
+      stepCode.style.display = 'none';
+      emailMsg.textContent = 'Network error';
+    }
+  });
+
+  verifyBtn.addEventListener('click', async ()=>{
+    codeMsg.textContent = '';
+    const code = (codeInput.value || '').trim();
+    const email = (emailInput.value || '').trim();
+    if (!code) { codeMsg.textContent = 'Enter the 6-digit code.'; return; }
+    try{
+      const r = await fetch('/api/auth/verify-code', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email, code }) });
+      const j = await r.json();
+      if (!r.ok) { codeMsg.textContent = j && j.error ? j.error : 'Verification failed.'; return; }
+      // success: redirect to catalog
+      location.href = '/course-catalog-mockup.html';
+    }catch(e){ codeMsg.textContent = 'Network error'; }
+  });
+</script>
+</body>
+</html>

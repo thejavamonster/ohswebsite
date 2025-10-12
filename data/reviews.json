@@ -1,6 +1,102 @@
 {
   "jlcd1": [
     {
+      "id": "r_1760312577744",
+      "course_id": "jlcd1",
+      "rating": null,
+      "author": "asdfasdfa",
+      "text": "THIS IS SO DUMB",
+      "created_at": "2025-10-12T23:42:57.744Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "adaelise@ohs.stanford.edu",
+      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
+    },
+    {
+      "id": "r_1760311755593",
+      "course_id": "jlcd1",
+      "rating": null,
+      "author": null,
+      "text": "asdfasdfasdf",
+      "created_at": "2025-10-12T23:29:15.593Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "adaelise@ohs.stanford.edu",
+      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
+    },
+    {
+      "id": "r_1760311657710",
+      "course_id": "jlcd1",
+      "rating": null,
+      "author": null,
+      "text": "ae asdf easdf e",
+      "created_at": "2025-10-12T23:27:37.710Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "adaelise@ohs.stanford.edu",
+      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
+    },
+    {
+      "id": "r_1760311486312",
+      "course_id": "jlcd1",
+      "rating": null,
+      "author": "asdfasdfasdf",
+      "text": "asdfasdf",
+      "created_at": "2025-10-12T23:24:46.312Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "adaelise@ohs.stanford.edu",
+      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
+    },
+    {
+      "id": "r_1760311477969",
+      "course_id": "jlcd1",
+      "rating": null,
+      "author": null,
+      "text": "testest",
+      "created_at": "2025-10-12T23:24:37.969Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "adaelise@ohs.stanford.edu",
+      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
+    },
+    {
+      "id": "r_1760311241856",
+      "course_id": "jlcd1",
+      "rating": null,
+      "author": "adaelise",
+      "text": "asdfasdfasdf",
+      "created_at": "2025-10-12T23:20:41.856Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "adaelise@ohs.stanford.edu",
+      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
+    },
+    {
+      "id": "r_1760311174679",
+      "course_id": "jlcd1",
+      "rating": null,
+      "author": "adaelise",
+      "text": "testets",
+      "created_at": "2025-10-12T23:19:34.679Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "adaelise@ohs.stanford.edu",
+      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
+    },
+    {
+      "id": "r_1760311048470",
+      "course_id": "jlcd1",
+      "rating": null,
+      "author": "adaelise",
+      "text": "testsdfsdf",
+      "created_at": "2025-10-12T23:17:28.470Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "adaelise@ohs.stanford.edu",
+      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
+    },
+    {
       "id": "r_1760232595891",
       "course_id": "jlcd1",
       "rating": null,
@@ -16,7 +112,9 @@
           "text": "^ I know exactly from the tone and writing style who wrote the review above, and I agree with everything that she/he said. Dr. Walker-Dale is a great teacher, very passionate about the material (since she designed the course), and yes, make sure you take notes and do the reading. She does cold-call, but she is  never mean about it. All in all, I loved her, and it was a great course.",
           "created_at": "2025-10-12T01:42:48.875Z"
         }
-      ]
+      ],
+      "upvotes": 0,
+      "downvotes": 0
     },
     {
       "id": "r_1760231753472",
@@ -186,6 +284,16 @@
     }
   ],
   "omsb9": [
+    {
+      "id": "r_1760308671569",
+      "course_id": "omsb9",
+      "rating": 2,
+      "author": "jules328",
+      "text": "test test",
+      "created_at": "2025-10-12T22:37:51.569Z",
+      "status": "published",
+      "replies": []
+    },
     {
       "id": "r_1760233939996",
       "course_id": "omsb9",
