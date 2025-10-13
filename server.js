@@ -24,6 +24,10 @@ const REVIEWS_FILE = path.join(__dirname, 'data', 'reviews.json');
 const SCRAPED_JSON = path.join(__dirname, 'live_courses.json');
 const AUTH_CODES_FILE = path.join(__dirname, 'data', 'auth-codes.json');
 const SESSIONS_FILE = path.join(__dirname, 'data', 'sessions.json');
+// Auth code time-to-live (seconds). Default: 15 minutes
+const AUTH_CODE_TTL_SECONDS = Number(process.env.AUTH_CODE_TTL_SECONDS) || 15 * 60;
+// Minimum seconds between issuing codes to the same email (simple cooldown to deter spamming)
+const AUTH_CODE_REQUEST_COOLDOWN_SECONDS = Number(process.env.AUTH_CODE_REQUEST_COOLDOWN_SECONDS) || 30;
 
 function readJson(file){
   try{ return JSON.parse(fs.readFileSync(file,'utf8')); }catch(e){ return null; }
@@ -208,8 +212,19 @@ app.post('/api/auth/request-code', (req,res)=>{
   if (!email || typeof email !== 'string') return res.status(400).json({ error: 'invalid email' });
   const trimmed = String(email).trim().toLowerCase();
   if (!trimmed.endsWith('@ohs.stanford.edu')) return res.status(400).json({ error: 'email must be @ohs.stanford.edu' });
-  const code = (''+Math.floor(100000 + Math.random()*900000)).slice(0,6);
   const codes = readOrEmpty(AUTH_CODES_FILE);
+  // simple cooldown: if a code was created recently, don't re-issue immediately
+  try{
+    const prev = codes[trimmed];
+    if (prev && prev.created_at){
+      const then = Date.parse(prev.created_at);
+      if (!Number.isNaN(then)){
+        const age = (Date.now() - then) / 1000;
+        if (age < AUTH_CODE_REQUEST_COOLDOWN_SECONDS) return res.status(429).json({ error: 'too_many_requests' });
+      }
+    }
+  }catch(e){}
+  const code = (''+Math.floor(100000 + Math.random()*900000)).slice(0,6);
   codes[trimmed] = { code, created_at: new Date().toISOString() };
   writeJson(AUTH_CODES_FILE, codes);
   // send email if transporter available, else log
@@ -243,12 +258,25 @@ app.post('/api/auth/verify-code', (req,res)=>{
   const codes = readOrEmpty(AUTH_CODES_FILE);
   const rec = codes[trimmed];
   if (!rec || String(rec.code) !== String(code)) return res.status(400).json({ error: 'invalid code' });
+  // enforce TTL
+  try{
+    if (rec.created_at){
+      const then = Date.parse(rec.created_at);
+      if (!Number.isNaN(then)){
+        const age = (Date.now() - then) / 1000;
+        if (age > AUTH_CODE_TTL_SECONDS) return res.status(400).json({ error: 'code_expired' });
+      }
+    }
+  }catch(e){}
   // create session
   const sid = createSession(trimmed);
   // remove code
   delete codes[trimmed]; writeJson(AUTH_CODES_FILE, codes);
   // set cookie (expire 30 days)
-  res.cookie('ohs_sid', sid, { httpOnly: true, maxAge: 30*24*60*60*1000 });
+  // set a reasonably safe cookie configuration: httpOnly, SameSite lax, and secure in production
+  const cookieOpts = { httpOnly: true, maxAge: 30*24*60*60*1000, sameSite: 'lax' };
+  if (process.env.NODE_ENV === 'production') cookieOpts.secure = true;
+  res.cookie('ohs_sid', sid, cookieOpts);
   res.json({ success:true });
 });
 
