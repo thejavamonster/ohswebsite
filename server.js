@@ -57,10 +57,6 @@ const transporter = getTransporter();
 let emailer = null;
 try{ emailer = require('./lib/email'); }catch(e){ console.error('[BOOT] failed to load ./lib/email', e && e.message ? e.message : e); }
 
-// DB (Postgres) helper - optional. If DATABASE_URL not set, fall back to filesystem.
-let db = null;
-try{ db = require('./lib/db'); }catch(e){ db = null; }
-
 // Sessions: cookie-based. We'll set a signed random id in a cookie and persist session info in data/sessions.json
 function createSession(email){
   const sessions = readOrEmpty(SESSIONS_FILE);
@@ -135,40 +131,8 @@ app.get('/api/courses/:slug', (req,res)=>{
 
 // GET /api/courses/:slug/reviews
 app.get('/api/courses/:slug/reviews', (req,res)=>{
-  const slug = req.params.slug;
-  // if DB configured, use it
-  if (db && process.env.DATABASE_URL){
-    (async ()=>{
-      try{
-        const rows = await db.listReviewsForCourse(slug);
-        // redact poster metadata unless admin
-        const sess = getSession(req);
-        const allowAdmin = isAdmin(req) || (sess && String(sess.email).toLowerCase() === 'jules328@ohs.stanford.edu');
-        const list = rows.map(r => {
-          const copy = Object.assign({}, r);
-          // ensure replies array
-          copy.replies = Array.isArray(copy.replies) ? copy.replies : [];
-          if (allowAdmin && copy.poster_email){ try{ copy.author = String(copy.poster_email).split('@')[0]; }catch(e){} }
-          const sessionEmail = sess && sess.email ? String(sess.email).toLowerCase() : null;
-          copy.can_delete = allowAdmin || (sessionEmail && copy.poster_email && String(copy.poster_email).toLowerCase() === sessionEmail);
-          if (!allowAdmin){ delete copy.poster_email; delete copy.poster_sid; }
-          // redact replies metadata for non-admin
-          copy.replies = copy.replies.map(rc => {
-            const rcc = Object.assign({}, rc);
-            if (allowAdmin && rcc.poster_email){ try{ rcc.author = String(rcc.poster_email).split('@')[0]; }catch(e){} }
-            if (!allowAdmin){ delete rcc.poster_email; delete rcc.poster_sid; }
-            return rcc;
-          });
-          return copy;
-        });
-        res.json({ total: list.length, results: list });
-      }catch(e){ console.error('[DB] listReviews error', e); res.status(500).json({ error: 'db_error' }); }
-    })();
-    return;
-  }
-  // fallback to file-based storage
   const all = readJson(REVIEWS_FILE) || {};
-  const rawList = (all[slug] || []).map(r => (Object.assign({ replies: [], upvotes: 0, downvotes: 0 }, r)) );
+  const rawList = (all[req.params.slug] || []).map(r => (Object.assign({ replies: [], upvotes: 0, downvotes: 0 }, r)) );
   // redact poster metadata unless admin. Also treat the specific admin email as admin for convenience.
   const sess = getSession(req);
   const allowAdmin = isAdmin(req) || (sess && String(sess.email).toLowerCase() === 'jules328@ohs.stanford.edu');
@@ -233,18 +197,9 @@ app.post('/api/courses/:slug/reviews', (req,res)=>{
     if (!Number.isFinite(rnum) || rnum < 1 || rnum > 5) return res.status(400).json({error:'invalid rating'});
   }
   const slug = req.params.slug;
-  const review = { id: 'r_'+Date.now(), course_id: slug, rating: rating === undefined || rating === null ? null : Number(rating), author: author ? String(author).trim() : null, text: text.trim(), created_at: new Date().toISOString(), status:'published', poster_email: sessionEmail || null, poster_sid: sessionId || null, upvotes: 0, downvotes: 0 };
-  if (db && process.env.DATABASE_URL){
-    (async ()=>{
-      try{
-        await db.createReview(review);
-        res.status(201).json({ success:true, review });
-      }catch(e){ console.error('[DB] createReview error', e); res.status(500).json({ error: 'db_error' }); }
-    })();
-    return;
-  }
   const all = readJson(REVIEWS_FILE) || {};
   all[slug] = all[slug] || [];
+  const review = { id: 'r_'+Date.now(), course_id: slug, rating: rating === undefined || rating === null ? null : Number(rating), author: author ? String(author).trim() : null, text: text.trim(), created_at: new Date().toISOString(), status:'published', replies: [], poster_email: sessionEmail || null, poster_sid: sessionId || null };
   all[slug].unshift(review);
   writeJson(REVIEWS_FILE, all);
   res.status(201).json({ success:true, review });
@@ -361,28 +316,6 @@ app.post('/api/courses/:slug/reviews/:reviewId/vote', (req,res)=>{
   if (prev !== undefined && prev !== null && prev !== 'up' && prev !== 'down') return res.status(400).json({ error: 'invalid prev' });
   const slug = req.params.slug;
   const reviewId = req.params.reviewId;
-  if (db && process.env.DATABASE_URL){
-    (async ()=>{
-      try{
-        const review = await db.getReviewById(slug, reviewId);
-        if (!review) return res.status(404).json({ error: 'review not found' });
-        review.upvotes = typeof review.upvotes === 'number' ? review.upvotes : 0;
-        review.downvotes = typeof review.downvotes === 'number' ? review.downvotes : 0;
-        if (prev === vote){
-          if (vote === 'up') review.upvotes = Math.max(0, review.upvotes - 1);
-          else review.downvotes = Math.max(0, review.downvotes - 1);
-        } else if (!prev){
-          if (vote === 'up') review.upvotes += 1; else review.downvotes += 1;
-        } else if (prev !== vote){
-          if (prev === 'up') review.upvotes = Math.max(0, review.upvotes - 1); else review.downvotes = Math.max(0, review.downvotes - 1);
-          if (vote === 'up') review.upvotes += 1; else review.downvotes += 1;
-        }
-        await db.updateVotes(slug, reviewId, review.upvotes, review.downvotes);
-        res.json({ success:true, upvotes: review.upvotes, downvotes: review.downvotes });
-      }catch(e){ console.error('[DB] vote error', e); res.status(500).json({ error: 'db_error' }); }
-    })();
-    return;
-  }
   const all = readJson(REVIEWS_FILE) || {};
   const list = all[slug] || [];
   const review = list.find(r=> r.id === reviewId);
@@ -428,18 +361,6 @@ app.post('/api/courses/:slug/reviews/:reviewId/replies', (req, res) => {
   if (!text || typeof text !== 'string' || text.trim().length < 1) return res.status(400).json({ error: 'invalid input' });
   const slug = req.params.slug;
   const reviewId = req.params.reviewId;
-  if (db && process.env.DATABASE_URL){
-    (async ()=>{
-      try{
-        const r = await db.getReviewById(slug, reviewId);
-        if (!r) return res.status(404).json({ error: 'review not found' });
-        const reply = { id: 'rp_'+Date.now(), review_id: reviewId, author: author ? String(author).trim() : null, text: text.trim(), created_at: new Date().toISOString(), poster_email: sessionEmail || null, poster_sid: sessionId || null };
-        await db.createReply(reply);
-        res.status(201).json({ success: true, reply });
-      }catch(e){ console.error('[DB] createReply error', e); res.status(500).json({ error: 'db_error' }); }
-    })();
-    return;
-  }
   const all = readJson(REVIEWS_FILE) || {};
   const list = all[slug] || [];
   const review = list.find(r => r.id === reviewId);
@@ -458,19 +379,6 @@ app.delete('/api/courses/:slug/reviews/:reviewId', (req, res) => {
   const allowAdmin = isAdmin(req) || (sess && String(sess.email).toLowerCase() === 'jules328@ohs.stanford.edu');
   const slug = req.params.slug;
   const reviewId = req.params.reviewId;
-  if (db && process.env.DATABASE_URL){
-    (async ()=>{
-      try{
-        const r = await db.getReviewById(slug, reviewId);
-        if (!r) return res.status(404).json({ error: 'review not found' });
-        const posterEmail = r.poster_email ? String(r.poster_email).toLowerCase() : null;
-        if (!allowAdmin && !(sessionEmail && posterEmail && sessionEmail === posterEmail)) return res.status(403).json({ error: 'forbidden' });
-        await db.deleteReview(slug, reviewId);
-        return res.json({ success:true });
-      }catch(e){ console.error('[DB] delete error', e); return res.status(500).json({ error: 'db_error' }); }
-    })();
-    return;
-  }
   const all = readJson(REVIEWS_FILE) || {};
   const list = all[slug] || [];
   try{
@@ -500,32 +408,6 @@ app.get('/api/admin/reviews', (req, res) => {
   if (!isAdmin(req)){
     console.log('[ADMIN] forbidden: requester is not admin');
     return res.status(403).json({ error: 'forbidden' });
-  }
-  if (db && process.env.DATABASE_URL){
-    (async ()=>{
-      try{
-        // list all reviews grouped by course
-        // simple approach: query all reviews and replies
-        const allRes = await db.query('SELECT * FROM reviews ORDER BY created_at DESC');
-        const rows = allRes.rows || [];
-        const processed = {};
-        for(const r of rows){
-          const slug = r.course_id || '(unknown)';
-          const copy = Object.assign({}, r);
-          if (copy.poster_email){ try{ copy.author = String(copy.poster_email).split('@')[0]; }catch(e){} }
-          processed[slug] = processed[slug] || [];
-          processed[slug].push(copy);
-        }
-        // attach replies
-        const repRes = await db.query('SELECT * FROM replies ORDER BY created_at DESC');
-        const reps = repRes.rows || [];
-        reps.forEach(rep => {
-          const list = processed[rep.review_id] || null; // not ideal mapping; keep simple for now
-        });
-        res.json({ total: rows.length, results: processed });
-      }catch(e){ console.error('[DB] admin reviews error', e); res.status(500).json({ error: 'db_error' }); }
-    })();
-    return;
   }
   const raw = readJson(REVIEWS_FILE) || {};
   // produce a processed copy where author is set to poster_email localpart for admin visibility
