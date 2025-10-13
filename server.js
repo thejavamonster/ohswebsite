@@ -131,12 +131,15 @@ app.get('/api/courses/:slug/reviews', (req,res)=>{
   const allowAdmin = isAdmin(req) || (sess && String(sess.email).toLowerCase() === 'jules328@ohs.stanford.edu');
   const list = rawList.map(r => {
     const copy = Object.assign({}, r);
-    // If requester is admin, show the poster's real ID as the public author
-    if (allowAdmin && copy.poster_email){
-      try{ copy.author = String(copy.poster_email).split('@')[0]; }catch(e){}
-    }
-    // redact poster metadata for non-admins
-    if (!allowAdmin){ delete copy.poster_email; delete copy.poster_sid; }
+      // If requester is admin, show the poster's real ID as the public author
+      if (allowAdmin && copy.poster_email){
+        try{ copy.author = String(copy.poster_email).split('@')[0]; }catch(e){}
+      }
+      // compute whether the current requester can delete this review/reply (admin or poster)
+      const sessionEmail = sess && sess.email ? String(sess.email).toLowerCase() : null;
+      copy.can_delete = allowAdmin || (sessionEmail && copy.poster_email && String(copy.poster_email).toLowerCase() === sessionEmail);
+      // redact poster metadata for non-admins
+      if (!allowAdmin){ delete copy.poster_email; delete copy.poster_sid; }
     // also process replies: if admin, replace reply author with poster localpart when available; redact metadata for non-admins
     if (Array.isArray(copy.replies)){
       copy.replies = copy.replies.map(rep => {
@@ -257,6 +260,14 @@ app.get('/api/auth/whoami', (req,res)=>{
   res.json({ authenticated:true, email, name });
 });
 
+// GET /api/auth/is-admin -> { isAdmin: boolean }
+app.get('/api/auth/is-admin', (req, res) => {
+  try{
+    const yes = isAdmin(req);
+    res.json({ isAdmin: !!yes });
+  }catch(e){ res.json({ isAdmin: false }); }
+});
+
 // POST /api/auth/logout
 app.post('/api/auth/logout', (req,res)=>{
   const sid = req.cookies && req.cookies['ohs_sid'];
@@ -330,6 +341,31 @@ app.post('/api/courses/:slug/reviews/:reviewId/replies', (req, res) => {
   review.replies.unshift(reply);
   writeJson(REVIEWS_FILE, all);
   res.status(201).json({ success: true, reply });
+});
+
+// DELETE /api/courses/:slug/reviews/:reviewId -- allowed for admin or the poster
+app.delete('/api/courses/:slug/reviews/:reviewId', (req, res) => {
+  const sess = getSession(req);
+  const sessionEmail = sess && sess.email ? String(sess.email).toLowerCase() : null;
+  const allowAdmin = isAdmin(req) || (sess && String(sess.email).toLowerCase() === 'jules328@ohs.stanford.edu');
+  const slug = req.params.slug;
+  const reviewId = req.params.reviewId;
+  const all = readJson(REVIEWS_FILE) || {};
+  const list = all[slug] || [];
+  try{
+    const sid = req.cookies && req.cookies['ohs_sid'];
+    console.log('[DELETE] request', { slug, reviewId, sid, sessionEmail, allowAdmin, existingIds: list.map(r=>r.id).slice(0,50) });
+  }catch(e){ /* ignore logging errors */ }
+  const idx = list.findIndex(r=> r.id === reviewId);
+  if (idx === -1) return res.status(404).json({ error: 'review not found' });
+  const review = list[idx];
+  const posterEmail = review.poster_email ? String(review.poster_email).toLowerCase() : null;
+  if (!allowAdmin && !(sessionEmail && posterEmail && sessionEmail === posterEmail)) return res.status(403).json({ error: 'forbidden' });
+  // remove the review
+  list.splice(idx, 1);
+  all[slug] = list;
+  writeJson(REVIEWS_FILE, all);
+  res.json({ success:true });
 });
 
 // Admin endpoint: view all reviews with poster metadata (restricted)

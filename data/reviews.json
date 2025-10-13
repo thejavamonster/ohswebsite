@@ -1,102 +1,6 @@
 {
   "jlcd1": [
     {
-      "id": "r_1760312577744",
-      "course_id": "jlcd1",
-      "rating": null,
-      "author": "asdfasdfa",
-      "text": "THIS IS SO DUMB",
-      "created_at": "2025-10-12T23:42:57.744Z",
-      "status": "published",
-      "replies": [],
-      "poster_email": "adaelise@ohs.stanford.edu",
-      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
-    },
-    {
-      "id": "r_1760311755593",
-      "course_id": "jlcd1",
-      "rating": null,
-      "author": null,
-      "text": "asdfasdfasdf",
-      "created_at": "2025-10-12T23:29:15.593Z",
-      "status": "published",
-      "replies": [],
-      "poster_email": "adaelise@ohs.stanford.edu",
-      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
-    },
-    {
-      "id": "r_1760311657710",
-      "course_id": "jlcd1",
-      "rating": null,
-      "author": null,
-      "text": "ae asdf easdf e",
-      "created_at": "2025-10-12T23:27:37.710Z",
-      "status": "published",
-      "replies": [],
-      "poster_email": "adaelise@ohs.stanford.edu",
-      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
-    },
-    {
-      "id": "r_1760311486312",
-      "course_id": "jlcd1",
-      "rating": null,
-      "author": "asdfasdfasdf",
-      "text": "asdfasdf",
-      "created_at": "2025-10-12T23:24:46.312Z",
-      "status": "published",
-      "replies": [],
-      "poster_email": "adaelise@ohs.stanford.edu",
-      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
-    },
-    {
-      "id": "r_1760311477969",
-      "course_id": "jlcd1",
-      "rating": null,
-      "author": null,
-      "text": "testest",
-      "created_at": "2025-10-12T23:24:37.969Z",
-      "status": "published",
-      "replies": [],
-      "poster_email": "adaelise@ohs.stanford.edu",
-      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
-    },
-    {
-      "id": "r_1760311241856",
-      "course_id": "jlcd1",
-      "rating": null,
-      "author": "adaelise",
-      "text": "asdfasdfasdf",
-      "created_at": "2025-10-12T23:20:41.856Z",
-      "status": "published",
-      "replies": [],
-      "poster_email": "adaelise@ohs.stanford.edu",
-      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
-    },
-    {
-      "id": "r_1760311174679",
-      "course_id": "jlcd1",
-      "rating": null,
-      "author": "adaelise",
-      "text": "testets",
-      "created_at": "2025-10-12T23:19:34.679Z",
-      "status": "published",
-      "replies": [],
-      "poster_email": "adaelise@ohs.stanford.edu",
-      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
-    },
-    {
-      "id": "r_1760311048470",
-      "course_id": "jlcd1",
-      "rating": null,
-      "author": "adaelise",
-      "text": "testsdfsdf",
-      "created_at": "2025-10-12T23:17:28.470Z",
-      "status": "published",
-      "replies": [],
-      "poster_email": "adaelise@ohs.stanford.edu",
-      "poster_sid": "7893098287811fc2c4ef4f03611ec0ac"
-    },
-    {
       "id": "r_1760232595891",
       "course_id": "jlcd1",
       "rating": null,
@@ -150,15 +54,6 @@
       "author": null,
       "text": "Holy moly this class was amazing! Dr. Walker-Dale is an incredible instructor and leads very engaging discussions. She grades pretty easy but her feed back is to die for… she writes entire pages for you and her feedback can be longer than what you actually wrote. Topics taught are quite unique (quantum theory, modernity, etc.) and you even get to lead class for a day (where you can cold call lol). HWD was helpful in office hours but she likes participation so participating a lot will help. Also readings were super long so I’d recommend that you start early on them. 11/10 and would 100% recommend! :D",
       "created_at": "2025-10-12T01:14:32.898Z",
-      "status": "published"
-    },
-    {
-      "id": "r_1760230990094",
-      "course_id": "jlcd1",
-      "rating": null,
-      "author": null,
-      "text": "Great class!!!, but tons of preparation",
-      "created_at": "2025-10-12T01:03:10.094Z",
       "status": "published"
     }
   ],

@@ -38,7 +38,7 @@
         
 
         <h4>Add a review</h4>
-        <form id="reviewForm">
+        <form id="reviewForm" autocomplete="off" autocorrect="off" spellcheck="false">
           <div style="display:flex;align-items:center;gap:8px">
             <div id="starWidget" role="radiogroup" aria-label="Rating"> 
               <span class="star" data-value="1">☆</span>
@@ -49,7 +49,8 @@
             </div>
             <small style="color:#666">(click to set rating, optional)</small>
           </div>
-          <div style="margin-top:8px"><input id="authorName" class="form-input" placeholder="Your name (optional)" /></div>
+          <!-- prevent browser autofill by using a non-standard name and autocomplete off -->
+          <div style="margin-top:8px"><input id="authorName" name="author_override" autocomplete="off" class="form-input" placeholder="Your name (optional)" autocapitalize="words"/></div>
           <div style="margin-top:8px"><textarea id="reviewText" class="form-input" placeholder="What did you like? What could be better?"></textarea></div>
           <div id="pageFormMessage" style="color:#b70f11;margin-top:8px"></div>
           <div style="margin-top:8px"><button type="submit" class="btn">Submit review</button></div>
@@ -134,14 +135,33 @@
 
     async function loadReviews(){
       try{
-          // Try admin endpoint first (returns full data) — if requester is admin this will succeed and include poster metadata
+          // Try admin endpoint first (returns full data) — if requester is admin this will succeed and include poster metadata.
+          // When admin endpoint is used we also fetch the public reviews and merge per-review flags (can_delete/upvotes/downvotes)
+          // so delete buttons and vote counts are present.
           let list = [];
           try{
-            const adminResp = await fetch('/api/admin/reviews');
-            if (adminResp.ok){
-              const adminPayload = await adminResp.json();
-              const all = adminPayload.results || {};
-              list = all[slug] || [];
+            // check whether the current user is admin to avoid unnecessary 403s
+            let isAdminResp = null;
+            try{ isAdminResp = await fetch('/api/auth/is-admin'); }catch(e){ isAdminResp = null; }
+            const isAdminFlag = isAdminResp && isAdminResp.ok ? (await isAdminResp.json()).isAdmin : false;
+            if (isAdminFlag){
+              const adminResp = await fetch('/api/admin/reviews');
+              if (adminResp.ok){
+                const adminPayload = await adminResp.json();
+                const all = adminPayload.results || {};
+                list = all[slug] || [];
+                try{
+                  // fetch public endpoint to obtain can_delete and vote counts and merge by id
+                  const pubResp = await fetch(`/api/courses/${slug}/reviews`);
+                  if (pubResp.ok){
+                    const pubPayload = await pubResp.json();
+                    const pubList = pubPayload.results || [];
+                    const byId = {};
+                    pubList.forEach(p=>{ if (p && p.id) byId[p.id] = p; });
+                    list = list.map(r => Object.assign({}, r, byId[r.id] || {}));
+                  }
+                }catch(e){ /* ignore merge errors and proceed with admin list */ }
+              }
             }
           }catch(e){ /* ignore and fall back */ }
           // fallback to public reviews endpoint when not admin or admin endpoint failed
@@ -207,13 +227,27 @@
               </div>
             </div>
           </div>`;
-          return `<div class="review">${ratingPart}<small style="color:#666;margin-left:8px">${author} • ${when}</small><p>${escapeHtml(rv.text)}</p>${repliesHtml}${replyToggle}</div>`;
+          const deleteBtn = rv.can_delete ? `<button class="review-delete" data-review-id="${rv.id}" aria-label="Delete review" style="float:right;background:transparent;border:0;padding:0;margin:0;cursor:pointer"><img src="/delete.png" alt="Delete" style="width:20px;height:20px;opacity:0.9;"/></button>` : '';
+          return `<div class="review">${deleteBtn}${ratingPart}<small style="color:#666;margin-left:8px">${author} • ${when}</small><p>${escapeHtml(rv.text)}</p>${repliesHtml}${replyToggle}</div>`;
         }).join('');
         // delegated handler: open a small reply form only when user clicks (Reply)
         if (!__listClickHandlerAttached){
           listEl.addEventListener('click', function(ev){
             __listClickHandlerAttached = true;
-            const t = ev.target;
+            // handle delete clicks (click may land on the img inside the button)
+            const deleteBtn = ev.target && (ev.target.closest ? ev.target.closest('.review-delete') : (ev.target.classList && ev.target.classList.contains('review-delete') ? ev.target : null));
+            if (deleteBtn){
+              ev.preventDefault();
+              const reviewId = deleteBtn.dataset.reviewId;
+              (async ()=>{
+                try{
+                  const r = await fetch(`/api/courses/${slug}/reviews/${encodeURIComponent(reviewId)}`, { method: 'DELETE' });
+                  if (!r.ok) throw new Error('delete failed');
+                  await loadReviews();
+                }catch(e){ console.error('delete error', e); }
+              })();
+              return;
+            }
             // handle vote clicks (thumb up / down). We'll accept clicks on the up/down text or the span
             if (t.classList && (t.classList.contains('upcount') || t.classList.contains('downcount') || t.classList.contains('vote-up') || t.classList.contains('vote-down') || (t.parentNode && t.parentNode.classList && t.parentNode.classList.contains('votes-inline')))){
               ev.preventDefault();
@@ -312,10 +346,11 @@
 
     fetchCourse();
     // try to prefill author from authenticated session
+    // try to detect whoami but do NOT autofill the author input to avoid browser autofill
     (async function(){
       try{
         const r = await fetch('/api/auth/whoami');
-        if (r.ok){ const j = await r.json(); if (j && j.authenticated && j.name){ const el = document.getElementById('authorName'); if (el) el.value = j.name; } }
+        if (r.ok){ const j = await r.json(); /* we intentionally do not set el.value to avoid triggering autofill */ }
       }catch(e){}
     })();
     loadReviews();
