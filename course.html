@@ -234,8 +234,9 @@
         if (!__listClickHandlerAttached){
           listEl.addEventListener('click', function(ev){
             __listClickHandlerAttached = true;
+            const t = ev.target;
             // handle delete clicks (click may land on the img inside the button)
-            const deleteBtn = ev.target && (ev.target.closest ? ev.target.closest('.review-delete') : (ev.target.classList && ev.target.classList.contains('review-delete') ? ev.target : null));
+            const deleteBtn = t && (t.closest ? t.closest('.review-delete') : (t.classList && t.classList.contains('review-delete') ? t : null));
             if (deleteBtn){
               ev.preventDefault();
               const reviewId = deleteBtn.dataset.reviewId;

@@ -1027,5 +1027,461 @@
         }
       ]
     }
+  ],
+  "oe010": [
+    {
+      "id": "r_1760317871296",
+      "course_id": "oe010",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Washburn is an AMAZING teacher. She is super sweet and offers great advice in office hours. She clearly loves teaching English and has a passion for analysing poetry! She is a little harsh on grading in my opinion, but she definitely helped me improve my writing! My essays are so much better now because of her! Please make use of the WTC center and office hours, as they are super helpful for essays and projects. Overall, amazing teacher and fun course.",
+      "created_at": "2025-10-13T01:11:11.296Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876",
+      "upvotes": 0,
+      "downvotes": 0
+    },
+    {
+      "id": "r_1760317866680",
+      "course_id": "oe010",
+      "rating": null,
+      "author": null,
+      "text": "Zarlengo is awesome in class, really strict as a grader. Don’t slip up on MLA formatting, and go to office hours on the papers. The homeworks are basically free and Zarlengo all but orders you to skip one. Super sweet teacher, a little harsh on grading but if you go to office hours (which are a joy) she’ll sort you out. Also she gives feedback in squiggly lines, you should find someone who knows her better to interpret that feedback and you can’t ignore it.",
+      "created_at": "2025-10-13T01:11:06.680Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317842665",
+      "course_id": "oe010",
+      "rating": null,
+      "author": null,
+      "text": "NOW onto DR RUSSELL!!! 👑 omg what a great teacher so much enthusiasm so much good energy I LOVED SPRING SEM CLASS WITH HER!!!! I mean come on finally a teacher who understands humor??? Anyone else would be like “y’all stop dissing melville 🤓” but she joked with us. Stayed on topic though, but it was really nice to have someone who felt like they were actually trying to make it a good and fun class for us. HER FEEDBACK IS TO DIE FOR. Honestly one of my favorite teachers, always left me WISHING WE HAD ANOTHER HOUR OF CLASS BECAUSE SHE’S JUST SO NICE",
+      "created_at": "2025-10-13T01:10:42.665Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317838401",
+      "course_id": "oe010",
+      "rating": null,
+      "author": null,
+      "text": "[Dr. Zarlengo and Dr. Russell] had Dr. Zarlengo for fall semester as a sub, she was… okay. Very harsh grader. Literally did not give me anything above a B on my essays. She literally took away 7 points from an assignment turning an A minus essay into a B essay because I forgot about parenthetical citations, okay guys I wrote the page number before the author name and she didn’t even give information on that… That’s pretty much my only complaint but…. She will literally destroy your gpa even though she Brennangives great feedback for it. That being said, in class she was kind and engaging. A very wonderful person and  I was so honored to have her as my teacher even though my gpa cried with me.",
+      "created_at": "2025-10-13T01:10:38.401Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760317861569",
+          "review_id": "r_1760317838401",
+          "author": null,
+          "text": "^I’ll second the Zarlengo comment, she was nice and her office hours really helped but on all three of the major essays she gane me a B or a B+??? The comments where always super complementary, and was like “I think you wrote a solid essay, and really fixed everything I told you to fix last time, but here's all the things I didn’t tell you about that I now want you to fix”",
+          "created_at": "2025-10-13T01:11:01.569Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317834528",
+      "course_id": "oe010",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Janisweska) [2023-2024] omg I loved this class and Dr. J was amazing, the readings were kind of hard to understand and she’s pretty strict about participation but discussions were so much fun and you can tell that she loves teaching and wants you to succeed. I ended up getting As both semesters and got 89s and above on every single essay, so it’s definitely possible, just use her office hours and listen to her feedback she gives.",
+      "created_at": "2025-10-13T01:10:34.528Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317830640",
+      "course_id": "oe010",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Russel is one of the best teachers I’ve ever had. Her classes are so fun and engaging. Her feedback is to die for!",
+      "created_at": "2025-10-13T01:10:30.640Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317825089",
+      "course_id": "oe010",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. J) I think in general she does give out pretty good feedback, but she just plays favorites to a completely unfair level.  On my third essay last semester, I got almost entirely positive feedback, ending with “What a way to end the semester! (89).”  I get that she doesn’t want to give high grades on essays, but on the final assignment she wrote only 3 very short comments, all of which were positive, and then proceeded to give me exactly the grade I needed to end up with an A minus overall.  Had she given me even one point higher, I would have been able to scrape out an A overall (and I would’ve had all As…), and I just don’t think that was a coincidence.  Anyways in conclusion, I do think it’s possible to have an A in her class, but you just have to be one of her absolute favorites, which imo isn’t fair.",
+      "created_at": "2025-10-13T01:10:25.089Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317821433",
+      "course_id": "oe010",
+      "rating": null,
+      "author": null,
+      "text": "Good course, Dr. J is great though loves to give 89s on big writing assignments",
+      "created_at": "2025-10-13T01:10:21.433Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317813161",
+      "course_id": "oe010",
+      "rating": null,
+      "author": null,
+      "text": "Really fun course - if you have the right teacher. (Hint: dr russell)(Or dr. clinton)",
+      "created_at": "2025-10-13T01:10:13.161Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    }
+  ],
+  "oe011": [
+    {
+      "id": "r_1760317946096",
+      "course_id": "oe011",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Wiebracht) ABSOLUTE BEST ENGLISH TEACHER I HAVE EVER HAD HERE. Coming from someone who has been full-time at OHS since 7th grade, I absolutely love Dr. Wiebracht, so much so that this coming year I’m taking his critical theory class. He truly enjoys what he is teaching and wants all of his students to share in that joy as well. He is super duper helpful in office hours, though they do book out pretty quickly so I would book in advance to make sure you get a slot. He grades homework basically on completion, but I highly recommend putting effort into them, as often times you can end up using a homework response in a later essay. 10/10 course, possibly my favorite english course I’ve had, and just really learn as much as you can from it, don’t be intimidated, he is there to help you and help you work through your ideas on whatever you’re reading. He also grades about average (2 weeksish) and gives absolutely excellent feedback on papers, so really try to apply his feedback to the next essay.",
+      "created_at": "2025-10-13T01:12:26.096Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317942272",
+      "course_id": "oe011",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Nunnery) I liked Nunnery-he was a really interesting teacher. The readings were fine, ig, but I didn’t really click with them.  Echoing others, he does talk a lot, but it’s pretty easy to get participation points, especially if you’re in a smaller class. He’s really lenient with extensions, and I don’t think that there’s a limit? However the one thing about Nunnery is that he’s a pretty slow grader. He always gives back the grades before the next paper is due, but it does take a while, so if you don’t like waiting keep that in mind.",
+      "created_at": "2025-10-13T01:12:22.272Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317936416",
+      "course_id": "oe011",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Weibracht) BEST ENGLISH TEACHER EVER. His classes not only help you learn and explore the material but are also super interesting and fun! He is super friendly and makes sure the material never gets boring. As this still is an ohs english course the grading (on essays) is definitely on the harder side but its FAIR, he thoroughly explains any points taken off and is happy to further explain in office hours. Dr. W is also never strict about sticking to the prompt with essays. He encourages you to take your own route on whatever interests you and to only use the prompt as inspiration. He actually says if you have a better idea then any of the prompts just run it by him and he’ll probably approve! I learned SO MUCH in this course. There’s one weekly assignment that’s a page long, but you can basically say whatever you want about the reading in a page long tangent as grading is only hard on essays, hw is based on completion and showing interest, just expand on whatever interested you or caught your attention in the reading and a page is super easy.",
+      "created_at": "2025-10-13T01:12:16.416Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317931679",
+      "course_id": "oe011",
+      "rating": null,
+      "author": null,
+      "text": "(Dr W) Boy oh boy where do I even begin. Dr. W… our honey, our pookie bear. I have appreciated you ever since I first took class with you. The way you recite paragraphs and strike awe into your students' eyes. Your silky smooth voice and that gorgeous mind. I would do anything for you. I wish it were possible to freeze time so I would never have to watch you retire. Just look at last year’s doc to see all the glowing reviews for him. He’s great.",
+      "created_at": "2025-10-13T01:12:11.679Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317914191",
+      "course_id": "oe011",
+      "rating": null,
+      "author": null,
+      "text": "(Dr Nunnery) Ill admit, he can be quite the yapper, however, when he talks, what he says is usually actually relevant to the course and has a lot of very very helpful information you can glean. When he talks he absolutely shows just how much he knows about his subject, and I absolutely love that about him. He is also great at answering any questions you have. That said… he is a very tough grader. His feedback is meaningful and very helpful for improving, but his grading will be harsh.",
+      "created_at": "2025-10-13T01:11:54.191Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760317926304",
+          "review_id": "r_1760317914191",
+          "author": null,
+          "text": "^ I wouldn’t say he grades leniently at all. Though if you take his feedback seriously and go to wtc’s it helps 10000%",
+          "created_at": "2025-10-13T01:12:06.304Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+        },
+        {
+          "id": "rp_1760317921328",
+          "review_id": "r_1760317914191",
+          "author": null,
+          "text": "^^seconded-he’s a really nice teacher but he does grade pretty harshly on essays.",
+          "created_at": "2025-10-13T01:12:01.328Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317908719",
+      "course_id": "oe011",
+      "rating": null,
+      "author": null,
+      "text": "(Dr Nunnery) MWA itself has really fun content and readings (I really liked, for example, The Red Convertible and Waiting for Godot), but it’s a bit hard to really enjoy with Dr. Nunnery. He’s a nice guy, but not the greatest instructor. Our class “discussions” was 95% him yapping, the other 5% students either asking questions or bsing for participation. As someone who enjoys the discussion part of OHS English classes, it was quite disappointing. He also does letter grades, meaning an A on weekly RQ’s or on participations means a 96.5, not a 100. His essay grading in my experience wasn’t too bad, just as harsh as the average OHS English teacher probably. Extremely lenient with extensions, but also hard to seek out. Constantly changing his OH times and often starting class 5-8ish minutes late, and also there were several instances where class ended with 3+ hands still up bc he just…yaps…so much.",
+      "created_at": "2025-10-13T01:11:48.719Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317904648",
+      "course_id": "oe011",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Nunnery) A really great and passionate teacher who holds very interesting class discussions. But while the discussions were really interesting, it was harder to get a good grasp of the type of paper that was expected or what level we should be writing at. Overall, I think he was pretty lenient in grading and participation, but it's a bit hard to follow along when he explains his advice sometimes.",
+      "created_at": "2025-10-13T01:11:44.648Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317899135",
+      "course_id": "oe011",
+      "rating": null,
+      "author": null,
+      "text": "dr dawkins is awesome, definitely go to office hours for feedback on your drafts she will do literal numbers on them. never received anything lower than an a on her essays",
+      "created_at": "2025-10-13T01:11:39.135Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317894496",
+      "course_id": "oe011",
+      "rating": null,
+      "author": null,
+      "text": "Dawkins - nice teacher, is southern like me so we get each other, but definitely has favorites :( kind of dismisses my ideas as “not important” in class, or outright tells me that I’m wrong just because i don’t have the same opinion as her about a reading? Can you really be wrong about a reading… condescends a little bit, but thinks i have a good sense of humor, so idk. We’ll see how my grades shape out. Idk if anybody can get an A grade in this class never heard of it so i was kinda wishing i didnt take it bc my gpa sucks rn, but dawkins can be a legit nice person, plus first teacher who shares my accent that ive had in a while so nostalgia 😢",
+      "created_at": "2025-10-13T01:11:34.496Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    }
+  ],
+  "oe020b": [
+    {
+      "id": "r_1760317958592",
+      "course_id": "oe020b",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Nunnery) I liked the topics, but man can he go on rants…. Max this… “Did you know…” “That reminds me…” It also got super annoying when papers are not returned, and he says he will get some out one day and four days later nothing is returned. SUPER slow grader, and is not the most helpful in office hours. I dont think any one else teachers this class but if so get the other person. Half of class discussions are interesting but useless to papers, homework assignments, or quick questions. A single question thats just a simple yes or no takes 10 minutes to answer and sometimes you dont even get that. He always said we should go into breakouts so we can talk (best part of the class) but instead we just go down the line of hands and half the class doesnt get to talk. Also he grades on a letter scale, so even if your homework assignment was perfect, its just a 96 instead of the normal 100 which brings down your final grade a bit (and you might need those points later on). He did make the writing assignments optional at the end so thats great!",
+      "created_at": "2025-10-13T01:12:38.592Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760317972112",
+          "review_id": "r_1760317958592",
+          "author": null,
+          "text": "^ Don’t ever expect to get papers back before at least a month. He goes on long spiels, and quite frankly it’s irritating when he never gives enough chances for people to talk and then gives 5/10 participation. He is nice though and doesn’t tend to care if you turn in papers late.",
+          "created_at": "2025-10-13T01:12:52.112Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+        },
+        {
+          "id": "rp_1760317966921",
+          "review_id": "r_1760317958592",
+          "author": null,
+          "text": "^^ very true at the end he was behind on grading the writing assignments so optional they became, lots of talk of his kid which at the start was fun but hearing about him talk about it gets kinda oldfast, and he does talk a LOT if you have a quick and i mean quick question make it fast and direct, and you will mostly get a short answer do encourage breakoutgroups if you have many students in your class otherwise participation gets wacky as half the time if your not fast enough you dont get to speak",
+          "created_at": "2025-10-13T01:12:46.921Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    }
+  ],
+  "oe020c": [
+    {
+      "id": "r_1760318069632",
+      "course_id": "oe020c",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Washburn) is an amazing teacher. I found her teaching style engaging whilst not becoming overbearing either. She’s super nice and always really helpful if you come to her office hours. I would say, however, that the course itself is not necessarily the most immersive dive into critical theory or analytical literature, but as a STEM student, I found the connection between humans and our impact on nature a fun bridge between disciplines that kept me interested. Overall, I would say that I'm pretty satisfied with this course. I would note, however, that it can be difficult to get an A due to how essays are graded. Dr. Washburn is not the easiest grader, hence why I would highly encourage attending her office hours.",
+      "created_at": "2025-10-13T01:14:29.632Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760318065880",
+      "course_id": "oe020c",
+      "rating": null,
+      "author": null,
+      "text": "(Dr.Washburn) [2024-2025] STEM kids– especially if you're into the relationship between humans and nature or find yourself wondering “what is nature?” – you should definitely take this class! It helps you think more deeply about ethics, ties into your own experiences, and reinforces the value of any work you've done in the field (conservation, bio, etc). It also opens your mind to new perspectives on how humans impact nature and how we interpret that impact (from different cultures and so). Lots of diverse viewpoints. BUT if you're more into theory and literature… maybe a PASS. You’ll probably end up disappointed. Washburn is super passionate and a lenient grader, but not great at replying to emails. Lots of creative projects (may take time, but that means free grade too right?)",
+      "created_at": "2025-10-13T01:14:25.880Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760318031609",
+      "course_id": "oe020c",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Washburn) [2024-2025] (Take this comment as a grain of salt, it represents only my opinion, which is highly biased) I was disappointed by this course. Going in, I expected Theory (with a capitalized T), and I ended up seeing a lot of critical commentary and (I’d say superficial) criticism. Regarding the difficulty of material, I find it simple; the approaches to the texts are far from rigorous close-reading, and are generally unsatisfactory in my perspective. The Theories are not hard to comprehend, and the short stories are just simple. Regarding Dr. Washburn, she is a good teacher (I do affirm this). However, the depth of content presented is inadequate for a high schooler who likes to think deeply about theory. (Personally, I disagree when I hear that a teacher prefers to have rhetorical questions as hooks in the introduction to analytical essays (instead of analytical precis to start the essay with).) Regarding the class discussion, I found them to be homogenous and unstimulating; my classmates are super nice people, but they seem to be reluctant to take intellectual risks in actually disagreeing with people (which I find frustrating, especially when all everyone is saying is something along the same lines). Yes, this course did try to escape and go beyond the oversimplifying narrative of “nature is collapsing, we need to save it”, and I do commend its effort. However, such attempts are almost always shallow and superficial. I can summarize the entire course into 1 idea: previously we perceived 2 things (human and nature), now we integrate 2 into 1 and hope this saves Earth. And yes, I can keep elaborating about how this course collapses into environmental activism, but I choose to stop. I think if you are a person who doesn’t like English or Theory, then this course is for you (respect to you! you help the world to be a better place through means other than Theory and literature). The grading can be kind if you do what is conventional. And yes, I’d say that this course may be more suitable for students looking for an introductory-level engagement with material in English, or whose major focus in the future may not be humanities.",
+      "created_at": "2025-10-13T01:13:51.609Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760318037920",
+          "review_id": "r_1760318031609",
+          "author": null,
+          "text": "^I am so impressed with this person's clearheadedness and unemotional rationality. Just saying. You’re awesome.",
+          "created_at": "2025-10-13T01:13:57.920Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760318001257",
+      "course_id": "oe020c",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Washburn) I LOVED this class, Dr. Washburn is amazing, and the class is super interesting. I found that the grading generally did make sense, and, as long as you put in some effort, there is no way you will get below an 85 on a writing assignment. The class organization made sense and Dr. Washburn is really good about listening to student feedback. Absolutely go to office hours, Dr. Washburn will review your essay and tell you what to fix for a higher grade, and if she doesn’t get to everyone, or for some reason doesn’t make it to office hours (happened once due to a family emergency) she is really good about scheduling floating office hours!",
+      "created_at": "2025-10-13T01:13:21.257Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760317988464",
+      "course_id": "oe020c",
+      "rating": null,
+      "author": null,
+      "text": "(Dr Washburn) interesting class. The class name might not make sense to you, but it definitely will by the end of the class - it’s quite an eye-opening class that has many practical usages in your view on the real world, which most other classes do not accomplish (I mean to be fair, this class had absolutely no impact on my view of the world, but that’s because I’m a stubborn little brat and not because the class is bad). Instructor is very considerate and passionate, just sometimes her grading doesn’t make any sense - last essay she gave me almost all positive comments with just a very minor criticism and gave me an 88 anyway",
+      "created_at": "2025-10-13T01:13:08.464Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    }
+  ],
+  "oe020e": [
+    {
+      "id": "r_1760318086520",
+      "course_id": "oe020e",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Wiebracht) [2024-2025] This class is Dr W’s baby and he’s absolutely amazing, he loves brainstorming and exploring literature with his students. Really feels like a seminar/discussion and his grading is also really nice. Not as harsh as some other teachers but not too lenient either, imo he’s fair and gives good feedback (often asks questions if he’s unsure about something or wants to challenge your thoughts). He does tend to go on lengthy rants and yap for a while during class, and he also often overlooks text chat so raising your hand and speaking on mic is really the best way to get your thoughts in + participation (I think he counts reading passages on the slides as participation too). Overall the structure of the course is similar to MWA, but I know he mentioned he’s planning on changing things for the ‘25-26 school year so there might be some surprises. Would def recommend him and this class, going to his OH are also really helpful (and he’s also super chill if you just want to talk about random stuff)!",
+      "created_at": "2025-10-13T01:14:46.520Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    }
+  ],
+  "oe020z": [
+    {
+      "id": "r_1760318097783",
+      "course_id": "oe020z",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Zarlengo / Dr. Morphew) I had Dr. Zarlengo in the fall and Dr. Morphew in the spring. Zarlengo is super enthusiastic but seems to be aDawkins fairly harsh grader. Morphew is very chill (too chill… there’s a lot of silence in class), and I think he grades fairly leniently. But he doesn’t really provide many comments on the essays (let alone any comments on the presentation that is worth as much as a major essay). The reading is fine (Henry V is cool), although Foucault is insanely hard to understand. You get a taste of a lot of different styles.",
+      "created_at": "2025-10-13T01:14:57.783Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760318093969",
+      "course_id": "oe020z",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Russell) I’ve had her twice, and she’s just amazing. Incredibly sweet and fun, and I feel like she gets excited about the readings. I think she’s given me the most comprehensive feedback on my essays out of all my teachers at OHS, and I’m very very appreciative of it. It’s not just what worked well and what can be improved on, but also some tips on how to improve on it. If you can, I’d highly recommend getting her.",
+      "created_at": "2025-10-13T01:14:53.969Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    }
+  ],
+  "oe021a": [
+    {
+      "id": "r_1760318121583",
+      "course_id": "oe021a",
+      "rating": null,
+      "author": null,
+      "text": "(24-25) guys dr. dawkins is the goat. Her comments on essays are actually substantive and she has a grading rubric that she actually sticks to. In the middle of the year she was on maternity leave so we had Dr. KLAH as a sub, who was chill. She was one of the most enthusiastic OHS teachers I’ve ever met, and just generally cares about her students (though there are some times where the conversations go way off topic). Dr. dawkins came back for the latter half of the spring semester and its been great so far. You also have the option to do creative projects, which is nice and helps your grade go up. Def recommend this class if the readings on the syllabus seem interesting to you",
+      "created_at": "2025-10-13T01:15:21.583Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760318127722",
+          "review_id": "r_1760318121583",
+          "author": null,
+          "text": "(Dr. Dawkins) I agree with the above, Dr. Dawkins was really great. I also really liked Dr. KLAH. I think Dr. Dawkins was a little more mellow than Dr. KLAH, but they’re both equally nice and dedicated. Dr. Dawkins does grade strictly (accurately to her rubric, not unreasonably), but she’s really helpful in office hours so if you go to office hours to discuss your paper then you will probably be fine grade-wise. The readings were fun and I didn’t think they were too long, but some of them are so I would just keep that in mind. I really enjoyed most of the readings so I didn’t really mind them being long, so if they sound interesting to you I would definitely recommend this class.",
+          "created_at": "2025-10-13T01:15:27.722Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    },
+    {
+      "id": "r_1760318110785",
+      "course_id": "oe021a",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Dawkins) Dr. Dawkins is an amazing instructor! The discussions in this class are always interesting, and she brightens the class with her enthusiasm. If you attend office hours, she’s extremely helpful: if you have a draft and you want to go over it with her, she will read the entire thing and provide great feedback. Her words are always so encouraging and actually make you excited to write. Even if you do not come on mic, she will invite you to read a passage on the slides so that you can get your participation points. The workload tends to be very up and down: the readings can get intense (40-50 pages per day) with Paradise Lost, Frankenstein, or Klara and The Sun, but it’s all worth it in the end!",
+      "created_at": "2025-10-13T01:15:10.785Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760318116569",
+          "review_id": "r_1760318110785",
+          "author": null,
+          "text": "^^100% agree with above. Dr. Dawkins is an amazing instructor and a really nice person. It’s obvious she really cares about her students and wants you to become a better writer. Dr. Dawkins runs a wonderful class; discussions are always really fun. Though, Dr. Dawkins is a bit of a picky grader, so you will have to work hard on the papers, but it’s worth it! You’ll come out of the class with more confidence in your writing skills. In the spring semester, you have the option to do 3 creative projects in lieu of a paper or creative projects in addition to a paper for extra bonus points unlike in the fall. Readings can get a bit hefty with the books. Definitely take the class if you are looking to advance your essays!",
+          "created_at": "2025-10-13T01:15:16.569Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    }
+  ],
+  "oe021b": [
+    {
+      "id": "r_1760318142471",
+      "course_id": "oe021b",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Hruska) AMAZING CLASS OH MY GOD note that the readings are LONGGGG but it is worth imo. Dr. Hruska is a wonderful teacher who is unfathomably based and real and very cool. She’s very very excited about the material and makes you excited about it too. I struggled sometimes (im more of a stem kid) but still enjoyed the class a lot regardless. While it was often hard to get the readings done (often like … 50+ pages sobbing emoji) it was well worth it for the class discussions. Because this level is non-required english, the people participating in class are people who *actually want to participate in class* so what basically everyone has to say is really really interesting. Big difference to MWA last year . lol . Note that Hruska is super lenient with extensions but only if you ask more than 24 hours in ahead! Otherwise she is not lenient. Kinda annoying but fine whatever. If you *can* take as a junior concurrently with DFRL, do it. Especially in the second semester there is a lot of concept overlap, because this class is very heavily historical/political. First sem readings were pretty good, second sem readings/films <33333 GOD",
+      "created_at": "2025-10-13T01:15:42.471Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    }
   ]
 }

@@ -49,6 +49,9 @@ function getTransporter(){
 }
 
 const transporter = getTransporter();
+// unified email helper (prefers ReSend when RESEND_API_KEY is set)
+let emailer = null;
+try{ emailer = require('./lib/email'); }catch(e){ console.error('[BOOT] failed to load ./lib/email', e && e.message ? e.message : e); }
 
 // Sessions: cookie-based. We'll set a signed random id in a cookie and persist session info in data/sessions.json
 function createSession(email){
@@ -212,26 +215,24 @@ app.post('/api/auth/request-code', (req,res)=>{
   // send email if transporter available, else log
   const subject = 'Your OHS verification code';
   const text = `Your verification code is: ${code}`;
-  if (transporter){
-    transporter.sendMail({ from: process.env.SMTP_FROM || 'noreply@ohs.stanford.edu', to: trimmed, subject, text })
-      .then(info=>{
-        console.log('[AUTH] email sent', info && info.response ? info.response : info);
-        const resp = { success:true };
-        if (process.env.DEV_AUTH_RETURN_CODE === 'true') resp.code = code;
-        res.json(resp);
-      }).catch(err=>{
-        console.error('email send failed', err);
-        // still return success to avoid leaking existence
-        const resp = { success:true, warned: true };
-        if (process.env.DEV_AUTH_RETURN_CODE === 'true') resp.code = code;
-        res.json(resp);
-      });
-  } else {
-    console.log(`[AUTH] verification code for ${trimmed}: ${code}`);
-    const resp = { success:true, warned: true };
-    if (process.env.DEV_AUTH_RETURN_CODE === 'true') resp.code = code;
-    res.json(resp);
-  }
+  // Use unified email helper (prefers ReSend when RESEND_API_KEY set, falls back to SMTP)
+  (async () => {
+    try{
+  // prefer an explicit Resend-from address, then SMTP_FROM; avoid falling back to the school's domain
+  const defaultFrom = process.env.RESEND_FROM || process.env.SMTP_FROM || 'noreply@websudoku.me';
+  const info = await emailer.sendMail({ from: defaultFrom, to: trimmed, subject, text });
+      console.log('[AUTH] email send result', info ? (info.id || info.response || info.messageId || info) : 'no-op');
+      const resp = { success:true };
+      if (process.env.DEV_AUTH_RETURN_CODE === 'true') resp.code = code;
+      res.json(resp);
+    }catch(err){
+      console.error('[AUTH] email send failed', err && err.message ? err.message : err);
+      // still return success to avoid leaking existence
+      const resp = { success:true, warned: true };
+      if (process.env.DEV_AUTH_RETURN_CODE === 'true') resp.code = code;
+      res.json(resp);
+    }
+  })();
 });
 
 // POST /api/auth/verify-code { email, code }
