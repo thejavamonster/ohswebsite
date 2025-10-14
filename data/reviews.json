@@ -1,6 +1,18 @@
 {
   "jlcd1": [
     {
+      "id": "r_1760400467940",
+      "course_id": "jlcd1",
+      "rating": null,
+      "author": null,
+      "text": "my name is adalyn hello",
+      "created_at": "2025-10-14T00:07:47.940Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "adaelise@ohs.stanford.edu",
+      "poster_sid": "d49f1bf797f7f403ee7bacd9dafc5d89"
+    },
+    {
       "id": "r_1760232595891",
       "course_id": "jlcd1",
       "rating": null,
@@ -1482,6 +1494,2468 @@
       "replies": [],
       "poster_email": "jules328@ohs.stanford.edu",
       "poster_sid": "787699a7501136c9f28b46cdd0ebe876"
+    }
+  ],
+  "ols11": [
+    {
+      "id": "r_1760401971492",
+      "course_id": "ols11",
+      "rating": null,
+      "author": null,
+      "text": "The writing option definitely brings quite a bit of work with it, I second abv ^ however Dr Zei is super nice and genuinely cares about you doing well in the class although her feedback can be a bit harsh at first. Expect B’s at the start of the class and 100% on your assignments at the end.",
+      "created_at": "2025-10-14T00:32:51.492Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760401968477",
+      "course_id": "ols11",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Zei, writing option) This is an AMAZING course!! Highly recommend for anyone interested in law. If you’re not, though, you may struggle in the first semester - 1st semester is a deep dive into various disciplines of law, and on the final you will be expected to demonstrate your understanding of it. Second semester is when the course shifts to a thorough study of a current SCOTUS case, which is amazing and a fantastic chance to dive into your specific legal interests. Dr. Zei is a great teacher, very thorough, and you can tell she really cares about the class. Both semesters are a lot of work (for the writing option, at least), so if you’re short on time or not particularly interested in law it may be overwhelming for you.",
+      "created_at": "2025-10-14T00:32:48.477Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760401964549",
+      "course_id": "ols11",
+      "rating": null,
+      "author": null,
+      "text": "I did the writing option. Dr. Zei was great. Would 1 million percent recommend the class even if you’re not going into law",
+      "created_at": "2025-10-14T00:32:44.549Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ops10": [
+    {
+      "id": "r_1760401989987",
+      "course_id": "ops10",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Neemeh) my least favorite teacher at ohs. They were disrespectful of students, made snide comments about students if they were having issues or were misunderstanding something. Everything was SO late. It took them all semester to grade our assignments, we had nothing back by the time we turned in our final. I began dreading going to this class because of the attitude and lack of respect for students. Not to mention they would keep their mic on the whole class so you would constantly have feedback and would interrupt you as you were making a point. Always had something else to blame for the lack of timely grading or organization of our group project.",
+      "created_at": "2025-10-14T00:33:09.987Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760401985649",
+      "course_id": "ops10",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Wallhagen) I can’t believe Dr. Wallhagen is a controversial teacher (as in, some people dislike him). He was amazing for this class. You could tell that he was really passionate about philosophy so he would sometimes go on rants about what he disliked about the books we were reading. As for the class itself, it was basically a book club with occasional essays and projects. Some of the books we read were really boring though. As a warning, just don’t say that truth is subjective because if you do he’s going to go on a long rant about how there is an objective truth and he WILL debate you during class about it.",
+      "created_at": "2025-10-14T00:33:05.649Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "jm007": [
+    {
+      "id": "r_1760402005248",
+      "course_id": "jm007",
+      "rating": null,
+      "author": null,
+      "text": "Ms. Kato is an amazing teacher! She’s really nice and she grades so quickly like literally she will grade the average assignment in less than 24 hours!",
+      "created_at": "2025-10-14T00:33:25.248Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "om011": [
+    {
+      "id": "r_1760402010760",
+      "course_id": "om011",
+      "rating": null,
+      "author": null,
+      "text": "Mrs. Fielder is an amazing teacher! I really do recommend her especially if you need extra help outside of class. She’s super sweet and understanding, and honestly so down to earth and respectful to her students.",
+      "created_at": "2025-10-14T00:33:30.760Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "om012": [
+    {
+      "id": "r_1760402075557",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Nikzad) He is a very well-intentioned instructor, and I feel like he means well, but as a teacher, not great at all. He just reads off the slides and sometimes gets problems incorrect during presentations, and most of the class is breakouts anyways, where you do ONE problem and nobody else is talking. In fact, for the last quarter of the second semester, I was in a breakout room all alone, so teamwork didn’t matter much either. His feedback is basically, “all problems correct, thank you for an organized work with nice handwriting.” If you get something wrong, then he just marks it “incorrect.” However, I will say that he is a kind person and is lenient on extensions and very understanding of anything personal that comes up. As for homework load, it wasn’t bad for me, but I actually knew a lot of material already, and I heard my classmates saying that they spent a lot of time on this class, so beware if you don’t already know some material in Intermediate Algebra. If you do, then it’s good for your GPA (I got high A’s, or A+’s in a normal school, since OHS doesn’t do A+’s, both semesters). Or at least, I have an A+ right now for the second semester… haven’t done the final yet. If you understand math pretty well or you like it in general, like me, consider giving him a shot, but I didn’t like him that much… so it depends on your preferences.",
+      "created_at": "2025-10-14T00:34:35.557Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402072553",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "Ms. Zaurova: Ms. Zaurova is not as bad as everyone says she is. She’s a very nice teacher who cares about your understanding and genuinely tries to help. Her classes are split into two halves; one half, the whole class is in one room and we all discuss problems and learn new concepts, the second half, we are split up into breakout rooms with 2 or 3 of our peers. The second part is particularly fun because you can socialize a bit and discuss a multitude of methods to solve problems. Every now and then Ms. Zaurova pops in and controls whether we understand what to do. We then spend five minutes at the end of class to discuss the content of the problems and continue the discussion next class.",
+      "created_at": "2025-10-14T00:34:32.553Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402069429",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "Ms. Zaurova: As everyone else already said, WORSE TEACHER EVER don't get her for math. She was literally out for my grades. She marked everything she could wrong AND REFUSED TO TEACH. The type of teacher who has no leniency and takes points off wherever they can. I tried so hard in this class just to be given nothing back in return. We spent all of class in break outs learning absolutely nothing. Not only that, but she refused to provide ANY resources because “just the book” is not very helpful. I'VE BEEN USING THE BOOK IM ASKING YOU FOR HELP. Not only this but I attempted to go to office hours multiple times and each time yet again NO ACTUAL HELP. Chatgpt is more helpful than her. If you want to get a bad grade in math and not learn anything then take her class. Honestly this class made me totally rethink my enrollment in OHS because it was so much of a waste of money taking it with her. She has quite literally been the BANE of my existence for the past year. I'm so glad this is over. Let this message be a warning. Taking this class WITH HER is equivalent to academic suicide",
+      "created_at": "2025-10-14T00:34:29.429Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402068419",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "Ms. Zaurova: Similar to other replies, very harsh grader and plays lots of favorites. I think i was a favorite at the beginning  of the year until lets say the final and then my grades dropped DRASTICALLY for participation and on problem sets. During class it's all breakouts and half the time it’s either one person doing all the work and not letting anyone else contribute, or everyone sits there dumbfounded and then Ms. Zaurova pops in and doesn't explain much at all. And the feedback on problem sets was sometimes my side work being incorrect even though the answer ended up being correct. And one time i used pascals triangle on a problem set and she took off points because she wanted me to use the choose x formula (it was never stated in the instructions) I also asked for a few resources to help with final prep and she essentially said to just read the book, which wasn't very helpful. She grades very quickly.  (i would also like to add this course killed my love for math, not that i had much to begin with, but this class got my asian mother to accept a b-)",
+      "created_at": "2025-10-14T00:34:28.419Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402060931",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Zaurova) Most of the class is just breakouts, and sometimes she will just sit there waiting for someone to ask a question, because it seems like she doesn’t really know what to teach. Feedback on problem sets is usually somewhere along the lines of “okay” at each question. Says she will give full credit on the participation sets (unlimited tries) as long as you attempt each problem, however many times I have noticed she does not. The curriculum is also not great, kinda random, and a fair amount of work. We had Dr. Guardia as a sub one day, and he was AMAZING, definitely recommend him. The only thing that was good about Ms. Zaurova was she is a fast grader. Other than that terrible class and teacher.",
+      "created_at": "2025-10-14T00:34:20.931Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402056588",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Zaurova) She is pretty strict and a harsh grader if you don’t show your work doing things “her way”. She plays favorites and will give you a 0 on participation. She sometimes “judges you” for questions that you “should know” Most of the class is breakouts. On the bright side, she is helpful and you can tell she genuinely wants you to do your best. For problem sets and exams her feedback is in depth and she makes it clear what she wants from you. She grades quickly.",
+      "created_at": "2025-10-14T00:34:16.588Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402051639",
+      "course_id": "om012",
+      "rating": 5,
+      "author": null,
+      "text": "(Ms. Revathi) [2023-\t] Ms. Revathi was absolutely AMAZING! Definitely try to get her, she always made sure we knew when assignments were due (they kept a very consistent week-by-week schedule for the assignments which was great), cared about our mental health, and also really seemed to care about us learning the material. She keeps a very consistent order in class, usually just going down the list of people alphabetically, so you know exactly when you’re going to do something on the whiteboard, which is a life-saver. She also is by FAR the fastest grader I’ve ever had; one time I remember taking one of the unit exams (that you could take at home parent-proctored), then going out to dinner, and literally right when I got there (~10 minutes after I submitted), it came back fully graded, like marks/feedback and everything! As for the course, there can be a lot of work, but since it is so consistent week after week, it is easy to start maintaining a work schedule. I’d recommend starting the problem sets as soon as the second class (wed/thur) ends, because it can catch up. In terms of material, it’s a 7/10 math class, but Revathi takes it up to a 10/10.",
+      "created_at": "2025-10-14T00:34:11.639Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402045776",
+      "course_id": "om012",
+      "rating": 5,
+      "author": null,
+      "text": "Dr. Guardia is an incredible teacher!! He was super duper accommodating with my assignments (especially if you need an extension, he gives it no sweat). Overall, a great teacher and really loves what he does. One thing I suggest, would be to watch the video lectures on topics you are struggling with and read the textbook if you don’t like to participate or ask questions. Otherwise, he makes time to meet with you and usually replies to email within 20 minutes. Also, he makes it more than just like learning the content. He is really passionate and does everything so that you can learn more than just the “baseline curriculum”. For example, he made a book club on how to study. Also, the first semester isn’t super difficult, just stay consistent. So, 10/10 class.",
+      "created_at": "2025-10-14T00:34:05.776Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402030892",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "I actually agree with the comments above but I still LOVED having him as a teacher. I always reached out whenever I had questions on exams and the number one thing I will always be grateful for is the fact that he gave me a chance to redo questions on one of my exams “which I did HORRIBLE IN. Very empathetic teacher and overall I think despite his hands off approach, I actually learned so much from the presentations.revathirathi",
+      "created_at": "2025-10-14T00:33:50.892Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402028186",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "Dr Nikzad is well intentioned but he doesn’t do a ton in class. He basically gave us a 10 minute lecture summarizing the stuff from canvas and then stuck us in breakouts for 20 minutes to do problems that we would present on. Issue was that breakouts werent really for group work.",
+      "created_at": "2025-10-14T00:33:48.186Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402025698",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "Dr Nizad is without a doubt the worst OHS instructor I've ever had, he poorly explains much of the material, and you spend more than half the class alone in a breakout room doing a single problem. Furthermore, he never explains what you do wrong on tests, instead just saying ‘incorrect’ and then deducting points, which makes it really hard to improve from your mistakes. You would honestly be better off trying to learn all the material from the textbook.",
+      "created_at": "2025-10-14T00:33:45.698Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402023174",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "(Dr.Nikzad) For me, this class was a case of difficult material but a good teacher. We get to present problems every class, and are always supported. It can be exhausting sometimes because we do get a problem set + homework every week, but all of us have definitely improved a lot!",
+      "created_at": "2025-10-14T00:33:43.174Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402020148",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Nikzad was the most amazing teacher ever. He explains the content super well, is super chill and nice in class, and clearly lives for teaching math. He makes the class atmosphere super chill and relaxing and loves hearing about your plans for the weekend! I loved the daily math presentations because they helped me understand the concepts on a deeper level. He makes every chapter and concept super clear and easy to understand. He is not a harsh grader when it comes to grading tests and problem sets. Just make sure that you write with your nicest handwriting, otherwise he will deduct points. Overall, amazing teacher and a lovely course!",
+      "created_at": "2025-10-14T00:33:40.148Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402017157",
+      "course_id": "om012",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Shapiro) I liked this teacher, she did not cold call anyone and she explained things multiple times when people were confused. I didn’t love the course material but this teacher was great.",
+      "created_at": "2025-10-14T00:33:37.157Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "om015": [
+    {
+      "id": "r_1760402093255",
+      "course_id": "om015",
+      "rating": null,
+      "author": null,
+      "text": "Ms. Zaurova is clearly very interested in the material, bless her heart, but she does not know how to teach, especially to students who are less interested or competent in math. If you love geometry already, you will love this class and get along with Ms. Zaurova well. If math isn’t your strongest point, or if you have unique methods of going about it, you will not do well. Ms. Zaurova often makes digs toward students that don’t understand the material or don’t do it exactly how she does, which is not a positive learning environment. Most of class is spent in breakouts as well, which can be helpful occasionally, but for my section often created loops where no one understood the material and then just did it wrong together all class.",
+      "created_at": "2025-10-14T00:34:53.255Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402089660",
+      "course_id": "om015",
+      "rating": null,
+      "author": null,
+      "text": "Mrs. Shapiro is an amazing and kind teacher. You can clearly tell she loves teaching Geometry. She explains the content super well and is so sweet. If you ever have a question, you can ask her after class, and she loves helping you out when you need it. The course was pretty easy in my opinion. Not much homework and pretty simple problem sets. Overall, amazing course and a super sweet teacher.",
+      "created_at": "2025-10-14T00:34:49.660Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402086911",
+      "course_id": "om015",
+      "rating": null,
+      "author": null,
+      "text": "Mrs. Shapiro always ended class early and half of the exams we received had a mistake in them. There were multiple questions on unit exams that were unsolvable and there was even a mistake on the final! Classes were fine but later on in the year I ended up struggling because the material got 5 times harder in the second semester and she didn’t adjust the pace. Overall, not the best teacher ngl",
+      "created_at": "2025-10-14T00:34:46.911Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402082862",
+      "course_id": "om015",
+      "rating": null,
+      "author": null,
+      "text": "Mr. Nikzad is so good for this class. He’s so chill and really sweet.",
+      "created_at": "2025-10-14T00:34:42.862Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "om013": [
+    {
+      "id": "r_1760402125800",
+      "course_id": "om013",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Gupta) [2024-2025] Pretty good teacher overall, better than like half of the other reviews. She’s nice in class, grants extensions/resubmissions, and overall makes class an okay experience. Her grading speed is about average, and I feel like she’s trying her best to be a good teacher. Would recommend, 8/10",
+      "created_at": "2025-10-14T00:35:25.800Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402121845",
+      "course_id": "om013",
+      "rating": null,
+      "author": null,
+      "text": "(Dr.Kalubowila) She is kinda picky on the units and drawing unit circles (formatting stuff). I dont really like the class, its basically her talking the whole class and asking you to type answers. Most times we go to breakouts, and she picks people to write on the board and do the problem. If you find her afterclass she does give some help and solves your problem( but super busy teacher)",
+      "created_at": "2025-10-14T00:35:21.845Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402130910",
+          "review_id": "r_1760402121845",
+          "author": null,
+          "text": "LOL so real^^^ (comment above)",
+          "created_at": "2025-10-14T00:35:30.910Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402118074",
+      "course_id": "om013",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Kalubowila) [2023-2024] She was my favorite teacher this year by far (possibly ever)!! She explained the material very thoroughly and I never once felt lost in her class. She doesnt expect you to be well versed in the material before class and will teach everything in a way that is super easy to understand. This was so awesome for me as I feel like I dont fully grasp math concepts purely from a textbook so having her explain it all in class really cemented my understanding of the subjects. She is also so so so nice!! I love talking with her and ive gone to office hours many times to ask for study tips and help on questions. She prepares you very well for all the exams and will give you some idea what to expect on them. As long as you pay attention in class and go to office hours when needed then finishing with an A in the class is easy. She is also an easy grader and as long as it is shown that you know the material she wont take off many points (if any at all) for minor errors. Dr. Kalubowila also gives super helpful feedback on exams and will explain why you got points docked (she also welcomes you to come to office hours if you need further explanations on the question or the feedback)! Something that has helped me immensely in this course is going back to scroll through past classes (looking at the recordings) and taking notes based off of those. Overall I absolutely adored having her as my teacher and she made the class fun and easy to understand!! :)",
+      "created_at": "2025-10-14T00:35:18.074Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402114940",
+      "course_id": "om013",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Fielder) Super nice instructor and she explains things so clearly! I would recommend taking this course with her!",
+      "created_at": "2025-10-14T00:35:14.940Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402109506",
+      "course_id": "om013",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Van Lingen) Sorry to disappoint the person above but Dr. Van Lingen was terrible. I saw in another course review that someone had said that Dr. Van Lingen basically assumes that since we’re at OHS we’re automatically good at math, and I didn’t know how to put it into words before but that’s exactly how Dr. Van Lingen acts. He basically assumes everyone already knows how to do everything and will ask advanced questions, expecting people to know the answer (and will then thoroughly express his disappointment when there’s dead silence in the chat). If you’re good at math, I wouldn’t worry about having Dr. Van Lingen, just make sure to participate A LOT bc he’s pretty strict about participation grades (you need to be typing answers in chat 24/7, even if it’s the wrong answer). If you’re not good at math, though, I’d recommend trying to switch sections to get another teacher. Dr. Van Lingen will just expect you to know everything and will get grumpy when you don’t and will also complain about how people don’t participate enough (he def has a grumpy/disappointed/ borderline angry old man vibe to him). Also, his feedback on exams is terrible. The only feedback he gives is either “Great!,” “Ok” or “Off” but never actually explains what you did wrong or gives any detail besides that. So basically, if you don’t understand what you did wrong on an exam you’re forced to either go to Office Hours and ask him or just figure it out for yourself.",
+      "created_at": "2025-10-14T00:35:09.506Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402103327",
+      "course_id": "om013",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. van Lingen) idk why ppl hate him but I personally adore him. Class itself is great",
+      "created_at": "2025-10-14T00:35:03.327Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "om045": [
+    {
+      "id": "r_1760402187029",
+      "course_id": "om045",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Fielder) Ms. Fielder literally changed my entire view on math. I’m a super humanties +bio/chem person and math has never been “fun” to me (tho I’ve always done ok in it). Ms. Fielder is the absolute SWEETEST person I have ever met, she is so kind and always will try her absolute best to help you understand whatever topic it is that you’re having trouble with. She’s also an incredibly lenient grader (I had a 100 in the class until the very end of spring semester, and I ended the class with a 99.3 so) and really just wants everyone to learn as much as they can. PLEASE TRY TO SWITCH TO HER SECTION IF YOU CAN i literally cannot recommend her enough and I wish she also taught more advanced level math so I could have her again.",
+      "created_at": "2025-10-14T00:36:27.029Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402182069",
+      "course_id": "om045",
+      "rating": null,
+      "author": null,
+      "text": "Dr. lal is nice, grading’s decent. She likes when you volunteer for problems and participate, just as long as you show some effort. Go to OH if you need help!",
+      "created_at": "2025-10-14T00:36:22.069Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402177394",
+      "course_id": "om045",
+      "rating": null,
+      "author": null,
+      "text": "(Dr Lal) great class! teacher is chill but explains the content well. Super in depth in class and office hours! They have open note take home finals and midterms instead of a proctored exam which for me made it more manageable. Dr lal’s voice makes me really sleepy tho for some reason but otherwise this was a super good class",
+      "created_at": "2025-10-14T00:36:17.394Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402168144",
+      "course_id": "om045",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Niazi) great teacher, pretty chill, and will help you through problems that you have issues with, along with being flexible on due dates.",
+      "created_at": "2025-10-14T00:36:08.144Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402173624",
+          "review_id": "r_1760402168144",
+          "author": null,
+          "text": "(Dr Niazi) ^^ great teacher and very chill, gives helpful class discussions and helps students with stuff they don’t understand and gives good feedback. He's also a very lenient grader. Best math teacher ever.",
+          "created_at": "2025-10-14T00:36:13.624Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402162355",
+      "course_id": "om045",
+      "rating": null,
+      "author": null,
+      "text": "(Mrs. Revathi) is the best math teacher I’ve ever met. She’s very passionate about the material and a great person overall. Very fast grader and extremely helpful explaining problems on email (i couldnt go to office hours due to time zones). Beware the workload!!! Biweekly homework assignments take 2h+ to complete, and some of the pre-class questions need a long time to figure out as well. Ms. Revathi has told me that my request for both assignments to be due on Sunday would be seriously considered, so let’s hope it goes through. :)",
+      "created_at": "2025-10-14T00:36:02.355Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402159341",
+      "course_id": "om045",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Revathi) I’ve never met a faster grader, our exams are due on Monday night and I’ve pretty much always had it back on class by Tuesday evening. She’s incredibly chill, and she’ll talk about the importance of getting assignments in on time and getting enough sleep. I’ve had her twice, and loved her both times! As for the class itself, it really pretty chill grade-wise, but there is quite a bit of homework. I think I spent probably ~3 hours per each homework (some I’ve spent much longer), but I know some people who average much shorter than that, it really just depends. The finals/midterms are open notes, and ngl I found them kinda fun.",
+      "created_at": "2025-10-14T00:35:59.341Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402141551",
+      "course_id": "om045",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Lal was a good instructor, but the HW load was too much - assignments due every Thursday and Sunday make it an unending cycle of work and stress.",
+      "created_at": "2025-10-14T00:35:41.551Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402156221",
+          "review_id": "r_1760402141551",
+          "author": null,
+          "text": "(Dr. Lal) ^ agree with the above, I got really burned out towards the end of the semester. Integrals are a real drag, series = hell. Otherwise, good textbook, good syllabus, solid course.",
+          "created_at": "2025-10-14T00:35:56.221Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402138974",
+      "course_id": "om045",
+      "rating": null,
+      "author": null,
+      "text": "I loved this course. Ms. Fielder was an amazing teacher!",
+      "created_at": "2025-10-14T00:35:38.974Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "om061": [
+    {
+      "id": "r_1760402211467",
+      "course_id": "om061",
+      "rating": null,
+      "author": null,
+      "text": "Mr. Fredericks is a really lenient teacher. Classes were formatted on the textbook (all example problems were from the textbook too) and the feedback was sometimes slightly confusing (not often though). He grades fairly quickly, and he’s a really kind teacher so recommend reaching out if you are struggling with material. He doesn’t take off points for late work and he really is looking out for you to do well. Second semester does get fairly hard and the class moves quickly so look out for that.",
+      "created_at": "2025-10-14T00:36:51.467Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402208567",
+      "course_id": "om061",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Fredericks) is top 10 classes I’ve taken at SOHS. He’s really chill and honestly the class is always fun. Be ready to be talking about random tidbits about his life, the world, and all the practice problems we do. Classes taught everything, so there wasn’t even much of a need to actually read/watch videos/take notes on the lectures, would recommend taking the notes though, since it makes AP prep much easier.",
+      "created_at": "2025-10-14T00:36:48.567Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402205502",
+      "course_id": "om061",
+      "rating": null,
+      "author": null,
+      "text": "Polacco hes ok. My god i wish i knew that you do not have to spend a fricking $250 on the textbook bc they hv it in pdf",
+      "created_at": "2025-10-14T00:36:45.502Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "om065": [
+    {
+      "id": "r_1760402223309",
+      "course_id": "om065",
+      "rating": null,
+      "author": null,
+      "text": "DO NOT TAKE THIS CLASS!!!! This is the absolute WORST class I have ever taken. I have never been so angry with a class and teacher before. D’Urso is not a good teacher at all. I don’t know how people say she’s a good teacher, she’s not. She is so disorganized, monotone, and never seems like she wants to be there or teach. In parent teacher conferences she said to my parent that what you learn in class is not relevant to what you read or do for homework. So what’s the point of class? Good question. For her to just ramble on about something that you’ll never hear about again or ever use. She never explains or teaches anything relevant. You do one long research project/paper at the end of the spring semester, and she never went over it in class or explained what she wanted. She literally skipped over the slides that explained it. Her feedback or solution is always “see her in office hours,” which is never helpful. I think she just genuinely doesn’t know what to do. She seems very clueless. I’m sure she knows the material, but she cannot teach it for the life of her. This class has been nothing but frustrating, and I can’t believe a school as prestigious as OHS (a STEM school) has a math class THIS BAD. People write off bad teaching as their “teaching style,” and we as a society really need to stop doing that to spare their feelings and say it like it is: bad teaching. D’Urso is a bad teacher. She does not teach. If you need a math class, just take something else… without D’Urso as a teacher.",
+      "created_at": "2025-10-14T00:37:03.309Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402218092",
+      "course_id": "om065",
+      "rating": null,
+      "author": null,
+      "text": "Decent class, D’Urso is a good teacher IF you go to her office hours, class time is very vague or not related to what the hw is about at all, but shes super good at describing what its asking/explains way more in depth if you go to her. Shes also the fastest grader i have had ever (quiz due monday at 2:59 am? Returned at 3pm that afternoon). Not only that but shes super lenient compared to other teachers, ive had times where i completely missed/talked around the answer for a question and gotten full points (granted this goes the other way where i didnt think I missed anything n got a point off but one point isnt enough to care). I think shes a good teacher if u make the effort to go to office hours but otherwise you might/will be very lost.",
+      "created_at": "2025-10-14T00:36:58.092Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "oec11": [
+    {
+      "id": "r_1760402241842",
+      "course_id": "oec11",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Brege) This class was awesome, I would definitely recommend taking it if you are interested in economics and that kind of stuff. Mr. Brege is also an extremely lenient grader and although there are some weekly write-ups you need to do, they are relatively straightforward as long as you understand the material. As I said, Mr. Brege also doesn’t take off many points so it is one of the easier classes at OHS to get an A in.",
+      "created_at": "2025-10-14T00:37:21.842Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402238621",
+      "course_id": "oec11",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Brege) I found this class a great introduction to microeconomics and the language of economics broadly. It is composed of 2 exams and a weekly homework write-up that can take some time. It is a class that if you put in a little bit of effort it can be extremely easy to get a very high grade in. The weekly homework can take a while but you’ll do very well on them if you spend that time correctly. Overall the discussions are enjoyable and low-stress, and Dr. Brege is easy-going and approachable.",
+      "created_at": "2025-10-14T00:37:18.621Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "oec15": [
+    {
+      "id": "r_1760402266695",
+      "course_id": "oec15",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Brege) Dr Brege is the GOAT",
+      "created_at": "2025-10-14T00:37:46.695Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402256471",
+      "course_id": "oec15",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Brege) Idk what the person above me meant by “dumbfounded by the incompetence of the other students in the class” since 99% of the time there was an active discussion and almost all students participated, but I agree with the other parts.",
+      "created_at": "2025-10-14T00:37:36.471Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402262533",
+          "review_id": "r_1760402256471",
+          "author": null,
+          "text": "^My section was dead a lot of the time, but the class itself was fun because you literally just had to research and do a write up on a topic of your choice/interest.",
+          "created_at": "2025-10-14T00:37:42.533Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402249252",
+      "course_id": "oec15",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Brege) This class is more Dr. Brege in his element, it seems. The format is much more casual compared to AP Micro, with there being no weekly homework or exams. Instead, you have a large research paper due at the end of the semester that constitutes a large portion of your grade. I was dumbfounded at the incompetence of the other students in this class, so really if you have a pulse you can meet and exceed his expectations. Just please, I beg, actually try on your Nobel Presentations. And for the love of God turn in your semester paper on-time, it is like 75% of the class grade and it is not hard.",
+      "created_at": "2025-10-14T00:37:29.252Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "um150": [
+    {
+      "id": "r_1760402328672",
+      "course_id": "um150",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Gupta) I enjoyed this class, I found the first semester pretty difficult, but i loved the second semester. Every class had discussion even though there was a light participation requirement, and we did lots of breakout problems together. Dr. Gupta was really nice, she may in seem strict at first, but if you’re overwhelmed or sick or stressed and need an extension, even with minimal time until the assignment due date, she will grant it. Tests had no calculators which was difficult for me as someone prone to sloppy mistakes, but I didn’t mind it too much. Dr. Gupta graded everything in a reasonable amount of time (generally had major assignments back before the next major assignment where they were relevant, but she teaches two different courses that often have overlapping major assignments so it sometimes takes a little while (nothing unreasonable though, think average ohs english teacher grading speed). Looking at the rest of these reviews I would say if you can get Dr. Gupta, absolutely take her section! Would recommend.",
+      "created_at": "2025-10-14T00:38:48.672Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402282577",
+      "course_id": "um150",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Gilula) Dr. Gilula is a great instructor, but there are some “flaws.” He doesn’t care too much about the course itself, so you might see on Canvas that an assignment/project is coming up without being notified. He usually grades all assignments towards the end of the semester, so if you want immediate feedback you should email him or go to his office hours. He is very helpful in office hours, so do not be afraid to go and ask. If you are a true math person, you’ll grow to love him :).",
+      "created_at": "2025-10-14T00:38:02.577Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402321947",
+          "review_id": "r_1760402282577",
+          "author": null,
+          "text": "^ One of his sections was quiet and depressing af I actually felt sad being in there. Maybe it was just that section though.",
+          "created_at": "2025-10-14T00:38:41.947Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402317608",
+          "review_id": "r_1760402282577",
+          "author": null,
+          "text": "^i second, Gilula's sections are kinda quiet (that's kinda on me too because I was quiet a lot imo), but he is a great instructor aside from the fact that he grades everything kinda late (as I type this I have had a B+ in powerschool for a while now even though i know i cooked the assignments). go to office hours if you don't understand something because i know i should have gone to them more often this year",
+          "created_at": "2025-10-14T00:38:37.608Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402313328",
+          "review_id": "r_1760402282577",
+          "author": null,
+          "text": "^ i third, im 3 weeks into the course and its so quiet like whats the point of coming to class if we’re just gonna do practice problems the whole time? As someone who usually asks questions and participates and whatnot, the whole atmosphere makes me scared to ask questions cuz it’s just so quiet… and let’s not even get started on the disastrous textbook. It’s so long and basically the equivalent of spaghetti code for explaining math concepts. No I don’t remember this random span of vectors 1 chapter ago, why do you need to say “let’s revisit this” as if i’m an elephant or something. And then proceeds to say “we’ll cover this in more depth in chapter 19” like just cover it now? Gram-schmidt isn’t that hard and can be explained with just linear combos and projections. I’ll come back and update this if I feel it’s changed later in the semester. The Organic Chemistry Tutor will save your life in the problem sets.",
+          "created_at": "2025-10-14T00:38:33.328Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402308651",
+          "review_id": "r_1760402282577",
+          "author": null,
+          "text": "^ Takes a little while to grade, but an excellent teacher. The actual classes are kind of odd bc it’s mainly practice problems, but he’s very good at explaining how to do the problems when he’s explaining them. The textbook is a mess though, especially with Gram-Schmidt.",
+          "created_at": "2025-10-14T00:38:28.651Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402303286",
+          "review_id": "r_1760402282577",
+          "author": null,
+          "text": "^^ Just switch sections lol I don’t think his sections are ever active. The other teachers are more interactive.",
+          "created_at": "2025-10-14T00:38:23.286Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402298615",
+          "review_id": "r_1760402282577",
+          "author": null,
+          "text": "^ Yeah his sections are basically us being thrown into breakouts like 75% of the time. The textbook truly is awful… He’s pretty good in office hours, but frequently wasn’t there.",
+          "created_at": "2025-10-14T00:38:18.615Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402294730",
+          "review_id": "r_1760402282577",
+          "author": null,
+          "text": "^Ill continue this, his class is very chill (mostly silent) and you do need to learn most material outside of class.",
+          "created_at": "2025-10-14T00:38:14.730Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402273694",
+      "course_id": "um150",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Kalubowila) Didn’t love her. She was kinda weird in general (and not really in the good way), so I wouldn’t recommend. I think she’s new to teaching though so this will hopefully change. Like I emailed her with a question about the final project last semester and she just… didn’t want to respond? Like “I’m not feeling well, sorry” with no pointer toward a solution. I ended up emailing the same question to my previous year math teacher who also teaches MVC (Pham) and she gave me a great answer. Like, Kalubowila could’ve at least pointed me toward the other teachers. Idk she was also just annoying in some other ways too (like for example didn’t actually know the answers to the breakout room questions and told us how we were doing based on cross checking with the other rooms – sure fine but then you have to wait until the other rooms are done and if all rooms get it wrong then you’re screwed) Also note that the second semester of this class is Stanford’s Math51, which is 90% linear algebra and not mvc lol. At least last year idk if they’re changing it again",
+      "created_at": "2025-10-14T00:37:53.694Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402279666",
+          "review_id": "r_1760402273694",
+          "author": null,
+          "text": "^I actually think she’s kinda nice, and she grades assignments pretty fast. Some miscommunication did happen, and that’s probably due to her English or something.",
+          "created_at": "2025-10-14T00:37:59.666Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "um51a": [
+    {
+      "id": "r_1760402341910",
+      "course_id": "um51a",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Van Lingen) i hated him im sorry he clearly is trying to be a good teacher but he just sucks. he's constantly calling everyone out by name to ask if we're following BUT if we do ask a clarifying question or say that something was confusing, he's very condescending, his response is very brief, and it does not actually help. Sometimes he completely dismisses questions by just saying we're wrong and then moving on.",
+      "created_at": "2025-10-14T00:39:01.910Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402339254",
+      "course_id": "um51a",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Van Lingen) Not that hard imo—diff eq gets harder, if you get Dr. Van Lingen you’re going to have a harder time than D’Urso’s sections. Dr. Van Lingen grades pretty slow (like you’ll get your quiz grades back in batches, so by the time you’re on Quiz 8 you’ll have Quiz 1-5 graded). Pretty sure D’Urso is known for wicked fast grading but idrk. Also get ready to talk about the forest and the trees (you’ll find out :P). If you want Dr. Van Lingen to see your messages DO NOT message him on Canvas, EMAIL HIM DIRECTLY. He will give extensions and is pretty reasonable if you ask nicely and give valid reasons. Just make sure you read the textbook, watch the lectures (they’re kinda hidden in canvas but they exist!!), and do the online exercises. I would also recommend searching up youtube videos for topics you’re struggling with.",
+      "created_at": "2025-10-14T00:38:59.254Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "um53a": [
+    {
+      "id": "r_1760402352992",
+      "course_id": "um53a",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. D’Urso) very chill class and teacher! class can be a bit boring since it's just people going over problems that you solve before class, but it's easy to get a good grade if you spam participate. exams and quizzes aren't too bad either if you know the material. she sometimes doesnt go to office hours but otherwise W teacher",
+      "created_at": "2025-10-14T00:39:12.992Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402349510",
+      "course_id": "um53a",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Van Lingen) Not my favorite math class, but that’s just me. There are some cool real world applications of DE tho. For Van Lingen specific feedback see Lin Alg review.",
+      "created_at": "2025-10-14T00:39:09.510Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402346727",
+      "course_id": "um53a",
+      "rating": null,
+      "author": null,
+      "text": "Its like going into Purdue Engineering, but before you graduate.",
+      "created_at": "2025-10-14T00:39:06.727Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "um115": [
+    {
+      "id": "r_1760402371894",
+      "course_id": "um115",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Lal) [2024-25] I agree with the above about having an AP Calculus BC background; I took MVC three years prior to taking this course and didn’t really remember anything but everything worked out fine. The only real MVC thing that stood out to me was one application of Green’s theorem. Real analysis is basically rigorous calculus and is in my opinion more fun than complex analysis. Based on what I had heard from fellow students, they mostly said complex analysis was easier; I had the opposite experience. I wouldn’t say this course is drastically harder than any of the other higher level math courses (except maybe discrete math and geometry of numbers). Real analysis was much more intuitive given our calculus background. Complex analysis is more powerful but also more difficult, and it felt like it had more concepts. Presentations were easy 100s. Dr. Lal is super nice and very helpful when she works through problems in class. We almost never came on camera.",
+      "created_at": "2025-10-14T00:39:31.894Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402368263",
+      "course_id": "um115",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Lal is the one of the most kind, empathetic teachers I have seen thus far. She will learn alongside you. If you have a background in calculus bc, theoretically you could take this class, but I highly recommend a MVC class as it prepares you for the jump. DO NOT slack off -- take notes in class. Her class problems are the same problems on everything. Go on camera, talk in class, and don’t BS your presentation. If she sees you put in effort, and you took MVC or similar, and you have the time for a standard rigorous OHS class -- you will be fine and get an A.",
+      "created_at": "2025-10-14T00:39:28.263Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "um152": [
+    {
+      "id": "r_1760402391534",
+      "course_id": "um152",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Fredericks) It’s obvious that Mr. Fredericks has no idea what he’s doing and has no understanding of number theory beyond the material that he teaches or much mathematical problem solving skills. In class I often had to correct him.",
+      "created_at": "2025-10-14T00:39:51.534Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402387418",
+      "course_id": "um152",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Fredericks) It’s alright, I guess. This class doesn’t really teach number theory right ngl, it’s really just teaching a bunch of new material whilst only scratching the surface of each topic without doing any advanced or actually cool proofs with them. It’s not that fun, the instructor is great though.",
+      "created_at": "2025-10-14T00:39:47.418Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402383274",
+      "course_id": "um152",
+      "rating": null,
+      "author": null,
+      "text": "lmao imagine trying to teach number theory without field theory",
+      "created_at": "2025-10-14T00:39:43.274Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "um157": [
+    {
+      "id": "r_1760402408565",
+      "course_id": "um157",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Fredericks) It’s obvious that Mr. Fredericks has no idea what he’s doing and it’s even worse than the Number Theory comment above as in this course he does not even understand the course material, making multiple mistakes in the classes about Hilbert systems that strongly suggest he does not have an idea of what a formal proof actually is.",
+      "created_at": "2025-10-14T00:40:08.565Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402399869",
+      "course_id": "um157",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Fredericks) Great class. Extremely fun and very easy to get a good grade (it’s even possible to get above a 100%). There’s really not much to say about it, if you like logic, this will be a great course for you. This class is genuinely one of the only times I’ve had fun in the past few years of my life.",
+      "created_at": "2025-10-14T00:39:59.869Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "um160": [
+    {
+      "id": "r_1760402415092",
+      "course_id": "um160",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Paquin) Super fun (sort of chill) course and amazing teacher! I would say it’s easier than linear algebra, differential equations, and MVC.",
+      "created_at": "2025-10-14T00:40:15.092Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "um170": [
+    {
+      "id": "r_1760402433324",
+      "course_id": "um170",
+      "rating": null,
+      "author": null,
+      "text": "she grades fairly strictly but gives really useful feedback on improvement which can be applied to the next time you submit that problem",
+      "created_at": "2025-10-14T00:40:33.324Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402430350",
+      "course_id": "um170",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Paquin is an amazing teacher! The class is very flexible, you will almost never get tardies if you arrive within ~2 minutes of class and she is very understanding of your time, for example if you are sick or busy with some other things she will grant you the proper extension that you need. The feedback was also very helpful and detailed, it helped me understand where I could improve and where I was good at. In addition, everything from each class lecture is always uploaded and the expectations of the course are stated very clearly. The environment in class is very collaborative as well. I would definitely strongly recommend this class to anyone who is thinking about taking it.",
+      "created_at": "2025-10-14T00:40:30.350Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402421482",
+      "course_id": "um170",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Paquin) This is a very unique course, because you spend the whole time compiling a portfolio of proofs (lattice point geometry). It fosters a super collaborative environment, and Dr. Paquin is awesome!",
+      "created_at": "2025-10-14T00:40:21.482Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402426906",
+          "review_id": "r_1760402421482",
+          "author": null,
+          "text": "^ Dr Paquin is hands down the best OHS teacher to exist. Super engaging in class, gives everyone a chance to participate but doesnt cold-call. Has classes in zoom which is so much nicer because it doesn’t have malevolent spirits attempting to give you tardies for being a second late. As long as you show up you’re fine. She’s very accommodating with absences and late work as well. Also has occasional guest appearances by her kids who are adorable af.",
+          "created_at": "2025-10-14T00:40:26.906Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ola11": [
+    {
+      "id": "r_1760402447884",
+      "course_id": "ola11",
+      "rating": null,
+      "author": null,
+      "text": "(Magistra Pisarello) She’s an amazing teacher. Class is very fun and interactive, and she gives us a lot of practice to drill in the latin morphology and grammar and stuff. I’m not a linguist nerd but I still like the class a lot. Havent been to her office hours yet because they’re 3am in my timezone.",
+      "created_at": "2025-10-14T00:40:47.884Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ola12": [
+    {
+      "id": "r_1760402462649",
+      "course_id": "ola12",
+      "rating": null,
+      "author": null,
+      "text": "Loved Doctor Hendrickson, and overall I really enjoyed the class and learned a lot. I heard that new students won’t be switching into wheelocks and won’t have to cover the first 20 chapter’s vocab in the first month. I will say this though, because no one else has mentioned it yet: Dr Hendrickson cold calls every class, for every question, he does not wait to see if anyone raises their hand, that said I think it was probably necessary due to the material and physically how much we covered this year.",
+      "created_at": "2025-10-14T00:41:02.649Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402459574",
+      "course_id": "ola12",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Hendrickson) An amazing course with an outstanding instructor with a great passion for Latin! The textbook (Wheelock) might make you pull out your hair at times, but you’ll grow to love it (it gives quite clear explanations of the grammar overall). Be prepared for some spoken Latin and English to Latin translations, but no worries if you haven’t done that before!",
+      "created_at": "2025-10-14T00:40:59.574Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402456347",
+      "course_id": "ola12",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Hendrickson) Was a wonderful Latin teacher who clearly cared a lot about real language acquisition among his students. The breadth of different activities, assignments, and class discussions made the course feel exciting and vibrant. You are always doing something new which is quite fun. There are a lot of weekly assignments, but he will allow you to stop after one hour of working on them which helps a lot in cutting down the workload. The class is relatively difficult, and I suggest you take lots of notes and for Eutropius days, to come to class prepared with a preliminary translation. He will call on students either in order of last name or randomly so you need to pay attention in this class and work on your memorization. The exams are proctored, but he tells you basically what is on them ahead of time, making the studying process much easier. The take-home tests allow you access to the book for a short time, take full advantage of that opportunity. Overall an amazing if not slightly stressful course!",
+      "created_at": "2025-10-14T00:40:56.347Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402453514",
+      "course_id": "ola12",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Hendrickson) He was an amazing teacher who was very passionate in class. Class discussions were very helpful in understanding the material and there was also discussion of interesting facts relating to Roman history, etc. He explains the grammar in Eutropius very well and I can say that my reading comp improved a lot. Taking class notes is very helpful and his grading is pretty lenient.",
+      "created_at": "2025-10-14T00:40:53.514Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ola13": [
+    {
+      "id": "r_1760402487954",
+      "course_id": "ola13",
+      "rating": null,
+      "author": null,
+      "text": "(Magistra Pisarello) oh what can i say to even express how much i love the entire latin department at OHS. NOT A SINGLE PERSON IN THE LATIN DEPARTMENT SHOULD EVER GET ANY HATE EVER. and this is coming from someone who has had all of them. magistra is literally so wonderful and this class is such a nice payoff after latin 2. definitely try to come to class prepared with translations, but if you can’t she is completely understanding and will help you work through the passage. like the other two people said it’s bascially a latin book club you’re just reading Cicero, Ovid, or Catullus and either being like “oh wow this is awesome” or “what the actual frick are we reading right now” (catullus def leans towards the latter). but I seriously recommend any latin class all of them and all of the teachers are 10/10",
+      "created_at": "2025-10-14T00:41:27.954Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402477301",
+      "course_id": "ola13",
+      "rating": null,
+      "author": null,
+      "text": "(Magistra Pisarello) Magistra Pisarello is amazing!! Just keep in mind that you can’t really slack off in this class. You have to come to class prepared with a translation of what you were assigned to read and Magistra will call in order of participants lists for people to translate out loud (technically you just have the read the latin, she won’t necessarily ask that you translate it for homework, but you will have to translate it in front of the class regardless so I recommend translating beforehand and then if you have any questions/uncertainties to bring those up as you read your translation.) Pisarello is super super nice though and very lenient with extensions, so if you ever need more time for an exam, I guarantee you she’ll give it to you. She is also super helpful if you don’t understand a translation – pls don’t worry about messing a translation up bc Magistra is super nice about it, very chill, always willing to help, and will never shame/make fun of a student for getting a translation wrong. Overall, like the person above said, this class was basically just a book club. It was super fun and entertaining, and 90% of class time was spent just reading Cicero, Ovid, or Catullus and either admiring or shitting on their writing. 10/10 class and 10/10 teacher. Carthago delenda est.",
+      "created_at": "2025-10-14T00:41:17.301Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402469676",
+      "course_id": "ola13",
+      "rating": null,
+      "author": null,
+      "text": "(Magistra Pisarello) Just so you know, I might be a little biased since I really like Latin. This course is amazing. It’s such a nice payoff after Latin 2. The reading will feel difficult at first, but it gets a lot easier as you go along, not because the readings get easier, but because you will get a lot better. The readings in the second half of the second semester can get pretty long, but Magistra has absolutely no problem with you not finishing them. She acknowledged that some people (or most people) will only have time to reach a certain point, and she will account for that. There is no punishment for it. If the class as a group doesn’t get through all the reading, there will not be questions about it on exams except for maybe questions about the content (we were given English translations of the parts we didn’t get to as a class). The readings are really fun though. The fall semester is focused on Cicero’s oratory, and we looked at some of the letters he wrote (which was really fun, and I found some of them really funny, especially coming from Cicero). The fall semester is about poetry (Catullus on Ovid), which I also really enjoyed. The course also covers some rhetorical devices and how literature is structured on a broad level (this can be applied to any text, not only Latin). I’ll say it again, though, this course is so good. I think this is the most fun course I’ve taken at OHS, and graduating from OHS without talking to Magistra at least once feels like it should be a crime (i.e., she’s really nice and generally a great person). Class discussion often felt like a book/poetry club, and Magistra called it “Latin and vibes” at one point. Carthago delenda est.",
+      "created_at": "2025-10-14T00:41:09.676Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ola14": [
+    {
+      "id": "r_1760402506914",
+      "course_id": "ola14",
+      "rating": null,
+      "author": null,
+      "text": "Can anyone speak on Dr. Lanier?",
+      "created_at": "2025-10-14T00:41:46.914Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402517210",
+          "review_id": "r_1760402506914",
+          "author": null,
+          "text": "Just had Lanier this past year (24-25). Loveeee him, he’s hilarious and really nice and chill. As the person above said, no cold calling in his class, but I feel bad that sometimes people slack off so its nice to participate without being called on every once in a while to show him you care about the material. Very few tests during the year, since we just work on the book the 1rst semester. He’s chill with extensions even if you don’t have a good reason. Overall love him, great guy, and clearly passionate about the classics.",
+          "created_at": "2025-10-14T00:41:57.210Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402512106",
+          "review_id": "r_1760402506914",
+          "author": null,
+          "text": "Love him, love this course. This course is less structured than Advanced Latin, and I had a whole lot of fun. Very chill teacher, very few tests, and clearly loves Latin and history. Also he doesn’t do cold calling. You should still prepare and translate beforehand of course, but don’t get too stressed.",
+          "created_at": "2025-10-14T00:41:52.106Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "och11": [
+    {
+      "id": "r_1760402526649",
+      "course_id": "och11",
+      "rating": null,
+      "author": null,
+      "text": "王老师(wang laoshi) is pretty chill but screw fluencylink homework. Overall decent course, feel like there was a bit too much homework but maybe that’s just me.",
+      "created_at": "2025-10-14T00:42:06.649Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "och12": [
+    {
+      "id": "r_1760402532075",
+      "course_id": "och12",
+      "rating": null,
+      "author": null,
+      "text": "Lauren Bickart (great teacher but i don’t like the class sorry) - No, just no.  I’ll start out by saying i’m more stem than anything else but this course was still horrible.  Way too much homework and fluencylink is the worst thing ever created. I made it out alive but just know that you must practice literally everything if you want to e prepared for quizzes.  Every detail of very vocab and grammar must be memorized or you’re screwed.  Again, i really hated this class since i just don’t like humanities in general, but chinese is NOT what you want to be taking regardless.  It’s just very difficult, take spanish or something please",
+      "created_at": "2025-10-14T00:42:12.075Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "och14": [
+    {
+      "id": "r_1760402560876",
+      "course_id": "och14",
+      "rating": null,
+      "author": null,
+      "text": "AI generated images on the quiz at the end of the sustainability & environmental protection unit was a choice lol (they were also just …… bad… like, we were supposed to write a story based on the series of images but the character looked completely different in each one and the story itself did not make very much sense. I can guess what she used for prompts but if I couldn’t tell it was AI I would be very confused.)",
+      "created_at": "2025-10-14T00:42:40.876Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402557253",
+      "course_id": "och14",
+      "rating": null,
+      "author": null,
+      "text": "I generally like OHS Chinese and 王老师 — the structure of the course is great and I feel like I learn a lot",
+      "created_at": "2025-10-14T00:42:37.253Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402547799",
+      "course_id": "och14",
+      "rating": null,
+      "author": null,
+      "text": "（王老师) [2024-25] pretty chill class, as long as you look over the vocabulary list in the textbook for each lesson you should be all set. Nobody in the class raises their hands to participate, and sometimes 王老师 will call on you if it seems like you aren’t paying attention. It’s mostly just reading what is written on the slide and occasionally filling in a few words. 王老师 does often have connection issues, but seems like a pretty nice person.",
+      "created_at": "2025-10-14T00:42:27.799Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "osp11": [
+    {
+      "id": "r_1760402572782",
+      "course_id": "osp11",
+      "rating": null,
+      "author": null,
+      "text": "Por favor! If you are looking for a language where you get immersed into the culture, traditions, music, food, and people of Spanish-speaking countries, you will love",
+      "created_at": "2025-10-14T00:42:52.782Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402568160",
+      "course_id": "osp11",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Méndez-Ortiz) is amazing! The class is very challenging as the course studies many difficult grammar concepts. I 100% recommend seeing the teacher when you are having trouble with the grammar concepts and taking a Spanish course before this. The course moves really fast (I think you learn 3 years of spanish in 1 year) so you want to make sure you are ready for it. I would study/practice Spanish for 30-60 minutes everyday after/before class. You are expected to participate multiple times during class, although we do breakout rooms at least once a class. The quizzes were really hard (for me) and killed my grade but the midterm and finals are projects (not tests). Overall, it was a fun class just really challenging at times.",
+      "created_at": "2025-10-14T00:42:48.160Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "osp12": [
+    {
+      "id": "r_1760402586670",
+      "course_id": "osp12",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Méndez-Ortiz) Literally a treasure to society, I love Dr. Mendez-Ortiz with all my heart, shes sweet, funny and understanding and just overall a great teacher. Classes are fun with not that much reading required before hand but I will say she started using chatgpt for lesson slides and activities so they can get a little weird but you get a lot of time in breakout rooms basically just talking about your interests and opinions so you can make some good friends especially since class sizes are generally small. Also just so you know she uses a function on AC which allows her to see which students are on different browsers/tabs and she will dick participation points if she sees you leaving the AC tab at all. Other than that praticiaption is pretty chill, its a great environment and I dont think anyone felt embarrassed or hesitant to speak on mic and make mistakes. Grading is pretty chill? Idk in the second semester she switched formats were you got an second attempt on quizzes but instead of an easy final project you had a 2 hour final exam on proctorio. I think before the change the class was pretty low stress as long as you were prepared for the quizzes since she graded the projects fairly easily but in the last semester the stress from the quizzes was reduced by a lot and they were basically free As but the Final was really stressful. She ended up grading on a curve and it was ok but idk how she’s organizing the course this year. Overall though, this is such a good class, you have alot of fun in class and you learn a lot and improve your writing, speaking and understanding so much.",
+      "created_at": "2025-10-14T00:43:06.670Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402578399",
+      "course_id": "osp12",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Valdano) based teacher! really sweet and actually cares about you. also you do have to talk a lot and actually participate in class, and if you speak English she will make you sing a song in Spanish in front of the entire class :)) midterms and most assignments are easy As as long as you put effort into them; just don't be late on the Supersite assignments",
+      "created_at": "2025-10-14T00:42:58.399Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402583143",
+          "review_id": "r_1760402578399",
+          "author": null,
+          "text": "^ Going off of this… I had dr valdano for like the whole year until two months until the end of the year. Amazing teacher and too bad she isnt teaching this class anymore. She was super entertaining and loved to make us smile. At first she might have seemed a bit. Like. stern or something but she is literally the sweetest being on earth. The assignments were good, and if we were too stressed around midterms or finals she actually was cool enough to let us have a break and do some sort of fun activity in class. I will say she does make you participate but tbh its definitely not as bad as i thought. I think that singing part was for that certain section if im being honest. If i had to sing i woulda died a while back but ill miss her! Btw im gonna say this too. If anyone gets ms. mileusnich (idek if she is js a sub or an actual teacher) but GOOD LUCK she literally acted as if all but three ppl were there and didnt teach us a thing. She js went over supersite work we alr did and it sucked.",
+          "created_at": "2025-10-14T00:43:03.143Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "jp001": [
+    {
+      "id": "r_1760402626858",
+      "course_id": "jp001",
+      "rating": 4,
+      "author": null,
+      "text": "(Dr. Hamaoui) [2024-2025]  Basically everything noted above, but be prepared to spend like $20 dollars throughout the course lol. Would recommend, 9/10",
+      "created_at": "2025-10-14T00:43:46.858Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402622235",
+      "course_id": "jp001",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Hamaoui) This is a great course, as noted above, it gets alot harder the second semester, but Ms. Hamaoui was a great teacher, but also super fun and nice. There is hardly any work for this class, and the experiments are actually pretty fun. Amazing curriculum, and amazing teacher. Great course.",
+      "created_at": "2025-10-14T00:43:42.235Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402617911",
+      "course_id": "jp001",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Oas)[2023-2024] Easy class, good content. The material sets good foundations for future physics courses. Dr. Oas was really good, and clearly explained the material. THE GLORIOUS RULER OF ALL SPACETIME IS THE GOAT! Like mentioned above, the course pace gets much faster in the second semester. Unfortunately, :(",
+      "created_at": "2025-10-14T00:43:37.911Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402614627",
+      "course_id": "jp001",
+      "rating": null,
+      "author": null,
+      "text": "Mrs. Castillo wasn’t a very good teacher, like we could visibly hear her texting during class but she does give really EZ grades.",
+      "created_at": "2025-10-14T00:43:34.627Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402611647",
+      "course_id": "jp001",
+      "rating": null,
+      "author": null,
+      "text": "I had ms. castillo, she was pretty sweet and tried her best to answer questions and teach the material. Do keep in mind tho that she is a new teacher, that is she seemed to get lost in the problems/curriculum every now and then. Other than that, she was pretty good and was quite helpful in OH! course was easy and very slow paced in the first semester but grading in the second semester took forever. If you take this course you’ll prob learn a lot but do note this course is ridicul(ously easy and if you have the chance to skip it you probably should",
+      "created_at": "2025-10-14T00:43:31.647Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402607750",
+      "course_id": "jp001",
+      "rating": null,
+      "author": null,
+      "text": "I had Ms. Castillo. The class was pretty good and definitely hard but they teach you good physics. However, Ms. Castillo was HORRIBLE. I barely learned anything from her and she didn’t seem to know the curriculum very well, though maybe that was just because it is her first year teaching.",
+      "created_at": "2025-10-14T00:43:27.750Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402603225",
+      "course_id": "jp001",
+      "rating": null,
+      "author": null,
+      "text": "Ms. Castillo) Ez class, but still rigorous. They actually teach you REAL physics in middle school!!!! Class pace gets much faster in 2nd semester. Teacher is meh",
+      "created_at": "2025-10-14T00:43:23.225Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "js002": [
+    {
+      "id": "r_1760402638209",
+      "course_id": "js002",
+      "rating": null,
+      "author": null,
+      "text": "Take this class since it gives you basically what you need to learn further on the three sciences (phys chem bio.) had doherty, he grades like a week after, but hes the goat, GET DOHERTY (or tock i heard she's good.) labs are pretty fun, just please dont do them the night before like i did it sucks. The post lab questions are graded pretty nitpicky, as well as the nffr. My main feedback is think long about the nffr and try to make a good one each week (it can be hard sometimes so off the record ai can be helpful for gaining ideas for you to build on.)",
+      "created_at": "2025-10-14T00:43:58.209Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402634199",
+      "course_id": "js002",
+      "rating": null,
+      "author": null,
+      "text": "For all students planning to take this class next year: The science topics are absolutely awesome (from velocity and momentum to chiral molecules to natural selection and so much more!) (if you’re a science nerd like me :D). There is no textbook, instead there are readings and lectures (I recommend doing both AND supplementing them with Youtube videos). If you can learn from a textbook, get one. It will tremendously help with your understanding of concepts. Every week there are modules to go through (reading and or lecture, some additional suggested videos, reading questions, usually a lab with writeup (sometimes no writeup) and photodocumentation and PLQs (post lab questions). NFFRs (Notes for Future Research) are graded pretty hard, so think of good ones! Then there is a practice quiz and quiz (the questions are written very strangely and are very confusing, there are multiple choice questions and select all questions). In class, I had Dr. Doherty. He is so nice and encouraging; he teaches some but not very much. Usually labs and other assignments are not graded right away, but grading is PRETTY quick. Dr. Doherty makes sure to give personal feedback on all assignments. He is very encouraging! If science is your strong suit, it’s not too hard of a class (besides the quizzes). There are not 4 quizzes per week, only one, but it is kind of disorganized during class. It’s neither disorganized or organized, and it depends on how you learn best. You should probably take this class as it has fundamental and fun topics, just don’t stress too much! (Oh and midterms and finals have short answer questions!) (Musical mystery guest has no point, I guess it’s just fun? Blookets are good as they review material.) So overall, it’s a course that has fun topics but isn’t the best in terms of organization and grading. But you should take it (because I found it fun!) However, sometimes material that has not been covered yet is on quizzes and other assessments. (Just a note, for the bio section, you have to learn about phototropism and Joseph Priestley’s experiments on your own!)",
+      "created_at": "2025-10-14T00:43:54.199Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "oastr": [
+    {
+      "id": "r_1760402654018",
+      "course_id": "oastr",
+      "rating": null,
+      "author": null,
+      "text": "(Mr Oparko) great instructor and class and super fun! Not too much of a stressful workload but the assignments are due at inconvenient times (9am pt) but class and assignments are fun. Lots of gimkits and guest speakers too",
+      "created_at": "2025-10-14T00:44:14.018Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402651362",
+      "course_id": "oastr",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Oparko) My favorite teacher this year! He is very chill, lots of games in class, helpful videos, I learned a lot and this class made me want to potentially study Astrobiology in college. Highly recommend!",
+      "created_at": "2025-10-14T00:44:11.362Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402648886",
+      "course_id": "oastr",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Oparko) Workload can be a bit much but still a fun course! Labs are weird sometimes but class atmosphere is goated. Both instructors are awesome, solid course.",
+      "created_at": "2025-10-14T00:44:08.886Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402646063",
+      "course_id": "oastr",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Tock is amazing and really cares. TAke it!",
+      "created_at": "2025-10-14T00:44:06.063Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "oc005": [
+    {
+      "id": "r_1760402677154",
+      "course_id": "oc005",
+      "rating": null,
+      "author": null,
+      "text": "Oh no I chose this class without reading about it first lol. Well guess I’ll have to find out if it’s survivable (honestly i just want to go to Biology class) brb see yall next school year",
+      "created_at": "2025-10-14T00:44:37.154Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402673873",
+      "course_id": "oc005",
+      "rating": null,
+      "author": null,
+      "text": "Do not take this class in 9th grade. The homework was overwhelming and the topic moved way too fast- then we were just expected to have known it?? My dude we switched the topic after two classes how do you expect me to remember all this.",
+      "created_at": "2025-10-14T00:44:33.873Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402671079",
+      "course_id": "oc005",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Katsir is an AMAZING teacher. A lot of people told me that she is only there for the money and she teaches super bad. However, the moment I met her, OMG she is an amazing teacher. She is clearly passionate about chemistry and loves it when students ask questions. Dr. Katsir gets so giddy when you have a question haha. The pace of the class was pretty good and the workload was not super hard. A lot of people also warned me about the big quizzes, midtermis, and final exams. However, they were not too bad. A study tip that you NEED to know if you want to get a good score on these exams is to PRACTICE PRACTICE PRACTICE using the problems from the textbook. Do ALL of the cumulative questions because all of the questions on the exams are basically carbon copies of those. GO INTO OFFICE HOURS. Dr. Katsir is SUPER helpful when you need it. Overall, amazing teacher!",
+      "created_at": "2025-10-14T00:44:31.079Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402665428",
+      "course_id": "oc005",
+      "rating": null,
+      "author": null,
+      "text": "Signing up for Pearson+ is a game changer for this class. It gives you access to worksheets, tons of videos, and practice problems. I would highly recommend",
+      "created_at": "2025-10-14T00:44:25.428Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402661392",
+      "course_id": "oc005",
+      "rating": null,
+      "author": null,
+      "text": "Signing up for Pearson+ is a game changer for this class. It gives you access to worksheets, tons of videos, and practice problems. I would highly recommend",
+      "created_at": "2025-10-14T00:44:21.392Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "oc010a": [
+    {
+      "id": "r_1760402724092",
+      "course_id": "oc010a",
+      "rating": 5,
+      "author": null,
+      "text": "AWESOME CLASS AWESOME TEACHER 10/10 RECOMMEND but there is a decent bit of work to do each week: lab, frqs, homework, and quiz so DONT PROCRASTINATE",
+      "created_at": "2025-10-14T00:45:24.092Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402720207",
+      "course_id": "oc010a",
+      "rating": null,
+      "author": null,
+      "text": "Dr. DeMello is the goat super chill dude and made AP test feel like a walk in the park as long as u pay attention in class",
+      "created_at": "2025-10-14T00:45:20.207Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402717278",
+      "course_id": "oc010a",
+      "rating": null,
+      "author": null,
+      "text": "DR DEMELLO IS SO GREAT AND CUTE!",
+      "created_at": "2025-10-14T00:45:17.278Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402713338",
+      "course_id": "oc010a",
+      "rating": null,
+      "author": null,
+      "text": "HE’S THE ABSOLUTE BEST!!!!! Even if you’re not interested in chem, you HAVE to take this class. I hated chem when I started HS and then I took Dr. DeMello’s class and absolutely fell in love. I’m actually going to uni to major in chemistry now LOL. He’s such an amazing teacher and always has really awesome visualizations and anecdotes. He’s also super caring and will spend LITERALLY HOURS making sure you understand the material. He’s an amazing mentor who randomly shares really good life tips–all round amazing class with an amazing teacherMARSHMELLO!!! PLSSS TAKE THIS CLASS!!!",
+      "created_at": "2025-10-14T00:45:13.338Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402709393",
+      "course_id": "oc010a",
+      "rating": null,
+      "author": null,
+      "text": "AMAZING CLASS. AMAZING INSTRUCTOR. Made the AP exam seem easy. Dr. DeMello is so chill, easy with extensions and his classroom is super engaging (the way it looks). Feels like a real classroom in a weird way.",
+      "created_at": "2025-10-14T00:45:09.393Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402704809",
+      "course_id": "oc010a",
+      "rating": null,
+      "author": null,
+      "text": "Dr. DeMello is absolutely amazing. I’ve never had problems with him showing up to office hours, which I have had with nearly every other teacher. I also have had several extensions on hw, labs because of overnight activities on the weekends, and as long as you have a valid reason, he’s very nice about giving them. My one criticism is that assignments are rarely, if ever, posted to canvas on time, but he’ll generally bump the due date a few days to make up for this. The material is difficult, but Dr. DeMello is very good at making it engaging and easy to understand.",
+      "created_at": "2025-10-14T00:45:04.809Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402699014",
+      "course_id": "oc010a",
+      "rating": null,
+      "author": null,
+      "text": "Dr. DeMello is amazing, best chem teacher ever. It’s not an easy class and it definitely takes time, but if you put in the work you’ll do well. Everything is fair in this class and Dr. DeMello is a teacher who actually cares about his students and wants them to learn and do well. He’s nice about giving extensions (I was never denied one, and I needed a whole lot of extensions on the labs because I have busy weekends). The canvas page and ac room design take some getting used to but don’t subtract from the quality of the course, just be prepared.",
+      "created_at": "2025-10-14T00:44:59.014Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402693981",
+      "course_id": "oc010a",
+      "rating": null,
+      "author": null,
+      "text": "Dr. DeMello is the best and it’s basically impossible to fail this class if you pay attention to the lectures. The quizzes are weighted so that failing one does not really impact your grade too badly so it's easy to get an A too.",
+      "created_at": "2025-10-14T00:44:53.981Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402690910",
+      "course_id": "oc010a",
+      "rating": null,
+      "author": null,
+      "text": "Dr. DeMello is awesome! Overall a good course, but definitely a lot to keep up with.",
+      "created_at": "2025-10-14T00:44:50.910Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ob010a": [
+    {
+      "id": "r_1760402881536",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "(Mrs. Birge-Liberman) I don’t have much to add about the points above, but they are all definitely true and I have had similar experiences. What’s interesting about her is that she tries to care sort of? Like on one of the early fall assignments I said I spent about 17 hours on the assignment (it was a requirement to fill out a coversheet that included that question) and she brought it up at PT conferences and was like “Oh I’m really worried about [My name] because she spent 17 hours on this assignment” and then proceeded to bash my sleep schedule because “Well my kids go to sleep at 10 pm every day.” Ok? I work best after 10 pm. Maybe that’s not the case for your kids, but it is for me. It’s almost like we’re different people. And then after I went to her in office hours for help on my final project (she didn’t really provide help and even said she feels like she’s being unhelpful) she told my counselor that she should reach out to me because “I seemed stressed about the assignment”. The counselor was nice, but I also have pretty bad social anxiety, which she knows, because I quite literally had a panic attack when giving my spring presentation, so I’m not sure why she thought an awkward meeting with someone I don’t know was going to help? That just added to my stress and rendered me incapable of doing much of anything that day. And she does all of this being “concerned and caring,” but then doesn’t actually do anything to help. She doesn’t work with me to see if there’s something I could do to be more efficient, or, god forbid, actually state in the rubric what she’s grading the assignment on so that I don’t stress so much about not knowing what’s on her “invisible rubric”. And then when I go see her in OHs about something she took points off of, she either acts like she’s the victim (she manipulates the words I’m saying to act like I’m a toddler (or maybe a sixth grader considering that’s who she used to teach) pitching a fit). I’ll be like “hey, maybe I missed something. Do you think maybe in the future it could be changed to be explicit so that next year’s students don’t have the same problem?” or ask her where it said to do something, she’ll just say that I “should know [how to interpret the incredibly misleading instructions to fit her “invisible rubric”] by this point,” when it’s literally never been discussed. Anyways, TLDR: She’s very two-sided/hypocritical, and I genuinely learned more from other students in the class than I did from her (and she constantly acted like that was a good thing). Also this class legitimately took about as much, if not slightly more time & energy than all my other classes (full -time OHS, w/ multiple AP-level classes) combined, I think a lot of that could have been avoided, but Mrs. B was the opposite of helpful with that. She doesn’t know how to use class time effectively. She’s not necessarily a bad teacher for all schools, but really doesn’t seem to be a great fit for OHS.",
+      "created_at": "2025-10-14T00:48:01.536Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402879142",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "(Mrs. Birge-Liberman) I also had Mrs B and I agree with most of the stuff already said because my GPA was on the verge of crying because of this class but I actually do think she is really nice and is knowledgeable about the subject BUT her grading is actually hell I got a 54/100 on an assignment because I turned it in late and it single handedly ruined my grade. Also the expectations aren’t completely clear and she will take points off is something isnt “specific enough” but how are u supposed to know if it is or not bc it doesnt say anywhere?!?!?!?! She’s really petty and i got points off on my otherwise perfect presentation because i have a monitor and was looking to the side (like every class) and she said it's “weird” to present like that. Again she is genuinely trying to be nice but sometimes in class it’s harsh and she just straight up cold calls you or puts u into breakouts and expects you to come back with a whole explanation for things with not enough time to do it. Besides all of that the workload is super manageable and i actually liked the labs besides some of the fall ones which were tedious.",
+      "created_at": "2025-10-14T00:47:59.142Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402875701",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "(Birge-Liberman) On my CRISPR project last year, I emailed her *2 weeks before the deadline* to ask, very clearly, if I could use both my remaining late passes for the project, because I had other finals on the day it was due.  Her response was “Of course!,” and then a week after winter break is over, she tells me that I couldn’t stack late passes and she would take off 30% because I should have read the handbook !  I READ THE FREAKING HANDBOOK THAT IS RIDDLED WITH TYPOS AND INCOMPREHENSIBLE SENTENCES, AND I HAD NO IDEA WHAT IT MEANT, WHICH IS WHY I EMAILED YOU, and this is a perfect representation of what it’s like to try to deal with her bs for a year.  I would be fine with the condescendingness if she actually graded like we were 6th graders at her old school, but I fully agree with the comment above.  You can spend hours writing 7 perfect pages for an FRQ, but if you didn’t cite the freaking course materials they give us, sorry, 80%.  The only thing that saved me last semester was the midterm and final that she couldn’t take points off of as she pleased, and I am genuinely scared for my grade this semester because we have a project instead of a final.",
+      "created_at": "2025-10-14T00:47:55.701Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402866882",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "(Mrs. Birge-Liberman 24-25) AVOID BIRGE-LIBERMAN IF AT ALL POSSIBLE. As someone who has taken twelve college courses and been full-time at OHS for three years, during which I’ve taken a wide array of science courses both from and outside the school, I cannot stress enough how terribly this class was taught—one of the worst experiences of my academic career has been dealing with Mrs. Birge-Liberman. I had to send her EIGHT EMAILS over the course of TWO MONTHS just to get my midterm grade from the FALL SEMESTER “fixed,” and it still isn’t in Powerschool to this day, by the way. After bringing it up to her, she told me that I submitted my corrections late EVEN THOUGH THEY WERE IN BEFORE DUE. In fact, I know of at least three other students who submitted the assignments AFTER I TURNED IT IN and still got full credit. This isn’t the first instance of favortism that I’ve seen from her. In addition, she’ll dock points for the most absurd reasons. Your graph is too small? MINUS TEN PERCENT. Forgot Works Cited? MINUS TEN PERCENT. You didn’t include something that the prompt didn’t even ask you for? MINUS FIFTEEN PERCENT. You could answer a question flawlessly and with adequate scrutiny, sophistication, and substantive knowledge but still be docked points for not providing real-world examples even though you were never asked to include any. Just because she felt like adding her own invisible rubric. At this point, I imagine most readers would question if what I just mentioned was a report or a satire. No, that was not satire and it was not exaggeration, to my dismay. You WILL  lose points on assignments if they’re not exactly to her liking (which she doesn’t tell you until after she grades it, by the way—how fun and intellectually stimulating! uh, no, wtf). What’s truly unfortunate is that Dr. Vetter (whom I’ve heard great things about) is no longer teaching this course—one for which I was extremely excited for, as a future biomedical engineering major—meaning that we’re now stuck with an AC-incompetent, condescending teacher who seems to have a liking for just bombing your GPA. Throughout almost every class, she treats us all as though we’re senseless elementary-school children. Maybe it’s because her past teaching experience was with sixth-graders… we’re not sixth graders. Her  demeanor often comes across as condescending and disrespectful of our efforts. Furthermore, if you have any sort of question, she’ll almost always redirect you to her inflexible office hours instead of answering something that would not take more than a minute. Like, excuse me? If it was an OH question, I would ask it in OH. Think “If I expected you to text back a week later, I would have sent you a pigeon.” Mrs. Birge-Liberman DOES NOT BELONG IN A HIGH SCHOOL ENVIRONMENT and she certainly does not belong at an institution like Stanford Online High School.",
+      "created_at": "2025-10-14T00:47:46.882Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402862076",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "SHE CONDESCENDS TO YOU oh my god. The condescending. THe patronizing. We are not middle schoolers. Bro I am a freshman I am not 10 years old. What in the world.",
+      "created_at": "2025-10-14T00:47:42.076Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402850884",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "She has weird obsessions. I don’t know how else to say that. I was literally talking ON POINT about reward/punishment training (not a psychology class bro get a life). I was just like “Oh I have a dog, and we use a very light zap collar on him because he’s a wolf hybrid” and she was like OKAY SEE ME AFTER CLASS! And i was like what?? And then my friend is like “Oh I have that dog too!” and she’s like BOTH OF YOU STAY i was just so lost and she’s like We DONT TALK ABOUT ANIMAL ABUSE like dude a zap collar is not animal abuse ITS SO THAT YOUR FACE DOESNT GET MAULED OFF",
+      "created_at": "2025-10-14T00:47:30.884Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402856338",
+          "review_id": "r_1760402850884",
+          "author": null,
+          "text": "ANOTHER WEIRD OBSESSION is about NATURE. We had this one class where half of it was like “Well kIDS Whwat Did you do for Earth day????? 😭 And she said she’s gonna take points off our next assignment if we didn’t go for a nAtUre wAlK/???????/  I was so mad. Like sooo mad. W HOw am i supposed to go for a walk bro i can’t even leave my house without an adult male because its like dangerous to be walking around as a freshman girl…",
+          "created_at": "2025-10-14T00:47:36.338Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402844497",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "She will dESTROY YOUR GPA GUYS! She gave me a literal B+ on first semester i’ve never gotten a grade that bad!!! Not because my work is actually bad like bro my other science teachers are throwing around 95s at me and she’s like “AhHHH SORRY BUT YOU DIDNT PUT MLA CITATIONS!!! 5 POINTS OFF 🤓” or like “YOU DIDN’T LABEL YOUR MAJOR AXES! 8 POINTS OFF 🤓” OR SOMETHING EQUALLY STUPID GET A LIFE GET A LIFE",
+      "created_at": "2025-10-14T00:47:24.497Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402841557",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "God this was so difficult. Not like the lectures was difficult. Not like the readings were difficult. You can easily complete the workload if you put your mind and some energy to it. ITS JUST BECAUSE SHE HAS NO IDEA HOW THE HECK TO EXPLAIN ANYTHING TO YOU. SHE GOES ON RANDOM TANGENTS ALL CLASS LIKE OH MY GOD BRO",
+      "created_at": "2025-10-14T00:47:21.557Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402837100",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "I’m not kidding, I would cry or throw up almost every night just so terrified that she’s going to give me a bad grade on my next assignment because it didn’t fit her special invisible rubric. Never had anything like that happen to me before. Literally first half of spring semester, it was so awful. I couldn’t eat anything except a few bites of rice sometimes an apple. I lost 15 pounds from this class and my sports performance went in the 🗑️",
+      "created_at": "2025-10-14T00:47:17.100Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402833150",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "The stress. THE STRESS. It was so bad. Like so bad. More stress from this class then every single other class combined I was taking this year and guys I took 7 classes. Not like normal hahaha laugh it off stress. Bro this was legit stress. Especially during the first half of spring semester. I’m so glad to be done with this mess. NOT EVEN THE FAULT OF THE CLASS> THE FAULT OF THE TEACHER> SHE NEEDS TO LEAVE OHS RIGHT NOW BEFORE SHE TRAUMATIZES ANOTHER CHILD.",
+      "created_at": "2025-10-14T00:47:13.150Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402772645",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "(Mrs. Birge-Liberman 24-25) unfortunately i'm gonna have to agree with a lot of what the previous person said (though maybe not to the same extent). i personally had a lot of minor/major grievances:",
+      "created_at": "2025-10-14T00:46:12.645Z",
+      "status": "published",
+      "replies": [
+        {
+          "id": "rp_1760402824139",
+          "review_id": "r_1760402772645",
+          "author": null,
+          "text": "she treats ppl like theyre in middle school. what i mean by that is that she kinda talks down to us sometimes and doesn't take us seriously? which is not necessarily bad but i found it a bit patronizing. like pls we're in high school T-T also if you ask her literally anything that takes more than 2 seconds to explain she will reply with “happy to discuss this in office hours!” which is an interesting decision <- and what if we can’t go to office hours dude she’s so inflexible like my schedule is packed like a lot of y’alls we dont have time to argue with her outside of class lol",
+          "created_at": "2025-10-14T00:47:04.139Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402819498",
+          "review_id": "r_1760402772645",
+          "author": null,
+          "text": "^she’s taught 6th grade at her old school for 20 years loll",
+          "created_at": "2025-10-14T00:46:59.498Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402815639",
+          "review_id": "r_1760402772645",
+          "author": null,
+          "text": "^still no excuse to teach us like we’re 6th graders and test us like we’re high schoolers",
+          "created_at": "2025-10-14T00:46:55.639Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402809992",
+          "review_id": "r_1760402772645",
+          "author": null,
+          "text": "she spends a lot of time on housekeeping and such rather than the materials, i found the lectures and textbook to be very helpful personally so go to those for your information.",
+          "created_at": "2025-10-14T00:46:49.992Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402804986",
+          "review_id": "r_1760402772645",
+          "author": null,
+          "text": "she is a new teacher at ohs, not saying that's bad, but sometimes she will ignore what ppl are saying in the chat even though theyre contributing (this is kinda minor) and she doesnt like it when you go off topic. she also doesnt really know how to use ac (again this is also very minor)",
+          "created_at": "2025-10-14T00:46:44.986Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402799423",
+          "review_id": "r_1760402772645",
+          "author": null,
+          "text": "shes not very lenient on grading imo. sometimes she would take off points if you didn't include citations (which isn't in the rubric) or elaborate enough. (so if you are in her section, INCLUDE CITATIONS ON EVERY ASSIGNMENT even if you're just citing the most basic facts from the textbook/lectures.) i might be biased because i used to have all A-/A before i took the class and i had a B+ for fall semester, but i don't really think she grades fairly because she once took off points because the reason that I gave for the assignment being interesting to me (which is required) wasn't specific enough. so do with that what you will.",
+          "created_at": "2025-10-14T00:46:39.423Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402794383",
+          "review_id": "r_1760402772645",
+          "author": null,
+          "text": "i don't know if it was because the requirements for the assignments weren't clear or whatever? but she once docked me 8 points (out of 50, so this is 16 points on a 100 grade scale) because I put data in the wrong kind of graph and didn't include standard deviations. <- oh my freaking god same story here!!! the type of graph needed wasn't even listed and the instructions didn't say to include stdev so i was pretty pissed",
+          "created_at": "2025-10-14T00:46:34.383Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402789954",
+          "review_id": "r_1760402772645",
+          "author": null,
+          "text": "^^ same i went to office hours to ask her about it and she just showed me the example of the one person who got it right and then left it at that. She couldn’t really explain how to actually do stuff y’know",
+          "created_at": "2025-10-14T00:46:29.954Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402785189",
+          "review_id": "r_1760402772645",
+          "author": null,
+          "text": "if you choose to take this class, submit stuff on time :) stuff is usually due sunday at 9pm est which annoys the heck out of me because it's not midnight AND you get late penaltied on canvas automatically if you submit even 1 min later. just a heads up for ppl whose previous classes didnt have this automatic late penalty",
+          "created_at": "2025-10-14T00:46:25.189Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        },
+        {
+          "id": "rp_1760402781312",
+          "review_id": "r_1760402772645",
+          "author": null,
+          "text": "all in all i would not take this class with her again (I would probably prefer iweka or dr. failor) but you can decide if the stuff i mentioned is significant or not <- 100 percent agree with whoever is writing this. The class is good but gosh a teacher who worked with 6th graders this was a struggle guys",
+          "created_at": "2025-10-14T00:46:21.312Z",
+          "poster_email": "jules328@ohs.stanford.edu",
+          "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+        }
+      ],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402765880",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "This teacher wastes so much time during class going off on tangents, and expects you to completely understand the material although the lectures are older than me and the files have started to corrupt and are very confusing. The organization of the class is also really messed up and the weekly objectives are not lined up properly. I loved biology and have taken other AP bio classes and this is the worst one ever. She has 0 experience at OHS and will take points off on labs just because it is not exactly her answer. Also, she treats you like a 10 year old in class making the class miserable. AVOID BIRGE-LIBERMAN AT ALL COSTS!",
+      "created_at": "2025-10-14T00:46:05.880Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402761533",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "(Mrs. Birge-Liberman) Please read all of the info about her you need to switch if you get her asap just please read until the end of all the reviews on her to see why. We are trying to save your lives and your GPAs here trust.",
+      "created_at": "2025-10-14T00:46:01.533Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402758196",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "This class definitely has a lot of lectures, but the readings are really helpful as well! If you keep up with those, the class should be fairly relaxed, although the labs can be pretty heavy and sometimes require starting days in advance. The canvas page is also super organized which is nice but I do wish things were due at 11:59pm rather than 6.",
+      "created_at": "2025-10-14T00:45:58.196Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402744408",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "Really amazing class! ^I agree that the readings are difficult to keep up with, but they were definitely more useful than the lectures. We were told that you could either listen to the lectures or read the textbook, but really the material covered in class will be from the textbook since it's more detailed. Dr. Vetter was an amazing teacher. Her comments on my work were very helpful, her grading was pretty lenient, and her class discussions weren’t too intimidating. Office hours were definitely helpful and taking notes during class is a must in terms of understanding the material.Hamaoui",
+      "created_at": "2025-10-14T00:45:44.408Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402743483",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "Really good class - readings can be a bit difficult to keep up with but I found them to be more worth it than lectures. Dr. Iweka is a good teacher xbut can be intimidating. Really great foundation laid down for future biology classes, you’ll get a lot out of it if you’re willing to pay attention and put in the work. Also don’t be afraid to ask for help!",
+      "created_at": "2025-10-14T00:45:43.483Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402736800",
+      "course_id": "ob010a",
+      "rating": null,
+      "author": null,
+      "text": "I have 3 words to describe this class. The first is What. The second is The. The third will get me banned so use your imagination.",
+      "created_at": "2025-10-14T00:45:36.800Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "op005": [
+    {
+      "id": "r_1760402945448",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "(Mr.Mostarshed) He doesn't teach anything in class, the grades are nice tho. Expect to learn by urself if you take it. He’s such a bad teacher bro.",
+      "created_at": "2025-10-14T00:49:05.448Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402941317",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "(Mr. Mostarshed) Good Class. ^ For the above comment, the first semester had a lot of breakouts, however so far in the second semester there hasn't been a single session and it's mostly him teaching, so I believe he's learned from feedback. He's the goat, he's a little sleepy in class but much more helpful in office hours. Grades very nicely, doesn’t even give a late penalty most of the time. Bit of a slow grader, but when he does grade its usually 100% as long as you did all the steps. For the class itself, the textbook is relatively boring and we cover  SO much material, but if you study a lot for the exams its manageable. Good course, very interesting.",
+      "created_at": "2025-10-14T00:49:01.317Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402938312",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "Mr.Mostarshed) I dont like this class at all. The physics he teaches is basically breakout rooms. But he gives nice grades",
+      "created_at": "2025-10-14T00:48:58.312Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402933899",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "Mr. Mostarshed is an amazing teacher who clearly cares about his students, offering to spend more time with them beyond Office Hours to help them understand the subject better. He truly made learning physics enjoyable. Get him if you can.",
+      "created_at": "2025-10-14T00:48:53.899Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402930848",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Hamaoui) I took the class with Ms. Hamaoui, and she often struggled to lead discussions in a focused and considerate way. Our section frequently fell behind, which made physics class stressful and anxiety-inducing. If possible, take the class with Mr. Mostarshed instead.",
+      "created_at": "2025-10-14T00:48:50.848Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402927880",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Hamaoui) I don’t see what all the hate for her was for. Although she was not the best teacher I have had. Whenever I struggled with assignments I could always email her or message her on pronto and she would reply and was nice with extensions. The things she could have done better are in the above messages, but she was quite enthusiastic.",
+      "created_at": "2025-10-14T00:48:47.880Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402924775",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Hamaoui)^(2023-24) Adding to this response: I did not have a good experience with Mrs. Hamaoui. It was not her personality, but rather the fact that she did not do her part as a teacher properly in teaching during class time. I remember the first weeks of the term leading up to the midterm (it was quite bad). Everyone was so confused and would message each other nonstop, trying to see what homework or test was due. This is coming from a person who also attended one of Dr. Mostarshed’s classes (due to a schedule issue). Dr. Mostarshed had problems to do in class, breakouts, presented the material well, and overall didn’t confuse or delay the students at all. He was on top of the schedule too, unlike Mrs. Hamaoui.Get him if you can.",
+      "created_at": "2025-10-14T00:48:44.775Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402920220",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Hamaoui) (2023-24) On the contrary, we did cover what we needed. Some of the material was certainly easier if you reinforced with the textbook, but it was all at least covered to some extent in class. Ms. Hamaoui is really nice and does give extensions if you need them.",
+      "created_at": "2025-10-14T00:48:40.220Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402916772",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Hamaoui) (2023-24) Mrs. Hamaoui was the reason I dropped this class…we didnt cover what we needed for tests and problem sets. I spent 8 hours trying to do a problem set with having no idea what we were doing since we spent classes talking about stuff that weren't important. I remember spending 3 classes (1 hour 10 minutes *3) on one single graphing problem….",
+      "created_at": "2025-10-14T00:48:36.772Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402914514",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Hamaoui) The weekly assignments are optional for a reason, don’t work too long on them, just use them to check that you know the material. Unit reviews are tricky and not optional, get a start on those early. The labs aren’t always the easiest but they are what will make you remember the content, so I don’t object. For the labs read the prompt carefully and start early, they can take a while. The assessments are tricky but they don’t matter to much for your final grade. Forums don’t appear in the to-do list, don’t miss them. The tests are easy if you study, they usually don’t have super complicated problems like the homework does. As for Hamaoui, I don’t know why she gets so much hate. If you pay attention in class you will know what you need to for the tests, which are all that really matter. She is super generous with extensions and very accommodating with you and your life. She starts class super early so you can ask questions beforehand. She’s great.",
+      "created_at": "2025-10-14T00:48:34.514Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402911899",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Hamaoui) IF YOU WANT AN EASY A GET HAMAOUI. I know she gets a lot of hate and I’ll admit shes not the best at actually teaching but she lets you do corrections on literally every assignment other than the midterm and final which makes this class so much easier. You can literally go into exams with a 100 because as long as you submit corrections you will have a 100 regardless of how poorly you did on your first attempt or how clueless you are at physics. And tbh we had mostarshed for a bunch of classes as a sub and he was sooo boring and monotone and just reading straight off the slides i dont get why people prefer him over hamaoui. She does cold call in class but she never expects you to know the answer and will never get mad at you or be disappointed if you get something wrong even if its really obvious and she really only cold calls on people who are very obviously not paying attention (visibly talking to someone else on camera, constantly not looking at the screen/being on your phone, or very clearly on another tab/watching videos or movies/playing video games). Also the Pearson assignments and unit reviews are technically not optional but theyre not graded so you do not have to do them or submit your work and you wont get penalized. Also the unit tests are unproctored and have a very very long time limit (I literally took a nap and attended a club meeting while taking one exam) and also arent worth that much in terms of your grade so if you get something wrong you can do corrections but sometimes its just not worth the ffort cause its worth so little.",
+      "created_at": "2025-10-14T00:48:31.899Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402909718",
+      "course_id": "op005",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Hamaoui) The beginning of the course had way too much work that we weren’t warned about and there was an assessment released a day before it was due which was really annoying. But they figured it out and made it more manageable. It’s not a super fun course.",
+      "created_at": "2025-10-14T00:48:29.718Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "op010a": [
+    {
+      "id": "r_1760402970927",
+      "course_id": "op010a",
+      "rating": null,
+      "author": null,
+      "text": "Erikson’s teaching is pretty lackluster. Boring to listen to, rambles on until he loses on. I once went to his office hours to ask for help on a homework problem. I spent an hour there and he still couldn’t solve the problem.",
+      "created_at": "2025-10-14T00:49:30.927Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402955681",
+      "course_id": "op010a",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Erikson is pretty good, just be warned he does not just grade on completion like McKale did",
+      "created_at": "2025-10-14T00:49:15.681Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "up055": [
+    {
+      "id": "r_1760402988072",
+      "course_id": "up055",
+      "rating": null,
+      "author": null,
+      "text": "This class is… interesting. Dr. Oas is a good teacher, but the quizzes and tests are 90% of the grade and are extremely difficult, with very little overlap with what is taught in class. Additionally, even though mvc is listed as a corequisite, in the first 2 weeks we were doing second semester mvc. Finally, the homeworks would usually take upwards of 48 hours to complete, partially bc, again, there was very little overlap with what was taught in class.",
+      "created_at": "2025-10-14T00:49:48.072Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402984016",
+      "course_id": "up055",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Oas) [2024-25] I started out the year with Dr. Niazi and chose to switch to Dr. Oas after a couple classes. I think this was a smart decision – after all, Dr. Oas is the one who designs the course and the exams (I would follow this advice in other high-level STEM classes as well). Having Dr. Oas meant having a teacher who covered all the relevant material needed for the exams. This is especially important because there is no set reading material and you learn from recorded lectures and in-class lectures. Exams are worth like 80%, which is not fun. Start early on the problem sets, go to office hours, and collaborate with your friends. This course is split almost exactly in half between thermodynamics (probably the easiest unit of the whole year) and then optics.",
+      "created_at": "2025-10-14T00:49:44.016Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402980936",
+      "course_id": "up055",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Oas) AMAZING INSTRUCTOR. This class made absolutely no sense at first, but Dr. Oas was absolutely amazing with his discussions and (sometimes) even assigning his OWN papers and materials to make everything make sense to us. The content is hard, but the teacher will make sure that you don’t notice it is. The one complaint I have is that the exams are very difficult, so it’s not an easy course to get an A in. .",
+      "created_at": "2025-10-14T00:49:40.936Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "up070": [
+    {
+      "id": "r_1760402997845",
+      "course_id": "up070",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Oas) [2024-25] I have basically the same thoughts about this course except we had less problem sets (yay) but this time exams were worth 85% (and we had only one exam for the quantum mechanics unit, instead of two per unit as before). I found quantum mechanics and special relativity to be challenging for different reasons, but I’d say this course is harder than UP055 in general. The final exam on quantum mechanics was so hard.",
+      "created_at": "2025-10-14T00:49:57.845Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760402993373",
+      "course_id": "up070",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Oas) AMAZING INSTRUCTOR (again). There’s a lot of visualization required for the first half of this course, and the second half is just absolutely nuts (make sure you review your linear algebra), but once again, Dr. Oas explains things extremely well so you needn’t worry about it. The material is hard and definitely needs your effort into it, but honestly I think it’s easier than the first semester (UP055).",
+      "created_at": "2025-10-14T00:49:53.373Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "oastr1": [
+    {
+      "id": "r_1760403047143",
+      "course_id": "oastr1",
+      "rating": null,
+      "author": null,
+      "text": "(Ms. Tock) I also highly recommend this class! Ms. Tock is a wonderful teacher. Going into this class, I really didn’t know about astro at all and tbh I did it because research can look good on a college app. However, I ended up really enjoying the class just for what it was. The only thing is that the class (both semesters) is a relatively large time commitment, but I don’t regret it at all. Ms. Tock is really dedicated to the students, and she replies to questions ASAP and grades really fast. For the research part, I feel like whether or not you get a good or bad team could make or break the class but I had a really great team and really enjoyed working with them. And the grading is definitely manageable.",
+      "created_at": "2025-10-14T00:50:47.143Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403040659",
+      "course_id": "oastr1",
+      "rating": null,
+      "author": null,
+      "text": "Absolutely the best teacher you may ever meet in your life!!! Get her!!  She’s a quick grader and responds to email really quick with detailed and helpful replies. She made the class very fun and enthusiastic, I like her check-ins, everyone speaks on mic for a little, it updates us for what cool stuff our classmates are doing😋 One thing is that she don’t accept extensions, but its a 4% grade minus per day. Each assignment is 5 points and always 3 assignments each week. So the 4% is not significant as long as you pace well. The second semester is a research seminar that get you into real science (real data and the excitement for discovering legit unknown things in the universe)！！",
+      "created_at": "2025-10-14T00:50:40.659Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403036507",
+      "course_id": "oastr1",
+      "rating": null,
+      "author": null,
+      "text": "Yes to Dr. Tock she’s  definitely one of the best at OHS. She loves her students.",
+      "created_at": "2025-10-14T00:50:36.507Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403031876",
+      "course_id": "oastr1",
+      "rating": null,
+      "author": null,
+      "text": "Ms. Tock is by far my favorite teacher I’ve had in my whole OHS career. She’s so enthusiastic, fun, engaged, and grades insanely fast. Astrophysics in the fall is difficult, but not insanely math-heavy like she advertises it to be. The research portion in the spring is so much fun, so interesting, and it is hands on experience with research/real science. 100000% recommend taking this class, for the learning but more importantly, having Ms. Tock as a teacher. Best class at OHS for real.",
+      "created_at": "2025-10-14T00:50:31.876Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ob011": [
+    {
+      "id": "r_1760403056631",
+      "course_id": "ob011",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Failor) [2024-25] This is a very chill course but probably not as chill as neuro. This was the first time I sort of abused extensions in an OHS course, because she is so lenient on giving them out. This was helpful in the second semester where you have to turn in drafts of your 20-page review paper. You have to read one research article per week and answer reading questions. The big assignment in the spring is the review article. You also lead class discussions on papers, but she’s chill with you partnering with someone else. Dr. Failor is super, super nice, and you should also join the science bowl club/homeroom that she sponsors.",
+      "created_at": "2025-10-14T00:50:56.631Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ob015": [
+    {
+      "id": "r_1760403076920",
+      "course_id": "ob015",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Vetter) [2024-25] I agree with the above; neuro is not my favorite topic. Just make sure to participate on mic in each class to get the easy 10/10 participation grade. There are no proctored exams, only quizams that are FRQs that you complete by yourself with no outside help.",
+      "created_at": "2025-10-14T00:51:16.920Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403075821",
+      "course_id": "ob015",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Vetter is super chill and an insanely fast grader. There are no exams, just labs and open note FRQs and quizams. Vetter is not a hard grader by any means and the class is refreshing from that standpoint after AP Bio. The course can get a bit dry imo but as long as you do the readings, engage in class, and do your work on time, it’s very easy to get an A (and honestly a 100 if you try!)",
+      "created_at": "2025-10-14T00:51:15.821Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403069541",
+      "course_id": "ob015",
+      "rating": null,
+      "author": null,
+      "text": "Dr vetter W teacher, easy 100, saving my gpa everyday",
+      "created_at": "2025-10-14T00:51:09.541Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "up135": [
+    {
+      "id": "r_1760403084605",
+      "course_id": "up135",
+      "rating": null,
+      "author": null,
+      "text": "Extremely rewarding course with excellent instructor. If you took Modern Physics, you must take this course! It will not be stressful. Make sure you have the time set aside for a standard intensive OHS course, but nothing beyond that. You will definitely understand your interests in physics (or disinterest), and will leave the course as a better thinker and with a community you will be able to talk to in the future! Everyone in the class is very diligent and kind, and the instructor is as well, so it forms a nice environment to learn topics you typically don’t reach until the third or fourth year in undergrad. Just put effort—notes during class, reviewing slides after class, or similar—and you will be fine. You will get to do a self-guided project both semesters to explore whatever you like, and you get to formalize it into a paper as well. Very nice addition to your portfolio. Grading -- do not worry, he understands college applications and, if you’re putting effort, he will work with you. Put in the effort, get the A. Just make sure you do not miss class -- these are the lectures! Also do not slack off, this class builds up, and will become hard if you do not ask questions as they come. Ask questions after class and in OH -- help is there if you want it, but you need to want it. I highly recommend this course to anyone considering a path in CS, Physics, or even other fields. It gives a depthful exposure to allow you to comprehend current literature in a way that allows you to say something intelligent.",
+      "created_at": "2025-10-14T00:51:24.605Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "jcs01": [
+    {
+      "id": "r_1760403115462",
+      "course_id": "jcs01",
+      "rating": null,
+      "author": null,
+      "text": "Ehhhhh, Dr thana is ok…overall i just really didn’t like CS and most of the time had to go on youtube to fully understand concepts",
+      "created_at": "2025-10-14T00:51:55.462Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403110627",
+      "course_id": "jcs01",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Thananjeyan) Genuine 10/10. He’s very humorous, great in teaching and kinda gives a great class environment overall. He does his best to make sure everyone understands the material and never coldcalls, and accepts resubmissions/edits to assignments. I think the class is getting a bit harder tho, I almost flunked(if you call a B- a flunk) the S1 midterm and final and did pretty bad on the S2 midterm. Still, would recommend, great teacher!!",
+      "created_at": "2025-10-14T00:51:50.627Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403107476",
+      "course_id": "jcs01",
+      "rating": null,
+      "author": null,
+      "text": "I had dr. thanan, he was great! He was incredibly nice and funny. It was near impossible to ask questions though… he always seemed to just repeat what was said in class… other than that the course is pretty good and the topics are interesting but do note that the second semester is much harder.",
+      "created_at": "2025-10-14T00:51:47.476Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403104718",
+      "course_id": "jcs01",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Thananjeyan) Course was really good, however I have seen that over the years, it is getting harder and harder. Back in 2022-23, the average grade was like a 95 or 96. Now, its like an 89.",
+      "created_at": "2025-10-14T00:51:44.718Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403100804",
+      "course_id": "jcs01",
+      "rating": null,
+      "author": null,
+      "text": "(Dr. Thananjeyan) Course was awesome!!!! Hard course from all about computers to python to game theory and permutations/counting/probability. Instructor is so nice and such a great teacher. I learned a lot and enjoy this class. Whoever takes this class, YOU MUST GET Dr. Paramosthy Thanajeyan!!!!!!!",
+      "created_at": "2025-10-14T00:51:40.804Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ocs10": [
+    {
+      "id": "r_1760403302855",
+      "course_id": "ocs10",
+      "rating": null,
+      "author": null,
+      "text": "(Mrs. Rathi) (23-24) Yeah idk you’ll get a lot more help from the internet than Mrs. Rathi, GeeksForGeeks (Geeks4Geeks? forgot) will be your best friend.",
+      "created_at": "2025-10-14T00:55:02.855Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403299875",
+      "course_id": "ocs10",
+      "rating": null,
+      "author": null,
+      "text": "(Mrs. Rathi) Oddly I had a different experience with Mrs. Rathi. She was a little passive aggressive but she seems like a fair teacher. She does speak in a monotone during her classes but I didn’t really see a problem with it. Her redo policy was a tad unclear but otherwise the class was pretty chill and the assignments were relatively straightforward. The only issue I had was with the final project, since she changed the due date to something that was due 2 weeks before the original due date. She did this 2 weeks in advance but it would have been nice to get a warning on this since it made the final project a whole lot more stressful. But yeah it was still a good course.",
+      "created_at": "2025-10-14T00:54:59.875Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403297255",
+      "course_id": "ocs10",
+      "rating": null,
+      "author": null,
+      "text": "(Mrs. Rathi) [2023-24] I 100% agree with what has been said above about Mrs. Rathi-- the environment during her class is either stressful, hostile, or both. In addition, Mrs. Rathi sometimes gives really vague instructions on assignments/in class, and then gets annoyed (and/or takes off points) when a good portion of the class misinterprets the instructions?? She also had a very arbitrary participation grading system, based on \"the general feeling [of participation from the student]\", which I'm not sure what the criteria for that means exactly. The course content itself was very interesting and enjoyable, but I think I would have had a better experience with a different instructor.",
+      "created_at": "2025-10-14T00:54:57.255Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403294229",
+      "course_id": "ocs10",
+      "rating": null,
+      "author": null,
+      "text": "Mrs. Rathi is the worst - THE worst. She’s passive aggressive, clueless about OHS policy, and basically bullies people in class. I wish I had Polacco.",
+      "created_at": "2025-10-14T00:54:54.229Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403290147",
+      "course_id": "ocs10",
+      "rating": null,
+      "author": null,
+      "text": "Mrs. Rathi [2024-25] First month and I hate her already. Here are some basic conditions of being a good teacher that she violates:\nDo something with class time. Class meetings aren’t emails, lectures or an assignment, it’s an interactive time. Figure out something to do with it. Don’t lecture in a dull monotone if you want people to pay attention.\nDon’t make assumptions. Not everyone who is smiling is distracted. If you KNOW that your class doesn’t make people smile, do something about it rather than snap at all the smiling people.\nYou know more than they do. If all of your students are getting the wrong answer, the same wrong answer, that might just mean that they don’t have an intuitive sense of how computers work. It does not necessarily mean they didn’t do the reading and need to be shamed on record for it. Also, they can’t do something as fast as you can just because they understand it conceptually. \nBe respectful. Your students will not learn a thing from a teacher who doesn’t respect them. Questions are ok and should be encouraged, even if you think you already answered them, because perhaps the student doesn’t understand your answer. Don’t, ever, at any point, for any reason, shout at your students calling them CHILD in command tense.\nBe understanding. Sometimes life happens to your students. Don’t keep bugging the person whose mic/camera isn’t working, they usually can’t do anything about it until class is out. And please, if you must cold call, don’t for the love of God cold call THE CRYING KID. Saying “oh you’re crying i’ll pick someone else now” does NOT fix the mistake you just made.\nBe interesting. Students do not pay attention to/remember/care about a boring or hostile meeting. You will not be able to teach anything if you don’t utilize these, and you will DEFINITELY not be liked.",
+      "created_at": "2025-10-14T00:54:50.147Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403121470",
+      "course_id": "ocs10",
+      "rating": null,
+      "author": null,
+      "text": "(Mrs. Rathi) eh. She was very passive-aggressive throughout the class, sometimes I think an attempt to be funny she ended up just coming across a bit rude and would pick out a few students who she just did not like. We had Polacco for a sub for one day, and I am so hyped to have him next year instead. She is super vague and if you ask her to repeat more than once she gets a bit annoyed, “I just told you,” once a good old, “why dont you get it?”, or she just says the same exact thing she did before even if you said I dont understand. She changed the participation requirement halfway through the course, promised extra credit for whoever was on mic the most but did not give it (Said she forgot about it next semester) TO HER CREDIT, whenever I went to office hours her attitude was so different and she was super helpful, and even showed me samples of how something was supposed to be done instead which is amazing. Dont expect that vibe in class though… its like two different teachers\t! you don't do the assignment the way she wanted (which she won’t necessarily tell you how she does, or the assignment says to do it one way, and she wants it differently you get points off) she takes off 2 points (which for my year you could NOT redo it, it has to be less than an 8, so 7 and below that you can redo, and she would give 8’s). My only real annoyance was when she looked my code over, and went “Yeah that works good,” but gave me an 8/10.",
+      "created_at": "2025-10-14T00:52:01.470Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ocs20": [
+    {
+      "id": "r_1760403348121",
+      "course_id": "ocs20",
+      "rating": null,
+      "author": null,
+      "text": "Course was super fun! I got Dr Made and he's probably my fav comp sci teacher so far; he taught us how to improve and optimize our coding a whole lot; I get to use a lot of what I learned in extracurriculars as well. He's also super chill and tells funny stories during class so even if he goes deep into topics I never felt like my head was exploding too much. There were like five of us in class and he got to know us all so it was really fun",
+      "created_at": "2025-10-14T00:55:48.121Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403345195",
+      "course_id": "ocs20",
+      "rating": null,
+      "author": null,
+      "text": "Course was very fun and engaging, Mr. Polacco is a wonderful teacher. My sister took the course last year and wanted to make a maze game for the final project, which involves material that was several years ahead of the class, so rather than have her choose a new project he gave her a code snippet and a general explanation on how it worked.",
+      "created_at": "2025-10-14T00:55:45.195Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403341784",
+      "course_id": "ocs20",
+      "rating": null,
+      "author": null,
+      "text": "Agree with the above^ grading is a little slow but other than that he’s basically a perfect instructor: super helpful, ready to dive deep into anything you need help with and cover whatever people find interesting. He also spends 4 classes just playing review kahoots instead of doing a pointless lecture around breaks or the AP exam which is awesome.",
+      "created_at": "2025-10-14T00:55:41.784Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403337290",
+      "course_id": "ocs20",
+      "rating": null,
+      "author": null,
+      "text": "Course was great, Mr. Polacco is an awesome teacher, and always available if you have any questions. Class discussion sections are super engaging and Mr. Polacco really helps you understand the material. Only feedback is that grading can be a bit slow at times.",
+      "created_at": "2025-10-14T00:55:37.290Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ocs25": [
+    {
+      "id": "r_1760403364960",
+      "course_id": "ocs25",
+      "rating": null,
+      "author": null,
+      "text": "The course content is very nice, the homeworks are NOT! Many of them require you to run algorithms by hand on inputs with like size 15 or something, which at this point is basically busy work. The exams are also like this.",
+      "created_at": "2025-10-14T00:56:04.960Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    },
+    {
+      "id": "r_1760403360427",
+      "course_id": "ocs25",
+      "rating": null,
+      "author": null,
+      "text": "See Programming in C++ comments about Ms. Rathi—I second them. Class feels hostile because you’re constantly being yelled at. She  doesn’t give you the opportunity to ask questions and have them answered in a helpful manner. You have to answer “yes” when she asks “Do you understand?” or else she’ll just yell louder and louder and say derogatory comments like “Guys, it’s simple. Use your brains.” When you finally say “yes” even if you don’t understand, she just laughs and goes “See, it’s easy” and moves on. I’m pretty sure nobody actually understands anything in class. Assignments are graded vaguely. Half the time she takes points off and I have no idea why. I’m scared to go to office hours to figure out why because she’ll just yell at me more. Every day, I hate the class more and more. TLDR: you have to pretty much self teach yourself complex concepts if you don’t understand them the first way around because you are not going to have a support system… Hopefully your TAs are good.",
+      "created_at": "2025-10-14T00:56:00.427Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
+    }
+  ],
+  "ocs35": [
+    {
+      "id": "r_1760403378220",
+      "course_id": "ocs35",
+      "rating": null,
+      "author": null,
+      "text": "Dr. Thana is very understanding with late work and—if you do the bare minimum of talking during class actively, and stay on cam—will not grade harshly. He is available after class to answer questions and give help. This class is a low-stress exposure to architecture that will prepare you for university. It may feel like Data Structures at times, with the monotonous tracing-esque problems, but that’s just CS courses here I guess. There are fun assignments, if you can get yourself to get past the computational part and realize that there is a system underneath. Second semester, you get to do a project for the midterm. For exams, just review assignments EXTREMELY carefully. I would highly recommend you pay attention in class and ask questions. Especially if you’re a senior, do not pray for it to all click a week before finals when you need to submit applications too. Put effort and you’ll get the A. If you haven’t done CS classes, it may feel a lot more intimidating, when in reality it’s very simple. The above comments are not wrong, but he explains in class very thoroughly with analogies, so if you ask in those moments and with those contexts he will better be able to help than random questions (unless there’s a guiding HW problem). Seems he has a lot of classes back-to-back so he may also just be very busy (seems there’s one right before ours). I recommend this class to those on the CS path at OHS. It will be a nice way to finish it off.",
+      "created_at": "2025-10-14T00:56:18.220Z",
+      "status": "published",
+      "replies": [],
+      "poster_email": "jules328@ohs.stanford.edu",
+      "poster_sid": "2f27cb5eecabeb3fb10ec19ee6dc2d57"
     }
   ]
 }
