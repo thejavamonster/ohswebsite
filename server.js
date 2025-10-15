@@ -21,6 +21,9 @@ app.use(express.static(path.join(__dirname)));
 
 const COURSES_FILE = path.join(__dirname, 'courses.sample.json');
 const REVIEWS_FILE = path.join(__dirname, 'data', 'reviews.json');
+// Reviews store abstraction (Supabase when configured; JSON fallback)
+let reviewsStore = null;
+try{ reviewsStore = require('./lib/reviewsStore'); }catch(e){ console.error('[BOOT] failed to load reviewsStore', e && e.message ? e.message : e); }
 const SCRAPED_JSON = path.join(__dirname, 'live_courses.json');
 const AUTH_CODES_FILE = path.join(__dirname, 'data', 'auth-codes.json');
 const SESSIONS_FILE = path.join(__dirname, 'data', 'sessions.json');
@@ -130,9 +133,19 @@ app.get('/api/courses/:slug', (req,res)=>{
 });
 
 // GET /api/courses/:slug/reviews
-app.get('/api/courses/:slug/reviews', (req,res)=>{
-  const all = readJson(REVIEWS_FILE) || {};
-  const rawList = (all[req.params.slug] || []).map(r => (Object.assign({ replies: [], upvotes: 0, downvotes: 0 }, r)) );
+app.get('/api/courses/:slug/reviews', async (req,res)=>{
+  const courseId = req.params.slug;
+  let rawList = [];
+  try{
+    if (reviewsStore) rawList = await reviewsStore.getReviewsByCourse(courseId);
+    else {
+      const all = readJson(REVIEWS_FILE) || {};
+      rawList = (all[courseId] || []).map(r => (Object.assign({ replies: [], upvotes: 0, downvotes: 0 }, r)) );
+    }
+  }catch(err){
+    console.error('[REVIEWS] list error', err && err.message ? err.message : err);
+    return res.status(500).json({ error: 'server_error' });
+  }
   // redact poster metadata unless admin. Also treat the specific admin email as admin for convenience.
   const sess = getSession(req);
   const allowAdmin = isAdmin(req) || (sess && String(sess.email).toLowerCase() === 'jules328@ohs.stanford.edu');
@@ -173,7 +186,7 @@ app.get('/api/courses/:slug/reviews', (req,res)=>{
 });
 
 // POST /api/courses/:slug/reviews
-app.post('/api/courses/:slug/reviews', (req,res)=>{
+app.post('/api/courses/:slug/reviews', async (req,res)=>{
   // enforce server-side author: prefer session name but allow client-supplied author for display; always record poster identity for admin audit
   const sess = getSession(req);
   const sessionName = sess && sess.email ? String(sess.email).split('@')[0] : null;
@@ -197,11 +210,19 @@ app.post('/api/courses/:slug/reviews', (req,res)=>{
     if (!Number.isFinite(rnum) || rnum < 1 || rnum > 5) return res.status(400).json({error:'invalid rating'});
   }
   const slug = req.params.slug;
-  const all = readJson(REVIEWS_FILE) || {};
-  all[slug] = all[slug] || [];
-  const review = { id: 'r_'+Date.now(), course_id: slug, rating: rating === undefined || rating === null ? null : Number(rating), author: author ? String(author).trim() : null, text: text.trim(), created_at: new Date().toISOString(), status:'published', replies: [], poster_email: sessionEmail || null, poster_sid: sessionId || null };
-  all[slug].unshift(review);
-  writeJson(REVIEWS_FILE, all);
+  const review = { id: 'r_'+Date.now(), course_id: slug, rating: rating === undefined || rating === null ? null : Number(rating), author: author ? String(author).trim() : null, text: text.trim(), created_at: new Date().toISOString(), status:'published', replies: [], poster_email: sessionEmail || null, poster_sid: sessionId || null, upvotes: 0, downvotes: 0 };
+  try{
+    if (reviewsStore) await reviewsStore.createReview(slug, review);
+    else {
+      const all = readJson(REVIEWS_FILE) || {};
+      all[slug] = all[slug] || [];
+      all[slug].unshift(review);
+      writeJson(REVIEWS_FILE, all);
+    }
+  }catch(err){
+    console.error('[REVIEWS] create error', err && err.message ? err.message : err);
+    return res.status(500).json({ error: 'server_error' });
+  }
   res.status(201).json({ success:true, review });
 });
 
@@ -309,41 +330,60 @@ app.post('/api/auth/logout', (req,res)=>{
 });
 
 // POST /api/courses/:slug/reviews/:reviewId/vote
-app.post('/api/courses/:slug/reviews/:reviewId/vote', (req,res)=>{
+app.post('/api/courses/:slug/reviews/:reviewId/vote', async (req,res)=>{
   // Accepts { vote: 'up'|'down', prev?: 'up'|'down'|null }
   const { vote, prev } = req.body || {};
   if (!vote || (vote !== 'up' && vote !== 'down')) return res.status(400).json({ error: 'invalid vote' });
   if (prev !== undefined && prev !== null && prev !== 'up' && prev !== 'down') return res.status(400).json({ error: 'invalid prev' });
   const slug = req.params.slug;
   const reviewId = req.params.reviewId;
-  const all = readJson(REVIEWS_FILE) || {};
-  const list = all[slug] || [];
-  const review = list.find(r=> r.id === reviewId);
-  if (!review) return res.status(404).json({ error: 'review not found' });
-  review.upvotes = typeof review.upvotes === 'number' ? review.upvotes : 0;
-  review.downvotes = typeof review.downvotes === 'number' ? review.downvotes : 0;
-  // Determine update: if prev === vote => undo; if prev is null/undefined => add; if prev !== vote => switch
-  if (prev === vote){
-    // undo previous vote
-    if (vote === 'up') review.upvotes = Math.max(0, review.upvotes - 1);
-    else review.downvotes = Math.max(0, review.downvotes - 1);
-  } else if (!prev){
-    // new vote
-    if (vote === 'up') review.upvotes += 1;
-    else review.downvotes += 1;
-  } else if (prev !== vote){
-    // change vote: remove prev, add new
-    if (prev === 'up') review.upvotes = Math.max(0, review.upvotes - 1);
-    else review.downvotes = Math.max(0, review.downvotes - 1);
-    if (vote === 'up') review.upvotes += 1;
-    else review.downvotes += 1;
+  try{
+    let next;
+    if (reviewsStore){
+      next = await reviewsStore.updateVoteCounts(slug, reviewId, ({ upvotes, downvotes }) => {
+        let u = upvotes || 0, d = downvotes || 0;
+        if (prev === vote){
+          if (vote === 'up') u = Math.max(0, u - 1); else d = Math.max(0, d - 1);
+        } else if (!prev){
+          if (vote === 'up') u += 1; else d += 1;
+        } else if (prev !== vote){
+          if (prev === 'up') u = Math.max(0, u - 1); else d = Math.max(0, d - 1);
+          if (vote === 'up') u += 1; else d += 1;
+        }
+        return { upvotes: u, downvotes: d };
+      });
+    } else {
+      const all = readJson(REVIEWS_FILE) || {};
+      const list = all[slug] || [];
+      const review = list.find(r=> r.id === reviewId);
+      if (!review) return res.status(404).json({ error: 'review not found' });
+      review.upvotes = typeof review.upvotes === 'number' ? review.upvotes : 0;
+      review.downvotes = typeof review.downvotes === 'number' ? review.downvotes : 0;
+      if (prev === vote){
+        if (vote === 'up') review.upvotes = Math.max(0, review.upvotes - 1);
+        else review.downvotes = Math.max(0, review.downvotes - 1);
+      } else if (!prev){
+        if (vote === 'up') review.upvotes += 1;
+        else review.downvotes += 1;
+      } else if (prev !== vote){
+        if (prev === 'up') review.upvotes = Math.max(0, review.upvotes - 1);
+        else review.downvotes = Math.max(0, review.downvotes - 1);
+        if (vote === 'up') review.upvotes += 1;
+        else review.downvotes += 1;
+      }
+      writeJson(REVIEWS_FILE, all);
+      next = { upvotes: review.upvotes, downvotes: review.downvotes };
+    }
+    res.json({ success:true, upvotes: next.upvotes, downvotes: next.downvotes });
+  }catch(err){
+    console.error('[REVIEWS] vote error', err && err.message ? err.message : err);
+    if (String(err).includes('review not found')) return res.status(404).json({ error: 'review not found' });
+    res.status(500).json({ error: 'server_error' });
   }
-  writeJson(REVIEWS_FILE, all);
-  res.json({ success:true, upvotes: review.upvotes, downvotes: review.downvotes });
 });
 
 // POST /api/courses/:slug/reviews/:reviewId/replies
-app.post('/api/courses/:slug/reviews/:reviewId/replies', (req, res) => {
+app.post('/api/courses/:slug/reviews/:reviewId/replies', async (req, res) => {
   const { text } = req.body;
   // enforce author from session when available
   const sess = getSession(req);
@@ -361,40 +401,66 @@ app.post('/api/courses/:slug/reviews/:reviewId/replies', (req, res) => {
   if (!text || typeof text !== 'string' || text.trim().length < 1) return res.status(400).json({ error: 'invalid input' });
   const slug = req.params.slug;
   const reviewId = req.params.reviewId;
-  const all = readJson(REVIEWS_FILE) || {};
-  const list = all[slug] || [];
-  const review = list.find(r => r.id === reviewId);
-  if (!review) return res.status(404).json({ error: 'review not found' });
-  review.replies = review.replies || [];
   const reply = { id: 'rp_'+Date.now(), review_id: reviewId, author: author ? String(author).trim() : null, text: text.trim(), created_at: new Date().toISOString(), poster_email: sessionEmail || null, poster_sid: sessionId || null };
-  review.replies.unshift(reply);
-  writeJson(REVIEWS_FILE, all);
-  res.status(201).json({ success: true, reply });
+  try{
+    if (reviewsStore){
+      // Ensure review exists
+      const review = await reviewsStore.getReview(slug, reviewId);
+      if (!review) return res.status(404).json({ error: 'review not found' });
+      await reviewsStore.addReply(slug, reviewId, reply);
+    } else {
+      const all = readJson(REVIEWS_FILE) || {};
+      const list = all[slug] || [];
+      const review = list.find(r => r.id === reviewId);
+      if (!review) return res.status(404).json({ error: 'review not found' });
+      review.replies = review.replies || [];
+      review.replies.unshift(reply);
+      writeJson(REVIEWS_FILE, all);
+    }
+    res.status(201).json({ success: true, reply });
+  }catch(err){
+    console.error('[REVIEWS] add reply error', err && err.message ? err.message : err);
+    if (String(err).includes('review not found')) return res.status(404).json({ error: 'review not found' });
+    res.status(500).json({ error: 'server_error' });
+  }
 });
 
 // DELETE /api/courses/:slug/reviews/:reviewId -- allowed for admin or the poster
-app.delete('/api/courses/:slug/reviews/:reviewId', (req, res) => {
+app.delete('/api/courses/:slug/reviews/:reviewId', async (req, res) => {
   const sess = getSession(req);
   const sessionEmail = sess && sess.email ? String(sess.email).toLowerCase() : null;
   const allowAdmin = isAdmin(req) || (sess && String(sess.email).toLowerCase() === 'jules328@ohs.stanford.edu');
   const slug = req.params.slug;
   const reviewId = req.params.reviewId;
-  const all = readJson(REVIEWS_FILE) || {};
-  const list = all[slug] || [];
   try{
-    const sid = req.cookies && req.cookies['ohs_sid'];
-    console.log('[DELETE] request', { slug, reviewId, sid, sessionEmail, allowAdmin, existingIds: list.map(r=>r.id).slice(0,50) });
-  }catch(e){ /* ignore logging errors */ }
-  const idx = list.findIndex(r=> r.id === reviewId);
-  if (idx === -1) return res.status(404).json({ error: 'review not found' });
-  const review = list[idx];
-  const posterEmail = review.poster_email ? String(review.poster_email).toLowerCase() : null;
-  if (!allowAdmin && !(sessionEmail && posterEmail && sessionEmail === posterEmail)) return res.status(403).json({ error: 'forbidden' });
-  // remove the review
-  list.splice(idx, 1);
-  all[slug] = list;
-  writeJson(REVIEWS_FILE, all);
-  res.json({ success:true });
+    let review = null;
+    if (reviewsStore){
+      review = await reviewsStore.getReview(slug, reviewId);
+    } else {
+      const all = readJson(REVIEWS_FILE) || {};
+      const list = all[slug] || [];
+      review = list.find(r=> r.id === reviewId) || null;
+    }
+    try{
+      const sid = req.cookies && req.cookies['ohs_sid'];
+      console.log('[DELETE] request', { slug, reviewId, sid, sessionEmail, allowAdmin });
+    }catch(e){ /* ignore logging errors */ }
+    if (!review) return res.status(404).json({ error: 'review not found' });
+    const posterEmail = review.poster_email ? String(review.poster_email).toLowerCase() : null;
+    if (!allowAdmin && !(sessionEmail && posterEmail && sessionEmail === posterEmail)) return res.status(403).json({ error: 'forbidden' });
+    if (reviewsStore){
+      await reviewsStore.deleteReview(slug, reviewId);
+    } else {
+      const all = readJson(REVIEWS_FILE) || {};
+      const list = all[slug] || [];
+      const idx = list.findIndex(r=> r.id === reviewId);
+      if (idx !== -1){ list.splice(idx, 1); all[slug] = list; writeJson(REVIEWS_FILE, all); }
+    }
+    res.json({ success:true });
+  }catch(err){
+    console.error('[REVIEWS] delete error', err && err.message ? err.message : err);
+    res.status(500).json({ error: 'server_error' });
+  }
 });
 
 // Admin endpoint: view all reviews with poster metadata (restricted)

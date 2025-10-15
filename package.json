@@ -5,13 +5,16 @@
   "description": "Simple Express server for course catalog prototype (serves static files and a small reviews API)",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "migrate:reviews": "node scripts/migrate_reviews_to_supabase.js",
+    "db:verify": "node scripts/verify_supabase_reviews.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.3",
     "express": "^4.18.2",
+    "@supabase/supabase-js": "^2.46.1",
     "nodemailer": "^6.9.4",
     "resend": "^6.1.2"
   }

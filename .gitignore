@@ -1,1 +1,11 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Env secrets
+.env
+
+# Data snapshots
+data/*.bak
+data/*.tmp
 .env
